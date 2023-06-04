@@ -718,6 +718,53 @@ func (x *FieldTestMessage) GetMapFixed64Enum() map[uint64]FieldTestMessage_Enum 
 	return nil
 }
 
+type Example struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Filed int32 `protobuf:"varint,1,opt,name=filed,proto3" json:"filed,omitempty"`
+}
+
+func (x *Example) Reset() {
+	*x = Example{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_fields_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *Example) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Example) ProtoMessage() {}
+
+func (x *Example) ProtoReflect() protoreflect.Message {
+	mi := &file_fields_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Example.ProtoReflect.Descriptor instead.
+func (*Example) Descriptor() ([]byte, []int) {
+	return file_fields_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *Example) GetFiled() int32 {
+	if x != nil {
+		return x.Filed
+	}
+	return 0
+}
+
 type FieldTestMessage_Message struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -727,7 +774,7 @@ type FieldTestMessage_Message struct {
 func (x *FieldTestMessage_Message) Reset() {
 	*x = FieldTestMessage_Message{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_fields_proto_msgTypes[34]
+		mi := &file_fields_proto_msgTypes[35]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -740,7 +787,7 @@ func (x *FieldTestMessage_Message) String() string {
 func (*FieldTestMessage_Message) ProtoMessage() {}
 
 func (x *FieldTestMessage_Message) ProtoReflect() protoreflect.Message {
-	mi := &file_fields_proto_msgTypes[34]
+	mi := &file_fields_proto_msgTypes[35]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -768,7 +815,7 @@ type FieldTestMessage_Message2 struct {
 func (x *FieldTestMessage_Message2) Reset() {
 	*x = FieldTestMessage_Message2{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_fields_proto_msgTypes[35]
+		mi := &file_fields_proto_msgTypes[36]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -781,7 +828,7 @@ func (x *FieldTestMessage_Message2) String() string {
 func (*FieldTestMessage_Message2) ProtoMessage() {}
 
 func (x *FieldTestMessage_Message2) ProtoReflect() protoreflect.Message {
-	mi := &file_fields_proto_msgTypes[35]
+	mi := &file_fields_proto_msgTypes[36]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1282,10 +1329,12 @@ var file_fields_proto_rawDesc = []byte{
 	0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x2e, 0x45, 0x6e, 0x75, 0x6d, 0x52, 0x04, 0x65, 0x6e,
 	0x75, 0x6d, 0x22, 0x22, 0x0a, 0x04, 0x45, 0x6e, 0x75, 0x6d, 0x12, 0x08, 0x0a, 0x04, 0x5a, 0x45,
 	0x52, 0x4f, 0x10, 0x00, 0x12, 0x07, 0x0a, 0x03, 0x4f, 0x4e, 0x45, 0x10, 0x01, 0x12, 0x07, 0x0a,
-	0x03, 0x54, 0x57, 0x4f, 0x10, 0x02, 0x2a, 0x22, 0x0a, 0x04, 0x45, 0x6e, 0x75, 0x6d, 0x12, 0x08,
-	0x0a, 0x04, 0x5a, 0x45, 0x52, 0x4f, 0x10, 0x00, 0x12, 0x07, 0x0a, 0x03, 0x4f, 0x4e, 0x45, 0x10,
-	0x01, 0x12, 0x07, 0x0a, 0x03, 0x54, 0x57, 0x4f, 0x10, 0x02, 0x42, 0x0a, 0x5a, 0x08, 0x2e, 0x2f,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x03, 0x54, 0x57, 0x4f, 0x10, 0x02, 0x22, 0x1f, 0x0a, 0x07, 0x45, 0x78, 0x61, 0x6d, 0x70, 0x6c,
+	0x65, 0x12, 0x14, 0x0a, 0x05, 0x66, 0x69, 0x6c, 0x65, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05,
+	0x52, 0x05, 0x66, 0x69, 0x6c, 0x65, 0x64, 0x2a, 0x22, 0x0a, 0x04, 0x45, 0x6e, 0x75, 0x6d, 0x12,
+	0x08, 0x0a, 0x04, 0x5a, 0x45, 0x52, 0x4f, 0x10, 0x00, 0x12, 0x07, 0x0a, 0x03, 0x4f, 0x4e, 0x45,
+	0x10, 0x01, 0x12, 0x07, 0x0a, 0x03, 0x54, 0x57, 0x4f, 0x10, 0x02, 0x42, 0x0a, 0x5a, 0x08, 0x2e,
+	0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1301,92 +1350,93 @@ func file_fields_proto_rawDescGZIP() []byte {
 }
 
 var file_fields_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_fields_proto_msgTypes = make([]protoimpl.MessageInfo, 36)
+var file_fields_proto_msgTypes = make([]protoimpl.MessageInfo, 37)
 var file_fields_proto_goTypes = []interface{}{
 	(Enum)(0),                         // 0: goproto.protoc.proto3.Enum
 	(FieldTestMessage_Enum)(0),        // 1: goproto.protoc.proto3.FieldTestMessage.Enum
 	(*FieldTestMessage)(nil),          // 2: goproto.protoc.proto3.FieldTestMessage
-	nil,                               // 3: goproto.protoc.proto3.FieldTestMessage.MapBoolEntry
-	nil,                               // 4: goproto.protoc.proto3.FieldTestMessage.MapEnumEntry
-	nil,                               // 5: goproto.protoc.proto3.FieldTestMessage.MapInt32Entry
-	nil,                               // 6: goproto.protoc.proto3.FieldTestMessage.MapSint32Entry
-	nil,                               // 7: goproto.protoc.proto3.FieldTestMessage.MapUint32Entry
-	nil,                               // 8: goproto.protoc.proto3.FieldTestMessage.MapInt64Entry
-	nil,                               // 9: goproto.protoc.proto3.FieldTestMessage.MapSint64Entry
-	nil,                               // 10: goproto.protoc.proto3.FieldTestMessage.MapUint64Entry
-	nil,                               // 11: goproto.protoc.proto3.FieldTestMessage.MapSfixed32Entry
-	nil,                               // 12: goproto.protoc.proto3.FieldTestMessage.MapFixed32Entry
-	nil,                               // 13: goproto.protoc.proto3.FieldTestMessage.MapFloatEntry
-	nil,                               // 14: goproto.protoc.proto3.FieldTestMessage.MapSfixed64Entry
-	nil,                               // 15: goproto.protoc.proto3.FieldTestMessage.MapFixed64Entry
-	nil,                               // 16: goproto.protoc.proto3.FieldTestMessage.MapDoubleEntry
-	nil,                               // 17: goproto.protoc.proto3.FieldTestMessage.MapStringEntry
-	nil,                               // 18: goproto.protoc.proto3.FieldTestMessage.MapBytesEntry
-	nil,                               // 19: goproto.protoc.proto3.FieldTestMessage.MapMessageEntry
-	nil,                               // 20: goproto.protoc.proto3.FieldTestMessage.MapMessage2Entry
-	nil,                               // 21: goproto.protoc.proto3.FieldTestMessage.MapKeyInt32Entry
-	nil,                               // 22: goproto.protoc.proto3.FieldTestMessage.MapKeySint32Entry
-	nil,                               // 23: goproto.protoc.proto3.FieldTestMessage.MapKeyUint32Entry
-	nil,                               // 24: goproto.protoc.proto3.FieldTestMessage.MapKeyInt64Entry
-	nil,                               // 25: goproto.protoc.proto3.FieldTestMessage.MapKeySint64Entry
-	nil,                               // 26: goproto.protoc.proto3.FieldTestMessage.MapKeyUint64Entry
-	nil,                               // 27: goproto.protoc.proto3.FieldTestMessage.MapKeySfixed32Entry
-	nil,                               // 28: goproto.protoc.proto3.FieldTestMessage.MapKeyFixed32Entry
-	nil,                               // 29: goproto.protoc.proto3.FieldTestMessage.MapKeySfixed64Entry
-	nil,                               // 30: goproto.protoc.proto3.FieldTestMessage.MapKeyFixed64Entry
-	nil,                               // 31: goproto.protoc.proto3.FieldTestMessage.MapKeyStringEntry
-	nil,                               // 32: goproto.protoc.proto3.FieldTestMessage.MapInt32Int64Entry
-	nil,                               // 33: goproto.protoc.proto3.FieldTestMessage.MapStringMessageEntry
-	nil,                               // 34: goproto.protoc.proto3.FieldTestMessage.MapStringMessage2Entry
-	nil,                               // 35: goproto.protoc.proto3.FieldTestMessage.MapFixed64EnumEntry
-	(*FieldTestMessage_Message)(nil),  // 36: goproto.protoc.proto3.FieldTestMessage.Message
-	(*FieldTestMessage_Message2)(nil), // 37: goproto.protoc.proto3.FieldTestMessage.Message2
+	(*Example)(nil),                   // 3: goproto.protoc.proto3.Example
+	nil,                               // 4: goproto.protoc.proto3.FieldTestMessage.MapBoolEntry
+	nil,                               // 5: goproto.protoc.proto3.FieldTestMessage.MapEnumEntry
+	nil,                               // 6: goproto.protoc.proto3.FieldTestMessage.MapInt32Entry
+	nil,                               // 7: goproto.protoc.proto3.FieldTestMessage.MapSint32Entry
+	nil,                               // 8: goproto.protoc.proto3.FieldTestMessage.MapUint32Entry
+	nil,                               // 9: goproto.protoc.proto3.FieldTestMessage.MapInt64Entry
+	nil,                               // 10: goproto.protoc.proto3.FieldTestMessage.MapSint64Entry
+	nil,                               // 11: goproto.protoc.proto3.FieldTestMessage.MapUint64Entry
+	nil,                               // 12: goproto.protoc.proto3.FieldTestMessage.MapSfixed32Entry
+	nil,                               // 13: goproto.protoc.proto3.FieldTestMessage.MapFixed32Entry
+	nil,                               // 14: goproto.protoc.proto3.FieldTestMessage.MapFloatEntry
+	nil,                               // 15: goproto.protoc.proto3.FieldTestMessage.MapSfixed64Entry
+	nil,                               // 16: goproto.protoc.proto3.FieldTestMessage.MapFixed64Entry
+	nil,                               // 17: goproto.protoc.proto3.FieldTestMessage.MapDoubleEntry
+	nil,                               // 18: goproto.protoc.proto3.FieldTestMessage.MapStringEntry
+	nil,                               // 19: goproto.protoc.proto3.FieldTestMessage.MapBytesEntry
+	nil,                               // 20: goproto.protoc.proto3.FieldTestMessage.MapMessageEntry
+	nil,                               // 21: goproto.protoc.proto3.FieldTestMessage.MapMessage2Entry
+	nil,                               // 22: goproto.protoc.proto3.FieldTestMessage.MapKeyInt32Entry
+	nil,                               // 23: goproto.protoc.proto3.FieldTestMessage.MapKeySint32Entry
+	nil,                               // 24: goproto.protoc.proto3.FieldTestMessage.MapKeyUint32Entry
+	nil,                               // 25: goproto.protoc.proto3.FieldTestMessage.MapKeyInt64Entry
+	nil,                               // 26: goproto.protoc.proto3.FieldTestMessage.MapKeySint64Entry
+	nil,                               // 27: goproto.protoc.proto3.FieldTestMessage.MapKeyUint64Entry
+	nil,                               // 28: goproto.protoc.proto3.FieldTestMessage.MapKeySfixed32Entry
+	nil,                               // 29: goproto.protoc.proto3.FieldTestMessage.MapKeyFixed32Entry
+	nil,                               // 30: goproto.protoc.proto3.FieldTestMessage.MapKeySfixed64Entry
+	nil,                               // 31: goproto.protoc.proto3.FieldTestMessage.MapKeyFixed64Entry
+	nil,                               // 32: goproto.protoc.proto3.FieldTestMessage.MapKeyStringEntry
+	nil,                               // 33: goproto.protoc.proto3.FieldTestMessage.MapInt32Int64Entry
+	nil,                               // 34: goproto.protoc.proto3.FieldTestMessage.MapStringMessageEntry
+	nil,                               // 35: goproto.protoc.proto3.FieldTestMessage.MapStringMessage2Entry
+	nil,                               // 36: goproto.protoc.proto3.FieldTestMessage.MapFixed64EnumEntry
+	(*FieldTestMessage_Message)(nil),  // 37: goproto.protoc.proto3.FieldTestMessage.Message
+	(*FieldTestMessage_Message2)(nil), // 38: goproto.protoc.proto3.FieldTestMessage.Message2
 }
 var file_fields_proto_depIdxs = []int32{
 	1,  // 0: goproto.protoc.proto3.FieldTestMessage.optional_enum:type_name -> goproto.protoc.proto3.FieldTestMessage.Enum
-	36, // 1: goproto.protoc.proto3.FieldTestMessage.optional_Message:type_name -> goproto.protoc.proto3.FieldTestMessage.Message
-	37, // 2: goproto.protoc.proto3.FieldTestMessage.optional_Message2:type_name -> goproto.protoc.proto3.FieldTestMessage.Message2
+	37, // 1: goproto.protoc.proto3.FieldTestMessage.optional_Message:type_name -> goproto.protoc.proto3.FieldTestMessage.Message
+	38, // 2: goproto.protoc.proto3.FieldTestMessage.optional_Message2:type_name -> goproto.protoc.proto3.FieldTestMessage.Message2
 	1,  // 3: goproto.protoc.proto3.FieldTestMessage.repeated_enum:type_name -> goproto.protoc.proto3.FieldTestMessage.Enum
-	36, // 4: goproto.protoc.proto3.FieldTestMessage.repeated_Message:type_name -> goproto.protoc.proto3.FieldTestMessage.Message
-	37, // 5: goproto.protoc.proto3.FieldTestMessage.repeated_Message2:type_name -> goproto.protoc.proto3.FieldTestMessage.Message2
-	3,  // 6: goproto.protoc.proto3.FieldTestMessage.map_bool:type_name -> goproto.protoc.proto3.FieldTestMessage.MapBoolEntry
-	4,  // 7: goproto.protoc.proto3.FieldTestMessage.map_enum:type_name -> goproto.protoc.proto3.FieldTestMessage.MapEnumEntry
-	5,  // 8: goproto.protoc.proto3.FieldTestMessage.map_int32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapInt32Entry
-	6,  // 9: goproto.protoc.proto3.FieldTestMessage.map_sint32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapSint32Entry
-	7,  // 10: goproto.protoc.proto3.FieldTestMessage.map_uint32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapUint32Entry
-	8,  // 11: goproto.protoc.proto3.FieldTestMessage.map_int64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapInt64Entry
-	9,  // 12: goproto.protoc.proto3.FieldTestMessage.map_sint64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapSint64Entry
-	10, // 13: goproto.protoc.proto3.FieldTestMessage.map_uint64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapUint64Entry
-	11, // 14: goproto.protoc.proto3.FieldTestMessage.map_sfixed32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapSfixed32Entry
-	12, // 15: goproto.protoc.proto3.FieldTestMessage.map_fixed32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapFixed32Entry
-	13, // 16: goproto.protoc.proto3.FieldTestMessage.map_float:type_name -> goproto.protoc.proto3.FieldTestMessage.MapFloatEntry
-	14, // 17: goproto.protoc.proto3.FieldTestMessage.map_sfixed64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapSfixed64Entry
-	15, // 18: goproto.protoc.proto3.FieldTestMessage.map_fixed64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapFixed64Entry
-	16, // 19: goproto.protoc.proto3.FieldTestMessage.map_double:type_name -> goproto.protoc.proto3.FieldTestMessage.MapDoubleEntry
-	17, // 20: goproto.protoc.proto3.FieldTestMessage.map_string:type_name -> goproto.protoc.proto3.FieldTestMessage.MapStringEntry
-	18, // 21: goproto.protoc.proto3.FieldTestMessage.map_bytes:type_name -> goproto.protoc.proto3.FieldTestMessage.MapBytesEntry
-	19, // 22: goproto.protoc.proto3.FieldTestMessage.map_Message:type_name -> goproto.protoc.proto3.FieldTestMessage.MapMessageEntry
-	20, // 23: goproto.protoc.proto3.FieldTestMessage.map_Message2:type_name -> goproto.protoc.proto3.FieldTestMessage.MapMessage2Entry
-	21, // 24: goproto.protoc.proto3.FieldTestMessage.map_key_int32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyInt32Entry
-	22, // 25: goproto.protoc.proto3.FieldTestMessage.map_key_sint32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeySint32Entry
-	23, // 26: goproto.protoc.proto3.FieldTestMessage.map_key_uint32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyUint32Entry
-	24, // 27: goproto.protoc.proto3.FieldTestMessage.map_key_int64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyInt64Entry
-	25, // 28: goproto.protoc.proto3.FieldTestMessage.map_key_sint64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeySint64Entry
-	26, // 29: goproto.protoc.proto3.FieldTestMessage.map_key_uint64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyUint64Entry
-	27, // 30: goproto.protoc.proto3.FieldTestMessage.map_key_sfixed32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeySfixed32Entry
-	28, // 31: goproto.protoc.proto3.FieldTestMessage.map_key_fixed32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyFixed32Entry
-	29, // 32: goproto.protoc.proto3.FieldTestMessage.map_key_sfixed64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeySfixed64Entry
-	30, // 33: goproto.protoc.proto3.FieldTestMessage.map_key_fixed64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyFixed64Entry
-	31, // 34: goproto.protoc.proto3.FieldTestMessage.map_key_string:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyStringEntry
-	32, // 35: goproto.protoc.proto3.FieldTestMessage.map_int32_int64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapInt32Int64Entry
-	33, // 36: goproto.protoc.proto3.FieldTestMessage.map_string_message:type_name -> goproto.protoc.proto3.FieldTestMessage.MapStringMessageEntry
-	34, // 37: goproto.protoc.proto3.FieldTestMessage.map_string_message2:type_name -> goproto.protoc.proto3.FieldTestMessage.MapStringMessage2Entry
-	35, // 38: goproto.protoc.proto3.FieldTestMessage.map_fixed64_enum:type_name -> goproto.protoc.proto3.FieldTestMessage.MapFixed64EnumEntry
+	37, // 4: goproto.protoc.proto3.FieldTestMessage.repeated_Message:type_name -> goproto.protoc.proto3.FieldTestMessage.Message
+	38, // 5: goproto.protoc.proto3.FieldTestMessage.repeated_Message2:type_name -> goproto.protoc.proto3.FieldTestMessage.Message2
+	4,  // 6: goproto.protoc.proto3.FieldTestMessage.map_bool:type_name -> goproto.protoc.proto3.FieldTestMessage.MapBoolEntry
+	5,  // 7: goproto.protoc.proto3.FieldTestMessage.map_enum:type_name -> goproto.protoc.proto3.FieldTestMessage.MapEnumEntry
+	6,  // 8: goproto.protoc.proto3.FieldTestMessage.map_int32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapInt32Entry
+	7,  // 9: goproto.protoc.proto3.FieldTestMessage.map_sint32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapSint32Entry
+	8,  // 10: goproto.protoc.proto3.FieldTestMessage.map_uint32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapUint32Entry
+	9,  // 11: goproto.protoc.proto3.FieldTestMessage.map_int64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapInt64Entry
+	10, // 12: goproto.protoc.proto3.FieldTestMessage.map_sint64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapSint64Entry
+	11, // 13: goproto.protoc.proto3.FieldTestMessage.map_uint64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapUint64Entry
+	12, // 14: goproto.protoc.proto3.FieldTestMessage.map_sfixed32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapSfixed32Entry
+	13, // 15: goproto.protoc.proto3.FieldTestMessage.map_fixed32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapFixed32Entry
+	14, // 16: goproto.protoc.proto3.FieldTestMessage.map_float:type_name -> goproto.protoc.proto3.FieldTestMessage.MapFloatEntry
+	15, // 17: goproto.protoc.proto3.FieldTestMessage.map_sfixed64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapSfixed64Entry
+	16, // 18: goproto.protoc.proto3.FieldTestMessage.map_fixed64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapFixed64Entry
+	17, // 19: goproto.protoc.proto3.FieldTestMessage.map_double:type_name -> goproto.protoc.proto3.FieldTestMessage.MapDoubleEntry
+	18, // 20: goproto.protoc.proto3.FieldTestMessage.map_string:type_name -> goproto.protoc.proto3.FieldTestMessage.MapStringEntry
+	19, // 21: goproto.protoc.proto3.FieldTestMessage.map_bytes:type_name -> goproto.protoc.proto3.FieldTestMessage.MapBytesEntry
+	20, // 22: goproto.protoc.proto3.FieldTestMessage.map_Message:type_name -> goproto.protoc.proto3.FieldTestMessage.MapMessageEntry
+	21, // 23: goproto.protoc.proto3.FieldTestMessage.map_Message2:type_name -> goproto.protoc.proto3.FieldTestMessage.MapMessage2Entry
+	22, // 24: goproto.protoc.proto3.FieldTestMessage.map_key_int32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyInt32Entry
+	23, // 25: goproto.protoc.proto3.FieldTestMessage.map_key_sint32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeySint32Entry
+	24, // 26: goproto.protoc.proto3.FieldTestMessage.map_key_uint32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyUint32Entry
+	25, // 27: goproto.protoc.proto3.FieldTestMessage.map_key_int64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyInt64Entry
+	26, // 28: goproto.protoc.proto3.FieldTestMessage.map_key_sint64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeySint64Entry
+	27, // 29: goproto.protoc.proto3.FieldTestMessage.map_key_uint64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyUint64Entry
+	28, // 30: goproto.protoc.proto3.FieldTestMessage.map_key_sfixed32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeySfixed32Entry
+	29, // 31: goproto.protoc.proto3.FieldTestMessage.map_key_fixed32:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyFixed32Entry
+	30, // 32: goproto.protoc.proto3.FieldTestMessage.map_key_sfixed64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeySfixed64Entry
+	31, // 33: goproto.protoc.proto3.FieldTestMessage.map_key_fixed64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyFixed64Entry
+	32, // 34: goproto.protoc.proto3.FieldTestMessage.map_key_string:type_name -> goproto.protoc.proto3.FieldTestMessage.MapKeyStringEntry
+	33, // 35: goproto.protoc.proto3.FieldTestMessage.map_int32_int64:type_name -> goproto.protoc.proto3.FieldTestMessage.MapInt32Int64Entry
+	34, // 36: goproto.protoc.proto3.FieldTestMessage.map_string_message:type_name -> goproto.protoc.proto3.FieldTestMessage.MapStringMessageEntry
+	35, // 37: goproto.protoc.proto3.FieldTestMessage.map_string_message2:type_name -> goproto.protoc.proto3.FieldTestMessage.MapStringMessage2Entry
+	36, // 38: goproto.protoc.proto3.FieldTestMessage.map_fixed64_enum:type_name -> goproto.protoc.proto3.FieldTestMessage.MapFixed64EnumEntry
 	1,  // 39: goproto.protoc.proto3.FieldTestMessage.MapEnumEntry.value:type_name -> goproto.protoc.proto3.FieldTestMessage.Enum
-	36, // 40: goproto.protoc.proto3.FieldTestMessage.MapMessageEntry.value:type_name -> goproto.protoc.proto3.FieldTestMessage.Message
-	37, // 41: goproto.protoc.proto3.FieldTestMessage.MapMessage2Entry.value:type_name -> goproto.protoc.proto3.FieldTestMessage.Message2
-	36, // 42: goproto.protoc.proto3.FieldTestMessage.MapStringMessageEntry.value:type_name -> goproto.protoc.proto3.FieldTestMessage.Message
-	37, // 43: goproto.protoc.proto3.FieldTestMessage.MapStringMessage2Entry.value:type_name -> goproto.protoc.proto3.FieldTestMessage.Message2
+	37, // 40: goproto.protoc.proto3.FieldTestMessage.MapMessageEntry.value:type_name -> goproto.protoc.proto3.FieldTestMessage.Message
+	38, // 41: goproto.protoc.proto3.FieldTestMessage.MapMessage2Entry.value:type_name -> goproto.protoc.proto3.FieldTestMessage.Message2
+	37, // 42: goproto.protoc.proto3.FieldTestMessage.MapStringMessageEntry.value:type_name -> goproto.protoc.proto3.FieldTestMessage.Message
+	38, // 43: goproto.protoc.proto3.FieldTestMessage.MapStringMessage2Entry.value:type_name -> goproto.protoc.proto3.FieldTestMessage.Message2
 	1,  // 44: goproto.protoc.proto3.FieldTestMessage.MapFixed64EnumEntry.value:type_name -> goproto.protoc.proto3.FieldTestMessage.Enum
 	1,  // 45: goproto.protoc.proto3.FieldTestMessage.Message2.enum:type_name -> goproto.protoc.proto3.FieldTestMessage.Enum
 	46, // [46:46] is the sub-list for method output_type
@@ -1414,8 +1464,8 @@ func file_fields_proto_init() {
 				return nil
 			}
 		}
-		file_fields_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*FieldTestMessage_Message); i {
+		file_fields_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*Example); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1427,6 +1477,18 @@ func file_fields_proto_init() {
 			}
 		}
 		file_fields_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*FieldTestMessage_Message); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_fields_proto_msgTypes[36].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*FieldTestMessage_Message2); i {
 			case 0:
 				return &v.state
@@ -1445,7 +1507,7 @@ func file_fields_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_fields_proto_rawDesc,
 			NumEnums:      2,
-			NumMessages:   36,
+			NumMessages:   37,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

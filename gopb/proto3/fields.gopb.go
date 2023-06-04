@@ -4692,3 +4692,146 @@ func (x ZapArrayFieldTestMessage_Message2) MarshalLogArray(ae zapcore.ArrayEncod
 func LogArrayFieldTestMessage_Message2(name string, v []*FieldTestMessage_Message2) zap.Field {
 	return zap.Array(name, ZapArrayFieldTestMessage_Message2(v))
 }
+
+type Example struct {
+	Filed int32 `json:"filed,omitempty" db:"filed"`
+}
+
+func (x *Example) Reset() {
+	*x = Example{}
+}
+
+// MarshalObjectTo marshal data to []byte
+func (x *Example) MarshalObjectTo(buf []byte) (data []byte, err error) {
+	data = buf
+	if x.Filed != 0 {
+		// data = protowire.AppendTag(data, 1, protowire.VarintType) => 00001000
+		data = append(data, 0x8)
+		data = protowire.AppendVarint(data, uint64(x.Filed))
+	}
+	return
+}
+
+// MarshalObject marshal data to []byte
+func (x *Example) MarshalObject() (data []byte, err error) {
+	data = make([]byte, 0, x.MarshalSize())
+	return x.MarshalObjectTo(data)
+}
+
+// UnmarshalObject unmarshal data from []byte
+func (x *Example) UnmarshalObject(data []byte) (err error) {
+	index := 0
+	ignoreGroup := 0
+	for index < len(data) {
+		num, typ, cnt := protowire.ConsumeTag(data[index:])
+		if num == 0 {
+			err = errors.New("invalid tag")
+			return
+		}
+
+		index += cnt
+		// ignore group
+		if ignoreGroup > 0 {
+			switch typ {
+			case protowire.VarintType:
+				_, cnt := protowire.ConsumeVarint(data[index:])
+				if cnt < 1 {
+					err = protowire.ParseError(cnt)
+					return
+				}
+				index += cnt
+			case protowire.Fixed32Type:
+				index += 4
+			case protowire.Fixed64Type:
+				index += 8
+			case protowire.BytesType:
+				v, cnt := protowire.ConsumeBytes(data[index:])
+				if v == nil {
+					if cnt < 0 {
+						err = protowire.ParseError(cnt)
+					} else {
+						err = errors.New("invalid data")
+					}
+					return
+				}
+				index += cnt
+			case protowire.StartGroupType:
+				ignoreGroup++
+			case protowire.EndGroupType:
+				ignoreGroup--
+			}
+			continue
+		}
+		switch num {
+		case 1:
+			if typ != protowire.VarintType {
+				err = errors.New("invlaid field Example.Filed id:1. not varint type")
+				return
+			}
+			v, cnt := protowire.ConsumeVarint(data[index:])
+			if cnt < 1 {
+				err = errors.New("invlaid field Example.Filed id:1. invalid varint value")
+				return
+			}
+			index += cnt
+			x.Filed = int32(v)
+		default: // skip fields
+			switch typ {
+			case protowire.VarintType:
+				_, cnt := protowire.ConsumeVarint(data[index:])
+				if cnt < 1 {
+					err = protowire.ParseError(cnt)
+					return
+				}
+				index += cnt
+			case protowire.Fixed32Type:
+				index += 4
+			case protowire.Fixed64Type:
+				index += 8
+			case protowire.BytesType:
+				v, cnt := protowire.ConsumeBytes(data[index:])
+				if v == nil {
+					if cnt < 0 {
+						err = protowire.ParseError(cnt)
+					} else {
+						err = errors.New("invalid data")
+					}
+					return
+				}
+				index += cnt
+			case protowire.StartGroupType:
+				ignoreGroup++
+			case protowire.EndGroupType:
+				ignoreGroup--
+			}
+		}
+	}
+
+	return
+}
+
+// MarshalSize calc marshal data need space
+func (x *Example) MarshalSize() (size int) {
+	if x.Filed != 0 {
+		size += 1 // size += protowire.SizeTag(,1)
+		size += protowire.SizeVarint(uint64(x.Filed))
+	}
+	return
+}
+
+func (x *Example) MarshalLogObject(enc zapcore.ObjectEncoder) error {
+	enc.AddInt32("Filed", x.Filed)
+	return nil
+}
+
+type ZapArrayExample []*Example
+
+func (x ZapArrayExample) MarshalLogArray(ae zapcore.ArrayEncoder) error {
+	for _, v := range x {
+		ae.AppendObject(v)
+	}
+	return nil
+}
+func LogArrayExample(name string, v []*Example) zap.Field {
+	return zap.Array(name, ZapArrayExample(v))
+}

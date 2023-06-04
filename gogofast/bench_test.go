@@ -6,11 +6,11 @@ import (
 	"testing"
 	"time"
 
-	google_msg "github.com/aggronmagi/benchpb/googlego/proto3"
+	gogofast_msg "github.com/aggronmagi/benchpb/gogofast/proto3"
 	gopb_msg "github.com/aggronmagi/benchpb/gopb/proto3"
 
+	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/assert"
-	"google.golang.org/protobuf/proto"
 )
 
 var testData = &gopb_msg.FieldTestMessage{
@@ -88,13 +88,13 @@ var testData = &gopb_msg.FieldTestMessage{
 
 func generateSameValue(value *gopb_msg.FieldTestMessage) (
 	//gitpb *github_msg.FieldTestMessage,
-	googlepb *google_msg.FieldTestMessage,
+	gogofastpb *gogofast_msg.FieldTestMessage,
 	// gogopb *gogo_msg.FieldTestMessage,
 	// gofastpb *gogofast_msg.FieldTestMessage,
 	//	gofasterpb *gogofaster_msg.FieldTestMessage,
 ) {
 	//gitpb = &github_msg.FieldTestMessage{}
-	googlepb = &google_msg.FieldTestMessage{}
+	gogofastpb = &gogofast_msg.FieldTestMessage{}
 	// gogopb = &gogo_msg.FieldTestMessage{}
 	// gofastpb = &gogofast_msg.FieldTestMessage{}
 	//gofasterpb = &gogofaster_msg.FieldTestMessage{}
@@ -103,14 +103,14 @@ func generateSameValue(value *gopb_msg.FieldTestMessage) (
 	if err != nil {
 		panic(err)
 	}
-	err = json.Unmarshal(data, googlepb)
+	err = json.Unmarshal(data, gogofastpb)
 	if err != nil {
 		panic(err)
 	}
 	return
 }
 
-func equal(t *testing.T, v1 *gopb_msg.FieldTestMessage, v2 *google_msg.FieldTestMessage) {
+func equal(t *testing.T, v1 *gopb_msg.FieldTestMessage, v2 *gogofast_msg.FieldTestMessage) {
 	d1, err := json.Marshal(v1)
 	if err != nil {
 		t.Fatal(err)
@@ -365,7 +365,7 @@ func BenchmarkVS(b *testing.B) {
 		if err != nil {
 			b.Fatal(err)
 		}
-		b.Run(v.name+"google-marshal", func(b *testing.B) {
+		b.Run(v.name+"gogofast-marshal", func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
 				proto.Marshal(v2)
 			}
@@ -376,15 +376,15 @@ func BenchmarkVS(b *testing.B) {
 			}
 		})
 
-		b.Run(v.name+"google-unmarshal", func(b *testing.B) {
+		b.Run(v.name+"gogofast-unmarshal", func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				v2 = &google_msg.FieldTestMessage{}
+				v2 = &gogofast_msg.FieldTestMessage{}
 				proto.Unmarshal(d2, v2)
 			}
 		})
-		// b.Run(v.name+"googlepb-unmarshal-cross", func(b *testing.B) {
+		// b.Run(v.name+"gogofastpb-unmarshal-cross", func(b *testing.B) {
 		// 	for i := 0; i < b.N; i++ {
-		// 		v2 = &google_msg.FieldTestMessage{}
+		// 		v2 = &gogofast_msg.FieldTestMessage{}
 		// 		proto.Unmarshal(d1, v2)
 		// 	}
 		// })

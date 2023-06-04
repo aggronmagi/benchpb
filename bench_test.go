@@ -1,16 +1,17 @@
 package benchpb
 
 import (
-	//github_msg "benchpb/githubgo/proto3"
-	// gogo_msg "benchpb/gogo/proto3"
-	// gogofast_msg "benchpb/gogofast/proto3"
-	// gogofaster_msg "benchpb/gogofaster/proto3"
-	google_msg "benchpb/googlego/proto3"
-	gopb_msg "benchpb/gopb/proto3"
+	//github_msg "github.com/aggronmagi/benchpb/githubgo/proto3"
+	// gogo_msg "github.com/aggronmagi/benchpb/gogo/proto3"
+	// gogofast_msg "github.com/aggronmagi/benchpb/gogofast/proto3"
+	// gogofaster_msg "github.com/aggronmagi/benchpb/gogofaster/proto3"
 	"encoding/json"
 	"math"
 	"testing"
 	"time"
+
+	google_msg "github.com/aggronmagi/benchpb/googlego/proto3"
+	gopb_msg "github.com/aggronmagi/benchpb/gopb/proto3"
 
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/proto"

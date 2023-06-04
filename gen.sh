@@ -17,4 +17,3 @@ protoc --gogofast_out=./gogofast/ fields.proto
 
 mkdir -p gogofaster/
 protoc --gogofaster_out=./gogofaster/ fields.proto
-cat bench_test.go | sed "s/googlego/gogofaster/g" | sed "s/google/gogofaster/g"|sed "s/google.golang.org\/protobuf\/proto/github.com\/gogo\/protobuf\/proto/g" > ./gogofaster/bench_test.go

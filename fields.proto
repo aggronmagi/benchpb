@@ -28,24 +28,44 @@ message FieldTestMessage {
   Message optional_Message = 17;
   Message2 optional_Message2 = 18;
 
-  repeated bool repeated_bool = 201;
-  repeated Enum repeated_enum = 202;
-  repeated int32 repeated_int32 = 203;
-  repeated sint32 repeated_sint32 = 204;
-  repeated uint32 repeated_uint32 = 205;
-  repeated int64 repeated_int64 = 206;
-  repeated sint64 repeated_sint64 = 207;
-  repeated uint64 repeated_uint64 = 208;
-  repeated sfixed32 repeated_sfixed32 = 209;
-  repeated fixed32 repeated_fixed32 = 210;
-  repeated float repeated_float = 211;
-  repeated sfixed64 repeated_sfixed64 = 212;
-  repeated fixed64 repeated_fixed64 = 213;
-  repeated double repeated_double = 214;
+  repeated bool repeated_bool = 201[packed=true];
+  repeated Enum repeated_enum = 202[packed=true];
+  repeated int32 repeated_int32 = 203[packed=true];
+  repeated sint32 repeated_sint32 = 204[packed=true];
+  repeated uint32 repeated_uint32 = 205[packed=true];
+  repeated int64 repeated_int64 = 206[packed=true];
+  repeated sint64 repeated_sint64 = 207[packed=true];
+  repeated uint64 repeated_uint64 = 208[packed=true];
+  repeated sfixed32 repeated_sfixed32 = 209[packed=true];
+  repeated fixed32 repeated_fixed32 = 210[packed=true];
+  repeated float repeated_float = 211[packed=true];
+  repeated sfixed64 repeated_sfixed64 = 212[packed=true];
+  repeated fixed64 repeated_fixed64 = 213[packed=true];
+  repeated double repeated_double = 214[packed=true];
   repeated string repeated_string = 215;
   repeated bytes repeated_bytes = 216;
   repeated Message repeated_Message = 217;
   repeated Message2 repeated_Message2 = 218;
+
+  repeated bool nopack_bool = 601[packed=false];
+  repeated Enum nopack_enum = 602[packed=false];
+  repeated int32 nopack_int32 = 603[packed=false];
+  repeated sint32 nopack_sint32 = 604[packed=false];
+  repeated uint32 nopack_uint32 = 605[packed=false];
+  repeated int64 nopack_int64 = 606[packed=false];
+  repeated sint64 nopack_sint64 = 607[packed=false];
+  repeated uint64 nopack_uint64 = 608[packed=false];
+  repeated sfixed32 nopack_sfixed32 = 609[packed=false];
+  repeated fixed32 nopack_fixed32 = 610[packed=false];
+  repeated float nopack_float = 611[packed=false];
+  repeated sfixed64 nopack_sfixed64 = 612[packed=false];
+  repeated fixed64 nopack_fixed64 = 613[packed=false];
+  repeated double nopack_double = 614[packed=false];
+  repeated string nopack_string = 615[packed=false];
+  repeated bytes nopack_bytes = 616[packed=false];
+  repeated Message nopack_Message = 617[packed=false];
+  repeated Message2 nopack_Message2 = 618[packed=false];
+
 
   map<int32, bool> map_bool = 301;
   map<int32, Enum> map_enum = 302;

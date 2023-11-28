@@ -80,98 +80,97 @@ func (FieldTestMessage_Enum) EnumDescriptor() ([]byte, []int) {
 }
 
 type FieldTestMessage struct {
-	OptionalBool      bool                                 `protobuf:"varint,1,opt,name=optional_bool,json=optionalBool,proto3" json:"optional_bool,omitempty"`
-	OptionalEnum      FieldTestMessage_Enum                `protobuf:"varint,2,opt,name=optional_enum,json=optionalEnum,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum" json:"optional_enum,omitempty"`
-	OptionalInt32     int32                                `protobuf:"varint,3,opt,name=optional_int32,json=optionalInt32,proto3" json:"optional_int32,omitempty"`
-	OptionalSint32    int32                                `protobuf:"zigzag32,4,opt,name=optional_sint32,json=optionalSint32,proto3" json:"optional_sint32,omitempty"`
-	OptionalUint32    uint32                               `protobuf:"varint,5,opt,name=optional_uint32,json=optionalUint32,proto3" json:"optional_uint32,omitempty"`
-	OptionalInt64     int64                                `protobuf:"varint,6,opt,name=optional_int64,json=optionalInt64,proto3" json:"optional_int64,omitempty"`
-	OptionalSint64    int64                                `protobuf:"zigzag64,7,opt,name=optional_sint64,json=optionalSint64,proto3" json:"optional_sint64,omitempty"`
-	OptionalUint64    uint64                               `protobuf:"varint,8,opt,name=optional_uint64,json=optionalUint64,proto3" json:"optional_uint64,omitempty"`
-	OptionalSfixed32  int32                                `protobuf:"fixed32,9,opt,name=optional_sfixed32,json=optionalSfixed32,proto3" json:"optional_sfixed32,omitempty"`
-	OptionalFixed32   uint32                               `protobuf:"fixed32,10,opt,name=optional_fixed32,json=optionalFixed32,proto3" json:"optional_fixed32,omitempty"`
-	OptionalFloat     float32                              `protobuf:"fixed32,11,opt,name=optional_float,json=optionalFloat,proto3" json:"optional_float,omitempty"`
-	OptionalSfixed64  int64                                `protobuf:"fixed64,12,opt,name=optional_sfixed64,json=optionalSfixed64,proto3" json:"optional_sfixed64,omitempty"`
-	OptionalFixed64   uint64                               `protobuf:"fixed64,13,opt,name=optional_fixed64,json=optionalFixed64,proto3" json:"optional_fixed64,omitempty"`
-	OptionalDouble    float64                              `protobuf:"fixed64,14,opt,name=optional_double,json=optionalDouble,proto3" json:"optional_double,omitempty"`
-	OptionalString    string                               `protobuf:"bytes,15,opt,name=optional_string,json=optionalString,proto3" json:"optional_string,omitempty"`
-	OptionalBytes     []byte                               `protobuf:"bytes,16,opt,name=optional_bytes,json=optionalBytes,proto3" json:"optional_bytes,omitempty"`
-	Optional_Message  *FieldTestMessage_Message            `protobuf:"bytes,17,opt,name=optional_Message,json=optionalMessage,proto3" json:"optional_Message,omitempty"`
-	Optional_Message2 *FieldTestMessage_Message2           `protobuf:"bytes,18,opt,name=optional_Message2,json=optionalMessage2,proto3" json:"optional_Message2,omitempty"`
-	RepeatedBool      []bool                               `protobuf:"varint,201,rep,packed,name=repeated_bool,json=repeatedBool,proto3" json:"repeated_bool,omitempty"`
-	RepeatedEnum      []FieldTestMessage_Enum              `protobuf:"varint,202,rep,packed,name=repeated_enum,json=repeatedEnum,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum" json:"repeated_enum,omitempty"`
-	RepeatedInt32     []int32                              `protobuf:"varint,203,rep,packed,name=repeated_int32,json=repeatedInt32,proto3" json:"repeated_int32,omitempty"`
-	RepeatedSint32    []int32                              `protobuf:"zigzag32,204,rep,packed,name=repeated_sint32,json=repeatedSint32,proto3" json:"repeated_sint32,omitempty"`
-	RepeatedUint32    []uint32                             `protobuf:"varint,205,rep,packed,name=repeated_uint32,json=repeatedUint32,proto3" json:"repeated_uint32,omitempty"`
-	RepeatedInt64     []int64                              `protobuf:"varint,206,rep,packed,name=repeated_int64,json=repeatedInt64,proto3" json:"repeated_int64,omitempty"`
-	RepeatedSint64    []int64                              `protobuf:"zigzag64,207,rep,packed,name=repeated_sint64,json=repeatedSint64,proto3" json:"repeated_sint64,omitempty"`
-	RepeatedUint64    []uint64                             `protobuf:"varint,208,rep,packed,name=repeated_uint64,json=repeatedUint64,proto3" json:"repeated_uint64,omitempty"`
-	RepeatedSfixed32  []int32                              `protobuf:"fixed32,209,rep,packed,name=repeated_sfixed32,json=repeatedSfixed32,proto3" json:"repeated_sfixed32,omitempty"`
-	RepeatedFixed32   []uint32                             `protobuf:"fixed32,210,rep,packed,name=repeated_fixed32,json=repeatedFixed32,proto3" json:"repeated_fixed32,omitempty"`
-	RepeatedFloat     []float32                            `protobuf:"fixed32,211,rep,packed,name=repeated_float,json=repeatedFloat,proto3" json:"repeated_float,omitempty"`
-	RepeatedSfixed64  []int64                              `protobuf:"fixed64,212,rep,packed,name=repeated_sfixed64,json=repeatedSfixed64,proto3" json:"repeated_sfixed64,omitempty"`
-	RepeatedFixed64   []uint64                             `protobuf:"fixed64,213,rep,packed,name=repeated_fixed64,json=repeatedFixed64,proto3" json:"repeated_fixed64,omitempty"`
-	RepeatedDouble    []float64                            `protobuf:"fixed64,214,rep,packed,name=repeated_double,json=repeatedDouble,proto3" json:"repeated_double,omitempty"`
-	RepeatedString    []string                             `protobuf:"bytes,215,rep,name=repeated_string,json=repeatedString,proto3" json:"repeated_string,omitempty"`
-	RepeatedBytes     [][]byte                             `protobuf:"bytes,216,rep,name=repeated_bytes,json=repeatedBytes,proto3" json:"repeated_bytes,omitempty"`
-	Repeated_Message  []*FieldTestMessage_Message          `protobuf:"bytes,217,rep,name=repeated_Message,json=repeatedMessage,proto3" json:"repeated_Message,omitempty"`
-	Repeated_Message2 []*FieldTestMessage_Message2         `protobuf:"bytes,218,rep,name=repeated_Message2,json=repeatedMessage2,proto3" json:"repeated_Message2,omitempty"`
-	NopackBool        []bool                               `protobuf:"varint,601,rep,name=nopack_bool,json=nopackBool,proto3" json:"nopack_bool,omitempty"`
-	NopackEnum        []FieldTestMessage_Enum              `protobuf:"varint,602,rep,name=nopack_enum,json=nopackEnum,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum" json:"nopack_enum,omitempty"`
-	NopackInt32       []int32                              `protobuf:"varint,603,rep,name=nopack_int32,json=nopackInt32,proto3" json:"nopack_int32,omitempty"`
-	NopackSint32      []int32                              `protobuf:"zigzag32,604,rep,name=nopack_sint32,json=nopackSint32,proto3" json:"nopack_sint32,omitempty"`
-	NopackUint32      []uint32                             `protobuf:"varint,605,rep,name=nopack_uint32,json=nopackUint32,proto3" json:"nopack_uint32,omitempty"`
-	NopackInt64       []int64                              `protobuf:"varint,606,rep,name=nopack_int64,json=nopackInt64,proto3" json:"nopack_int64,omitempty"`
-	NopackSint64      []int64                              `protobuf:"zigzag64,607,rep,name=nopack_sint64,json=nopackSint64,proto3" json:"nopack_sint64,omitempty"`
-	NopackUint64      []uint64                             `protobuf:"varint,608,rep,name=nopack_uint64,json=nopackUint64,proto3" json:"nopack_uint64,omitempty"`
-	NopackSfixed32    []int32                              `protobuf:"fixed32,609,rep,name=nopack_sfixed32,json=nopackSfixed32,proto3" json:"nopack_sfixed32,omitempty"`
-	NopackFixed32     []uint32                             `protobuf:"fixed32,610,rep,name=nopack_fixed32,json=nopackFixed32,proto3" json:"nopack_fixed32,omitempty"`
-	NopackFloat       []float32                            `protobuf:"fixed32,611,rep,name=nopack_float,json=nopackFloat,proto3" json:"nopack_float,omitempty"`
-	NopackSfixed64    []int64                              `protobuf:"fixed64,612,rep,name=nopack_sfixed64,json=nopackSfixed64,proto3" json:"nopack_sfixed64,omitempty"`
-	NopackFixed64     []uint64                             `protobuf:"fixed64,613,rep,name=nopack_fixed64,json=nopackFixed64,proto3" json:"nopack_fixed64,omitempty"`
-	NopackDouble      []float64                            `protobuf:"fixed64,614,rep,name=nopack_double,json=nopackDouble,proto3" json:"nopack_double,omitempty"`
-	NopackString      []string                             `protobuf:"bytes,615,rep,name=nopack_string,json=nopackString,proto3" json:"nopack_string,omitempty"`
-	NopackBytes       [][]byte                             `protobuf:"bytes,616,rep,name=nopack_bytes,json=nopackBytes,proto3" json:"nopack_bytes,omitempty"`
-	Nopack_Message    []*FieldTestMessage_Message          `protobuf:"bytes,617,rep,name=nopack_Message,json=nopackMessage,proto3" json:"nopack_Message,omitempty"`
-	Nopack_Message2   []*FieldTestMessage_Message2         `protobuf:"bytes,618,rep,name=nopack_Message2,json=nopackMessage2,proto3" json:"nopack_Message2,omitempty"`
-	MapBool           map[int32]bool                       `protobuf:"bytes,301,rep,name=map_bool,json=mapBool,proto3" json:"map_bool,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapEnum           map[int32]FieldTestMessage_Enum      `protobuf:"bytes,302,rep,name=map_enum,json=mapEnum,proto3" json:"map_enum,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum"`
-	MapInt32          map[int32]int32                      `protobuf:"bytes,303,rep,name=map_int32,json=mapInt32,proto3" json:"map_int32,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapSint32         map[int32]int32                      `protobuf:"bytes,304,rep,name=map_sint32,json=mapSint32,proto3" json:"map_sint32,omitempty" protobuf_key:"zigzag32,1,opt,name=key,proto3" protobuf_val:"zigzag32,2,opt,name=value,proto3"`
-	MapUint32         map[uint32]uint32                    `protobuf:"bytes,305,rep,name=map_uint32,json=mapUint32,proto3" json:"map_uint32,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapInt64          map[int64]int64                      `protobuf:"bytes,306,rep,name=map_int64,json=mapInt64,proto3" json:"map_int64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapSint64         map[int64]int64                      `protobuf:"bytes,307,rep,name=map_sint64,json=mapSint64,proto3" json:"map_sint64,omitempty" protobuf_key:"zigzag64,1,opt,name=key,proto3" protobuf_val:"zigzag64,2,opt,name=value,proto3"`
-	MapUint64         map[uint64]uint64                    `protobuf:"bytes,308,rep,name=map_uint64,json=mapUint64,proto3" json:"map_uint64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapSfixed32       map[int32]int32                      `protobuf:"bytes,309,rep,name=map_sfixed32,json=mapSfixed32,proto3" json:"map_sfixed32,omitempty" protobuf_key:"fixed32,1,opt,name=key,proto3" protobuf_val:"fixed32,2,opt,name=value,proto3"`
-	MapFixed32        map[uint32]uint32                    `protobuf:"bytes,310,rep,name=map_fixed32,json=mapFixed32,proto3" json:"map_fixed32,omitempty" protobuf_key:"fixed32,1,opt,name=key,proto3" protobuf_val:"fixed32,2,opt,name=value,proto3"`
-	MapFloat          map[int32]float32                    `protobuf:"bytes,311,rep,name=map_float,json=mapFloat,proto3" json:"map_float,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"fixed32,2,opt,name=value,proto3"`
-	MapSfixed64       map[int32]int64                      `protobuf:"bytes,312,rep,name=map_sfixed64,json=mapSfixed64,proto3" json:"map_sfixed64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"fixed64,2,opt,name=value,proto3"`
-	MapFixed64        map[int32]uint64                     `protobuf:"bytes,313,rep,name=map_fixed64,json=mapFixed64,proto3" json:"map_fixed64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"fixed64,2,opt,name=value,proto3"`
-	MapDouble         map[int32]float64                    `protobuf:"bytes,314,rep,name=map_double,json=mapDouble,proto3" json:"map_double,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"fixed64,2,opt,name=value,proto3"`
-	MapString         map[int32]string                     `protobuf:"bytes,315,rep,name=map_string,json=mapString,proto3" json:"map_string,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	MapBytes          map[int32][]byte                     `protobuf:"bytes,316,rep,name=map_bytes,json=mapBytes,proto3" json:"map_bytes,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	Map_Message       map[int32]*FieldTestMessage_Message  `protobuf:"bytes,317,rep,name=map_Message,json=mapMessage,proto3" json:"map_Message,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	Map_Message2      map[int32]*FieldTestMessage_Message2 `protobuf:"bytes,318,rep,name=map_Message2,json=mapMessage2,proto3" json:"map_Message2,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	OptionalBool     bool                            `protobuf:"varint,1,opt,name=optional_bool,json=optionalBool,proto3" json:"optional_bool,omitempty"`
+	OptionalEnum     FieldTestMessage_Enum           `protobuf:"varint,2,opt,name=optional_enum,json=optionalEnum,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum" json:"optional_enum,omitempty"`
+	OptionalInt32    int32                           `protobuf:"varint,3,opt,name=optional_int32,json=optionalInt32,proto3" json:"optional_int32,omitempty"`
+	OptionalSint32   int32                           `protobuf:"zigzag32,4,opt,name=optional_sint32,json=optionalSint32,proto3" json:"optional_sint32,omitempty"`
+	OptionalUint32   uint32                          `protobuf:"varint,5,opt,name=optional_uint32,json=optionalUint32,proto3" json:"optional_uint32,omitempty"`
+	OptionalInt64    int64                           `protobuf:"varint,6,opt,name=optional_int64,json=optionalInt64,proto3" json:"optional_int64,omitempty"`
+	OptionalSint64   int64                           `protobuf:"zigzag64,7,opt,name=optional_sint64,json=optionalSint64,proto3" json:"optional_sint64,omitempty"`
+	OptionalUint64   uint64                          `protobuf:"varint,8,opt,name=optional_uint64,json=optionalUint64,proto3" json:"optional_uint64,omitempty"`
+	OptionalSfixed32 int32                           `protobuf:"fixed32,9,opt,name=optional_sfixed32,json=optionalSfixed32,proto3" json:"optional_sfixed32,omitempty"`
+	OptionalFixed32  uint32                          `protobuf:"fixed32,10,opt,name=optional_fixed32,json=optionalFixed32,proto3" json:"optional_fixed32,omitempty"`
+	OptionalFloat    float32                         `protobuf:"fixed32,11,opt,name=optional_float,json=optionalFloat,proto3" json:"optional_float,omitempty"`
+	OptionalSfixed64 int64                           `protobuf:"fixed64,12,opt,name=optional_sfixed64,json=optionalSfixed64,proto3" json:"optional_sfixed64,omitempty"`
+	OptionalFixed64  uint64                          `protobuf:"fixed64,13,opt,name=optional_fixed64,json=optionalFixed64,proto3" json:"optional_fixed64,omitempty"`
+	OptionalDouble   float64                         `protobuf:"fixed64,14,opt,name=optional_double,json=optionalDouble,proto3" json:"optional_double,omitempty"`
+	OptionalString   string                          `protobuf:"bytes,15,opt,name=optional_string,json=optionalString,proto3" json:"optional_string,omitempty"`
+	OptionalBytes    []byte                          `protobuf:"bytes,16,opt,name=optional_bytes,json=optionalBytes,proto3" json:"optional_bytes,omitempty"`
+	OptionalMessage  *FieldTestMessage_Message       `protobuf:"bytes,17,opt,name=optional_message,json=optionalMessage,proto3" json:"optional_message,omitempty"`
+	OptionalMessage2 *FieldTestMessage_Message2      `protobuf:"bytes,18,opt,name=optional_message2,json=optionalMessage2,proto3" json:"optional_message2,omitempty"`
+	RepeatedBool     []bool                          `protobuf:"varint,201,rep,packed,name=repeated_bool,json=repeatedBool,proto3" json:"repeated_bool,omitempty"`
+	RepeatedEnum     []FieldTestMessage_Enum         `protobuf:"varint,202,rep,packed,name=repeated_enum,json=repeatedEnum,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum" json:"repeated_enum,omitempty"`
+	RepeatedInt32    []int32                         `protobuf:"varint,203,rep,packed,name=repeated_int32,json=repeatedInt32,proto3" json:"repeated_int32,omitempty"`
+	RepeatedSint32   []int32                         `protobuf:"zigzag32,204,rep,packed,name=repeated_sint32,json=repeatedSint32,proto3" json:"repeated_sint32,omitempty"`
+	RepeatedUint32   []uint32                        `protobuf:"varint,205,rep,packed,name=repeated_uint32,json=repeatedUint32,proto3" json:"repeated_uint32,omitempty"`
+	RepeatedInt64    []int64                         `protobuf:"varint,206,rep,packed,name=repeated_int64,json=repeatedInt64,proto3" json:"repeated_int64,omitempty"`
+	RepeatedSint64   []int64                         `protobuf:"zigzag64,207,rep,packed,name=repeated_sint64,json=repeatedSint64,proto3" json:"repeated_sint64,omitempty"`
+	RepeatedUint64   []uint64                        `protobuf:"varint,208,rep,packed,name=repeated_uint64,json=repeatedUint64,proto3" json:"repeated_uint64,omitempty"`
+	RepeatedSfixed32 []int32                         `protobuf:"fixed32,209,rep,packed,name=repeated_sfixed32,json=repeatedSfixed32,proto3" json:"repeated_sfixed32,omitempty"`
+	RepeatedFixed32  []uint32                        `protobuf:"fixed32,210,rep,packed,name=repeated_fixed32,json=repeatedFixed32,proto3" json:"repeated_fixed32,omitempty"`
+	RepeatedFloat    []float32                       `protobuf:"fixed32,211,rep,packed,name=repeated_float,json=repeatedFloat,proto3" json:"repeated_float,omitempty"`
+	RepeatedSfixed64 []int64                         `protobuf:"fixed64,212,rep,packed,name=repeated_sfixed64,json=repeatedSfixed64,proto3" json:"repeated_sfixed64,omitempty"`
+	RepeatedFixed64  []uint64                        `protobuf:"fixed64,213,rep,packed,name=repeated_fixed64,json=repeatedFixed64,proto3" json:"repeated_fixed64,omitempty"`
+	RepeatedDouble   []float64                       `protobuf:"fixed64,214,rep,packed,name=repeated_double,json=repeatedDouble,proto3" json:"repeated_double,omitempty"`
+	RepeatedString   []string                        `protobuf:"bytes,215,rep,name=repeated_string,json=repeatedString,proto3" json:"repeated_string,omitempty"`
+	RepeatedBytes    [][]byte                        `protobuf:"bytes,216,rep,name=repeated_bytes,json=repeatedBytes,proto3" json:"repeated_bytes,omitempty"`
+	RepeatedMessage  []*FieldTestMessage_Message     `protobuf:"bytes,217,rep,name=repeated_message,json=repeatedMessage,proto3" json:"repeated_message,omitempty"`
+	RepeatedMessage2 []*FieldTestMessage_Message2    `protobuf:"bytes,218,rep,name=repeated_message2,json=repeatedMessage2,proto3" json:"repeated_message2,omitempty"`
+	NopackBool       []bool                          `protobuf:"varint,31,rep,name=nopack_bool,json=nopackBool,proto3" json:"nopack_bool,omitempty"`
+	NopackEnum       []FieldTestMessage_Enum         `protobuf:"varint,32,rep,name=nopack_enum,json=nopackEnum,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum" json:"nopack_enum,omitempty"`
+	NopackInt32      []int32                         `protobuf:"varint,33,rep,name=nopack_int32,json=nopackInt32,proto3" json:"nopack_int32,omitempty"`
+	NopackSint32     []int32                         `protobuf:"zigzag32,34,rep,name=nopack_sint32,json=nopackSint32,proto3" json:"nopack_sint32,omitempty"`
+	NopackUint32     []uint32                        `protobuf:"varint,35,rep,name=nopack_uint32,json=nopackUint32,proto3" json:"nopack_uint32,omitempty"`
+	NopackInt64      []int64                         `protobuf:"varint,36,rep,name=nopack_int64,json=nopackInt64,proto3" json:"nopack_int64,omitempty"`
+	NopackSint64     []int64                         `protobuf:"zigzag64,37,rep,name=nopack_sint64,json=nopackSint64,proto3" json:"nopack_sint64,omitempty"`
+	NopackUint64     []uint64                        `protobuf:"varint,38,rep,name=nopack_uint64,json=nopackUint64,proto3" json:"nopack_uint64,omitempty"`
+	NopackSfixed32   []int32                         `protobuf:"fixed32,39,rep,name=nopack_sfixed32,json=nopackSfixed32,proto3" json:"nopack_sfixed32,omitempty"`
+	NopackFixed32    []uint32                        `protobuf:"fixed32,40,rep,name=nopack_fixed32,json=nopackFixed32,proto3" json:"nopack_fixed32,omitempty"`
+	NopackFloat      []float32                       `protobuf:"fixed32,41,rep,name=nopack_float,json=nopackFloat,proto3" json:"nopack_float,omitempty"`
+	NopackSfixed64   []int64                         `protobuf:"fixed64,42,rep,name=nopack_sfixed64,json=nopackSfixed64,proto3" json:"nopack_sfixed64,omitempty"`
+	NopackFixed64    []uint64                        `protobuf:"fixed64,43,rep,name=nopack_fixed64,json=nopackFixed64,proto3" json:"nopack_fixed64,omitempty"`
+	NopackDouble     []float64                       `protobuf:"fixed64,44,rep,name=nopack_double,json=nopackDouble,proto3" json:"nopack_double,omitempty"`
+	NopackString     []string                        `protobuf:"bytes,45,rep,name=nopack_string,json=nopackString,proto3" json:"nopack_string,omitempty"`
+	NopackBytes      [][]byte                        `protobuf:"bytes,46,rep,name=nopack_bytes,json=nopackBytes,proto3" json:"nopack_bytes,omitempty"`
+	NopackMessage    []*FieldTestMessage_Message     `protobuf:"bytes,47,rep,name=nopack_message,json=nopackMessage,proto3" json:"nopack_message,omitempty"`
+	NopackMessage2   []*FieldTestMessage_Message2    `protobuf:"bytes,48,rep,name=nopack_message2,json=nopackMessage2,proto3" json:"nopack_message2,omitempty"`
+	MapBool          map[int32]bool                  `protobuf:"bytes,51,rep,name=map_bool,json=mapBool,proto3" json:"map_bool,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	MapEnum          map[int32]FieldTestMessage_Enum `protobuf:"bytes,52,rep,name=map_enum,json=mapEnum,proto3" json:"map_enum,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum"`
+	MapInt32         map[int32]int32                 `protobuf:"bytes,53,rep,name=map_int32,json=mapInt32,proto3" json:"map_int32,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	// map<sint32, sint32> map_sint32 = 54;
+	MapUint32 map[uint32]uint32 `protobuf:"bytes,55,rep,name=map_uint32,json=mapUint32,proto3" json:"map_uint32,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	MapInt64  map[int64]int64   `protobuf:"bytes,56,rep,name=map_int64,json=mapInt64,proto3" json:"map_int64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	// map<sint64, sint64> map_sint64 = 57;
+	MapUint64 map[uint64]uint64 `protobuf:"bytes,58,rep,name=map_uint64,json=mapUint64,proto3" json:"map_uint64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	// map<sfixed32, sfixed32> map_sfixed32 = 59;
+	// map<fixed32, fixed32> map_fixed32 = 60;
+	MapFloat map[int32]float32 `protobuf:"bytes,61,rep,name=map_float,json=mapFloat,proto3" json:"map_float,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"fixed32,2,opt,name=value,proto3"`
+	// map<int32, sfixed64> map_sfixed64 = 62;
+	// map<int32, fixed64> map_fixed64 = 63;
+	MapDouble   map[int32]float64                    `protobuf:"bytes,64,rep,name=map_double,json=mapDouble,proto3" json:"map_double,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"fixed64,2,opt,name=value,proto3"`
+	MapString   map[int32]string                     `protobuf:"bytes,65,rep,name=map_string,json=mapString,proto3" json:"map_string,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	MapBytes    map[int32][]byte                     `protobuf:"bytes,66,rep,name=map_bytes,json=mapBytes,proto3" json:"map_bytes,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	MapMessage  map[int32]*FieldTestMessage_Message  `protobuf:"bytes,67,rep,name=map_message,json=mapMessage,proto3" json:"map_message,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	MapMessage2 map[int32]*FieldTestMessage_Message2 `protobuf:"bytes,68,rep,name=map_message2,json=mapMessage2,proto3" json:"map_message2,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	//	map<bool,int32> map_key_bool = 401;
 	//
 	// map<Enum,int32> map_key_enum = 402;
-	MapKeyInt32    map[int32]int32  `protobuf:"bytes,403,rep,name=map_key_int32,json=mapKeyInt32,proto3" json:"map_key_int32,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapKeySint32   map[int32]int32  `protobuf:"bytes,404,rep,name=map_key_sint32,json=mapKeySint32,proto3" json:"map_key_sint32,omitempty" protobuf_key:"zigzag32,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapKeyUint32   map[uint32]int32 `protobuf:"bytes,405,rep,name=map_key_uint32,json=mapKeyUint32,proto3" json:"map_key_uint32,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapKeyInt64    map[int64]int32  `protobuf:"bytes,406,rep,name=map_key_int64,json=mapKeyInt64,proto3" json:"map_key_int64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapKeySint64   map[int64]int32  `protobuf:"bytes,407,rep,name=map_key_sint64,json=mapKeySint64,proto3" json:"map_key_sint64,omitempty" protobuf_key:"zigzag64,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapKeyUint64   map[uint64]int32 `protobuf:"bytes,408,rep,name=map_key_uint64,json=mapKeyUint64,proto3" json:"map_key_uint64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapKeySfixed32 map[int32]int32  `protobuf:"bytes,409,rep,name=map_key_sfixed32,json=mapKeySfixed32,proto3" json:"map_key_sfixed32,omitempty" protobuf_key:"fixed32,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapKeyFixed32  map[uint32]int32 `protobuf:"bytes,410,rep,name=map_key_fixed32,json=mapKeyFixed32,proto3" json:"map_key_fixed32,omitempty" protobuf_key:"fixed32,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	MapKeyInt32 map[int32]int32 `protobuf:"bytes,73,rep,name=map_key_int32,json=mapKeyInt32,proto3" json:"map_key_int32,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	// /map<sint32,int32> map_key_sint32 = 404;
+	MapKeyUint32 map[uint32]int32 `protobuf:"bytes,75,rep,name=map_key_uint32,json=mapKeyUint32,proto3" json:"map_key_uint32,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	MapKeyInt64  map[int64]int32  `protobuf:"bytes,76,rep,name=map_key_int64,json=mapKeyInt64,proto3" json:"map_key_int64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	// /map<sint64,int32> map_key_sint64 = 407;
+	MapKeyUint64 map[uint64]int32 `protobuf:"bytes,78,rep,name=map_key_uint64,json=mapKeyUint64,proto3" json:"map_key_uint64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	// /map<sfixed32,int32> map_key_sfixed32 = 409;
+	// /map<fixed32,int32> map_key_fixed32 = 410;
 	// map<float,int32> map_key_float = 411;
-	MapKeySfixed64 map[int64]int32  `protobuf:"bytes,412,rep,name=map_key_sfixed64,json=mapKeySfixed64,proto3" json:"map_key_sfixed64,omitempty" protobuf_key:"fixed64,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapKeyFixed64  map[uint64]int32 `protobuf:"bytes,413,rep,name=map_key_fixed64,json=mapKeyFixed64,proto3" json:"map_key_fixed64,omitempty" protobuf_key:"fixed64,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	// /map<sfixed64,int32> map_key_sfixed64 = 412;
+	// /map<fixed64,int32> map_key_fixed64 = 413;
 	// map<double,int32> map_key_double = 414;
-	MapKeyString      map[string]int32                      `protobuf:"bytes,415,rep,name=map_key_string,json=mapKeyString,proto3" json:"map_key_string,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapInt32Int64     map[int32]int64                       `protobuf:"bytes,500,rep,name=map_int32_int64,json=mapInt32Int64,proto3" json:"map_int32_int64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
-	MapStringMessage  map[string]*FieldTestMessage_Message  `protobuf:"bytes,501,rep,name=map_string_message,json=mapStringMessage,proto3" json:"map_string_message,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	MapStringMessage2 map[string]*FieldTestMessage_Message2 `protobuf:"bytes,502,rep,name=map_string_message2,json=mapStringMessage2,proto3" json:"map_string_message2,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	MapFixed64Enum    map[uint64]FieldTestMessage_Enum      `protobuf:"bytes,503,rep,name=map_fixed64_enum,json=mapFixed64Enum,proto3" json:"map_fixed64_enum,omitempty" protobuf_key:"fixed64,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum"`
+	MapKeyString      map[string]int32                      `protobuf:"bytes,85,rep,name=map_key_string,json=mapKeyString,proto3" json:"map_key_string,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	MapInt32Int64     map[int32]int64                       `protobuf:"bytes,90,rep,name=map_int32_int64,json=mapInt32Int64,proto3" json:"map_int32_int64,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	MapStringMessage  map[string]*FieldTestMessage_Message  `protobuf:"bytes,91,rep,name=map_string_message,json=mapStringMessage,proto3" json:"map_string_message,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	MapStringMessage2 map[string]*FieldTestMessage_Message2 `protobuf:"bytes,92,rep,name=map_string_message2,json=mapStringMessage2,proto3" json:"map_string_message2,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
 func (m *FieldTestMessage) Reset()         { *m = FieldTestMessage{} }
@@ -319,16 +318,16 @@ func (m *FieldTestMessage) GetOptionalBytes() []byte {
 	return nil
 }
 
-func (m *FieldTestMessage) GetOptional_Message() *FieldTestMessage_Message {
+func (m *FieldTestMessage) GetOptionalMessage() *FieldTestMessage_Message {
 	if m != nil {
-		return m.Optional_Message
+		return m.OptionalMessage
 	}
 	return nil
 }
 
-func (m *FieldTestMessage) GetOptional_Message2() *FieldTestMessage_Message2 {
+func (m *FieldTestMessage) GetOptionalMessage2() *FieldTestMessage_Message2 {
 	if m != nil {
-		return m.Optional_Message2
+		return m.OptionalMessage2
 	}
 	return nil
 }
@@ -445,16 +444,16 @@ func (m *FieldTestMessage) GetRepeatedBytes() [][]byte {
 	return nil
 }
 
-func (m *FieldTestMessage) GetRepeated_Message() []*FieldTestMessage_Message {
+func (m *FieldTestMessage) GetRepeatedMessage() []*FieldTestMessage_Message {
 	if m != nil {
-		return m.Repeated_Message
+		return m.RepeatedMessage
 	}
 	return nil
 }
 
-func (m *FieldTestMessage) GetRepeated_Message2() []*FieldTestMessage_Message2 {
+func (m *FieldTestMessage) GetRepeatedMessage2() []*FieldTestMessage_Message2 {
 	if m != nil {
-		return m.Repeated_Message2
+		return m.RepeatedMessage2
 	}
 	return nil
 }
@@ -571,16 +570,16 @@ func (m *FieldTestMessage) GetNopackBytes() [][]byte {
 	return nil
 }
 
-func (m *FieldTestMessage) GetNopack_Message() []*FieldTestMessage_Message {
+func (m *FieldTestMessage) GetNopackMessage() []*FieldTestMessage_Message {
 	if m != nil {
-		return m.Nopack_Message
+		return m.NopackMessage
 	}
 	return nil
 }
 
-func (m *FieldTestMessage) GetNopack_Message2() []*FieldTestMessage_Message2 {
+func (m *FieldTestMessage) GetNopackMessage2() []*FieldTestMessage_Message2 {
 	if m != nil {
-		return m.Nopack_Message2
+		return m.NopackMessage2
 	}
 	return nil
 }
@@ -606,13 +605,6 @@ func (m *FieldTestMessage) GetMapInt32() map[int32]int32 {
 	return nil
 }
 
-func (m *FieldTestMessage) GetMapSint32() map[int32]int32 {
-	if m != nil {
-		return m.MapSint32
-	}
-	return nil
-}
-
 func (m *FieldTestMessage) GetMapUint32() map[uint32]uint32 {
 	if m != nil {
 		return m.MapUint32
@@ -627,13 +619,6 @@ func (m *FieldTestMessage) GetMapInt64() map[int64]int64 {
 	return nil
 }
 
-func (m *FieldTestMessage) GetMapSint64() map[int64]int64 {
-	if m != nil {
-		return m.MapSint64
-	}
-	return nil
-}
-
 func (m *FieldTestMessage) GetMapUint64() map[uint64]uint64 {
 	if m != nil {
 		return m.MapUint64
@@ -641,37 +626,9 @@ func (m *FieldTestMessage) GetMapUint64() map[uint64]uint64 {
 	return nil
 }
 
-func (m *FieldTestMessage) GetMapSfixed32() map[int32]int32 {
-	if m != nil {
-		return m.MapSfixed32
-	}
-	return nil
-}
-
-func (m *FieldTestMessage) GetMapFixed32() map[uint32]uint32 {
-	if m != nil {
-		return m.MapFixed32
-	}
-	return nil
-}
-
 func (m *FieldTestMessage) GetMapFloat() map[int32]float32 {
 	if m != nil {
 		return m.MapFloat
-	}
-	return nil
-}
-
-func (m *FieldTestMessage) GetMapSfixed64() map[int32]int64 {
-	if m != nil {
-		return m.MapSfixed64
-	}
-	return nil
-}
-
-func (m *FieldTestMessage) GetMapFixed64() map[int32]uint64 {
-	if m != nil {
-		return m.MapFixed64
 	}
 	return nil
 }
@@ -697,16 +654,16 @@ func (m *FieldTestMessage) GetMapBytes() map[int32][]byte {
 	return nil
 }
 
-func (m *FieldTestMessage) GetMap_Message() map[int32]*FieldTestMessage_Message {
+func (m *FieldTestMessage) GetMapMessage() map[int32]*FieldTestMessage_Message {
 	if m != nil {
-		return m.Map_Message
+		return m.MapMessage
 	}
 	return nil
 }
 
-func (m *FieldTestMessage) GetMap_Message2() map[int32]*FieldTestMessage_Message2 {
+func (m *FieldTestMessage) GetMapMessage2() map[int32]*FieldTestMessage_Message2 {
 	if m != nil {
-		return m.Map_Message2
+		return m.MapMessage2
 	}
 	return nil
 }
@@ -714,13 +671,6 @@ func (m *FieldTestMessage) GetMap_Message2() map[int32]*FieldTestMessage_Message
 func (m *FieldTestMessage) GetMapKeyInt32() map[int32]int32 {
 	if m != nil {
 		return m.MapKeyInt32
-	}
-	return nil
-}
-
-func (m *FieldTestMessage) GetMapKeySint32() map[int32]int32 {
-	if m != nil {
-		return m.MapKeySint32
 	}
 	return nil
 }
@@ -739,44 +689,9 @@ func (m *FieldTestMessage) GetMapKeyInt64() map[int64]int32 {
 	return nil
 }
 
-func (m *FieldTestMessage) GetMapKeySint64() map[int64]int32 {
-	if m != nil {
-		return m.MapKeySint64
-	}
-	return nil
-}
-
 func (m *FieldTestMessage) GetMapKeyUint64() map[uint64]int32 {
 	if m != nil {
 		return m.MapKeyUint64
-	}
-	return nil
-}
-
-func (m *FieldTestMessage) GetMapKeySfixed32() map[int32]int32 {
-	if m != nil {
-		return m.MapKeySfixed32
-	}
-	return nil
-}
-
-func (m *FieldTestMessage) GetMapKeyFixed32() map[uint32]int32 {
-	if m != nil {
-		return m.MapKeyFixed32
-	}
-	return nil
-}
-
-func (m *FieldTestMessage) GetMapKeySfixed64() map[int64]int32 {
-	if m != nil {
-		return m.MapKeySfixed64
-	}
-	return nil
-}
-
-func (m *FieldTestMessage) GetMapKeyFixed64() map[uint64]int32 {
-	if m != nil {
-		return m.MapKeyFixed64
 	}
 	return nil
 }
@@ -809,13 +724,6 @@ func (m *FieldTestMessage) GetMapStringMessage2() map[string]*FieldTestMessage_M
 	return nil
 }
 
-func (m *FieldTestMessage) GetMapFixed64Enum() map[uint64]FieldTestMessage_Enum {
-	if m != nil {
-		return m.MapFixed64Enum
-	}
-	return nil
-}
-
 type FieldTestMessage_Message struct {
 }
 
@@ -823,7 +731,7 @@ func (m *FieldTestMessage_Message) Reset()         { *m = FieldTestMessage_Messa
 func (m *FieldTestMessage_Message) String() string { return proto.CompactTextString(m) }
 func (*FieldTestMessage_Message) ProtoMessage()    {}
 func (*FieldTestMessage_Message) Descriptor() ([]byte, []int) {
-	return fileDescriptor_d39ad626ec0e575e, []int{0, 33}
+	return fileDescriptor_d39ad626ec0e575e, []int{0, 20}
 }
 func (m *FieldTestMessage_Message) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -853,15 +761,15 @@ func (m *FieldTestMessage_Message) XXX_DiscardUnknown() {
 var xxx_messageInfo_FieldTestMessage_Message proto.InternalMessageInfo
 
 type FieldTestMessage_Message2 struct {
-	Bool bool                  `protobuf:"varint,1,opt,name=bool,proto3" json:"bool,omitempty"`
-	Enum FieldTestMessage_Enum `protobuf:"varint,2,opt,name=enum,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum" json:"enum,omitempty"`
+	Bv bool                  `protobuf:"varint,1,opt,name=bv,proto3" json:"bv,omitempty"`
+	Ev FieldTestMessage_Enum `protobuf:"varint,2,opt,name=ev,proto3,enum=goproto.protoc.proto3.FieldTestMessage_Enum" json:"ev,omitempty"`
 }
 
 func (m *FieldTestMessage_Message2) Reset()         { *m = FieldTestMessage_Message2{} }
 func (m *FieldTestMessage_Message2) String() string { return proto.CompactTextString(m) }
 func (*FieldTestMessage_Message2) ProtoMessage()    {}
 func (*FieldTestMessage_Message2) Descriptor() ([]byte, []int) {
-	return fileDescriptor_d39ad626ec0e575e, []int{0, 34}
+	return fileDescriptor_d39ad626ec0e575e, []int{0, 21}
 }
 func (m *FieldTestMessage_Message2) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -890,16 +798,16 @@ func (m *FieldTestMessage_Message2) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_FieldTestMessage_Message2 proto.InternalMessageInfo
 
-func (m *FieldTestMessage_Message2) GetBool() bool {
+func (m *FieldTestMessage_Message2) GetBv() bool {
 	if m != nil {
-		return m.Bool
+		return m.Bv
 	}
 	return false
 }
 
-func (m *FieldTestMessage_Message2) GetEnum() FieldTestMessage_Enum {
+func (m *FieldTestMessage_Message2) GetEv() FieldTestMessage_Enum {
 	if m != nil {
-		return m.Enum
+		return m.Ev
 	}
 	return FieldTestMessage_ZERO
 }
@@ -956,30 +864,17 @@ func init() {
 	proto.RegisterMapType((map[int32][]byte)(nil), "goproto.protoc.proto3.FieldTestMessage.MapBytesEntry")
 	proto.RegisterMapType((map[int32]float64)(nil), "goproto.protoc.proto3.FieldTestMessage.MapDoubleEntry")
 	proto.RegisterMapType((map[int32]FieldTestMessage_Enum)(nil), "goproto.protoc.proto3.FieldTestMessage.MapEnumEntry")
-	proto.RegisterMapType((map[uint32]uint32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapFixed32Entry")
-	proto.RegisterMapType((map[int32]uint64)(nil), "goproto.protoc.proto3.FieldTestMessage.MapFixed64Entry")
-	proto.RegisterMapType((map[uint64]FieldTestMessage_Enum)(nil), "goproto.protoc.proto3.FieldTestMessage.MapFixed64EnumEntry")
 	proto.RegisterMapType((map[int32]float32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapFloatEntry")
 	proto.RegisterMapType((map[int32]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapInt32Entry")
 	proto.RegisterMapType((map[int32]int64)(nil), "goproto.protoc.proto3.FieldTestMessage.MapInt32Int64Entry")
 	proto.RegisterMapType((map[int64]int64)(nil), "goproto.protoc.proto3.FieldTestMessage.MapInt64Entry")
-	proto.RegisterMapType((map[uint32]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeyFixed32Entry")
-	proto.RegisterMapType((map[uint64]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeyFixed64Entry")
 	proto.RegisterMapType((map[int32]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeyInt32Entry")
 	proto.RegisterMapType((map[int64]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeyInt64Entry")
-	proto.RegisterMapType((map[int32]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeySfixed32Entry")
-	proto.RegisterMapType((map[int64]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeySfixed64Entry")
-	proto.RegisterMapType((map[int32]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeySint32Entry")
-	proto.RegisterMapType((map[int64]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeySint64Entry")
 	proto.RegisterMapType((map[string]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeyStringEntry")
 	proto.RegisterMapType((map[uint32]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeyUint32Entry")
 	proto.RegisterMapType((map[uint64]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapKeyUint64Entry")
 	proto.RegisterMapType((map[int32]*FieldTestMessage_Message2)(nil), "goproto.protoc.proto3.FieldTestMessage.MapMessage2Entry")
 	proto.RegisterMapType((map[int32]*FieldTestMessage_Message)(nil), "goproto.protoc.proto3.FieldTestMessage.MapMessageEntry")
-	proto.RegisterMapType((map[int32]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapSfixed32Entry")
-	proto.RegisterMapType((map[int32]int64)(nil), "goproto.protoc.proto3.FieldTestMessage.MapSfixed64Entry")
-	proto.RegisterMapType((map[int32]int32)(nil), "goproto.protoc.proto3.FieldTestMessage.MapSint32Entry")
-	proto.RegisterMapType((map[int64]int64)(nil), "goproto.protoc.proto3.FieldTestMessage.MapSint64Entry")
 	proto.RegisterMapType((map[int32]string)(nil), "goproto.protoc.proto3.FieldTestMessage.MapStringEntry")
 	proto.RegisterMapType((map[string]*FieldTestMessage_Message2)(nil), "goproto.protoc.proto3.FieldTestMessage.MapStringMessage2Entry")
 	proto.RegisterMapType((map[string]*FieldTestMessage_Message)(nil), "goproto.protoc.proto3.FieldTestMessage.MapStringMessageEntry")
@@ -993,126 +888,104 @@ func init() {
 func init() { proto.RegisterFile("fields.proto", fileDescriptor_d39ad626ec0e575e) }
 
 var fileDescriptor_d39ad626ec0e575e = []byte{
-	// 1890 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x5a, 0xd9, 0x6f, 0x1c, 0x4d,
-	0x11, 0xdf, 0xd9, 0x1d, 0x7b, 0x77, 0xdb, 0x7b, 0xcc, 0xce, 0xc7, 0x87, 0x5a, 0x79, 0x30, 0x23,
-	0x03, 0x61, 0x08, 0x91, 0x13, 0x6d, 0x9a, 0x26, 0x24, 0x24, 0x24, 0x16, 0xb6, 0x84, 0x10, 0x04,
-	0x26, 0x71, 0x10, 0x81, 0x90, 0xac, 0xe3, 0x71, 0xb0, 0xb2, 0x97, 0xec, 0x75, 0x14, 0xff, 0x17,
-	0x48, 0xdc, 0x08, 0xc4, 0x5f, 0xc0, 0x7d, 0x9f, 0xcf, 0xdc, 0x84, 0x3b, 0x09, 0x04, 0x82, 0xcd,
-	0xfd, 0xcc, 0xf1, 0x8a, 0xba, 0xbb, 0xba, 0xa7, 0x7b, 0xa6, 0xcd, 0xee, 0xcc, 0x97, 0xa7, 0x9d,
-	0x69, 0x57, 0xfd, 0x7e, 0x55, 0xd5, 0xf5, 0xab, 0x6e, 0x8d, 0x8c, 0x1a, 0x5b, 0xdb, 0x71, 0x7f,
-	0x73, 0x77, 0x79, 0xbc, 0x33, 0x9a, 0x8c, 0xfc, 0x17, 0xef, 0x8e, 0xf8, 0x83, 0x78, 0xbd, 0x23,
-	0x7e, 0xce, 0x2c, 0x3d, 0xbd, 0x8c, 0xbc, 0x35, 0x66, 0x77, 0x2d, 0xde, 0x9d, 0xbc, 0x3d, 0xde,
-	0xdd, 0xed, 0xdd, 0x8d, 0xfd, 0x57, 0xa2, 0xe6, 0x68, 0x3c, 0xd9, 0x1e, 0x0d, 0x7b, 0xfd, 0x5b,
-	0x1b, 0xa3, 0x51, 0x1f, 0x3b, 0x81, 0x13, 0xd6, 0xa2, 0x86, 0x5c, 0x5c, 0x19, 0x8d, 0xfa, 0xfe,
-	0xbb, 0x34, 0xa3, 0x78, 0xb8, 0x37, 0xc0, 0xe5, 0xc0, 0x09, 0x5b, 0xdd, 0x93, 0xcb, 0x56, 0xa2,
-	0xe5, 0x34, 0xc9, 0xf2, 0xea, 0x70, 0x6f, 0x90, 0x40, 0xb2, 0x37, 0xff, 0xd5, 0xa8, 0xa5, 0x20,
-	0xb7, 0x87, 0x93, 0x33, 0x5d, 0x5c, 0x09, 0x9c, 0x70, 0x2e, 0x52, 0x44, 0x6f, 0x65, 0x8b, 0xfe,
-	0x6b, 0x50, 0x5b, 0x99, 0xed, 0x0a, 0x3b, 0x37, 0x70, 0xc2, 0x4e, 0xa4, 0xbc, 0xaf, 0x6e, 0x67,
-	0x0c, 0xf7, 0x84, 0xe1, 0x5c, 0xe0, 0x84, 0xcd, 0xc4, 0x70, 0x5d, 0x18, 0xa6, 0x88, 0x29, 0xc1,
-	0xf3, 0x81, 0x13, 0x56, 0x0c, 0x62, 0x4a, 0x32, 0xc4, 0x94, 0xe0, 0x6a, 0xe0, 0x84, 0xbe, 0x49,
-	0x9c, 0x32, 0xdc, 0x13, 0x86, 0xb5, 0xc0, 0x09, 0x5d, 0x93, 0x98, 0x12, 0xff, 0x75, 0xa8, 0x93,
-	0x20, 0x6e, 0x6d, 0x3f, 0x88, 0x37, 0xcf, 0x74, 0x71, 0x3d, 0x70, 0xc2, 0x76, 0xe4, 0x29, 0x4c,
-	0x58, 0xf7, 0x5f, 0x8b, 0xd4, 0xda, 0x2d, 0x69, 0x8b, 0x02, 0x27, 0xac, 0x46, 0x8a, 0x6d, 0x0d,
-	0x4c, 0xf5, 0x84, 0xb6, 0xfa, 0xa3, 0xde, 0x04, 0x2f, 0x04, 0x4e, 0x58, 0x4e, 0x12, 0x5a, 0x63,
-	0x8b, 0x16, 0x7a, 0x4a, 0x70, 0x23, 0x70, 0x42, 0x2f, 0x4d, 0x4f, 0x49, 0x96, 0x9e, 0x12, 0xdc,
-	0x0c, 0x9c, 0x70, 0x3e, 0x45, 0x9f, 0xca, 0x7f, 0x73, 0xb4, 0xb7, 0xd1, 0x8f, 0x71, 0x2b, 0x70,
-	0x42, 0x27, 0xc9, 0xff, 0x2d, 0x7c, 0xd5, 0xac, 0xe8, 0x64, 0x67, 0x7b, 0x78, 0x17, 0xb7, 0x03,
-	0x27, 0xac, 0x6b, 0x15, 0xe5, 0xab, 0x46, 0x42, 0x1b, 0xfb, 0x93, 0x78, 0x17, 0x7b, 0x81, 0x13,
-	0x36, 0x92, 0x84, 0x56, 0xd8, 0xa2, 0x7f, 0x43, 0x8b, 0x11, 0x1a, 0x0d, 0x77, 0x02, 0x27, 0x5c,
-	0xe8, 0x9e, 0x9a, 0xb5, 0x2f, 0xe1, 0x37, 0x49, 0x4a, 0xaa, 0xe2, 0xa6, 0x56, 0x2c, 0x58, 0xeb,
-	0x62, 0x9f, 0x83, 0x9f, 0xce, 0x09, 0xde, 0x4d, 0xca, 0x2b, 0x57, 0xfc, 0x10, 0x35, 0x77, 0xe2,
-	0x71, 0xdc, 0x9b, 0xc4, 0x9b, 0x42, 0x74, 0x3f, 0x70, 0x82, 0x4a, 0x58, 0x5b, 0x29, 0x7b, 0x4e,
-	0xd4, 0x90, 0x7f, 0xe1, 0xca, 0xbb, 0xae, 0x59, 0x72, 0xe5, 0xfd, 0x90, 0x59, 0xe6, 0x94, 0x9e,
-	0x89, 0xcb, 0xe5, 0x77, 0x02, 0xb5, 0x14, 0xae, 0x50, 0xcb, 0x8f, 0x18, 0xf0, 0x1c, 0x37, 0x55,
-	0x94, 0x42, 0x83, 0x27, 0x51, 0x5b, 0xd9, 0x82, 0x06, 0x7f, 0xcc, 0x8c, 0x3b, 0xdc, 0x58, 0xe1,
-	0x80, 0x10, 0x75, 0x6b, 0x10, 0xe2, 0x4f, 0x98, 0x75, 0xd3, 0xb4, 0x06, 0x35, 0xa6, 0xe2, 0xa0,
-	0x04, 0xff, 0x94, 0x19, 0x57, 0x32, 0x71, 0x50, 0x92, 0x89, 0x83, 0x12, 0xfc, 0x33, 0x66, 0xec,
-	0x67, 0xe3, 0x48, 0x59, 0x83, 0x2e, 0x1f, 0x32, 0x6b, 0x37, 0x1b, 0x07, 0x25, 0xfe, 0x69, 0xd4,
-	0x49, 0xb0, 0xa5, 0xe0, 0x7e, 0xce, 0xec, 0xdb, 0xdc, 0xde, 0x53, 0xe8, 0x52, 0xa1, 0xcb, 0x48,
-	0xad, 0x29, 0x85, 0xfe, 0x82, 0x39, 0x54, 0xb9, 0x83, 0x22, 0x97, 0x32, 0xd5, 0x33, 0x15, 0x32,
-	0xfd, 0x25, 0xb3, 0x2e, 0x9b, 0x99, 0x0a, 0xad, 0x66, 0xa3, 0xa1, 0x04, 0xff, 0x8a, 0x99, 0x7b,
-	0xb6, 0x68, 0x28, 0xc9, 0x46, 0x43, 0x09, 0xfe, 0x35, 0x73, 0x98, 0xb7, 0x44, 0x93, 0xaa, 0x0e,
-	0xa8, 0xf6, 0x37, 0xcc, 0xdc, 0x31, 0xab, 0x03, 0xd2, 0x0d, 0xf5, 0xca, 0x0b, 0xe9, 0xfe, 0x96,
-	0x59, 0xd7, 0xb5, 0xaa, 0x0b, 0xed, 0x1e, 0xd7, 0xb2, 0x14, 0xda, 0x7d, 0xc4, 0x0c, 0x1b, 0x49,
-	0x86, 0x42, 0xbc, 0xef, 0xd5, 0xe2, 0x95, 0xe2, 0x7d, 0xcc, 0x2c, 0x8b, 0xa8, 0x57, 0x22, 0x49,
-	0xf5, 0xbe, 0x5f, 0x2b, 0x9f, 0x52, 0xef, 0x13, 0x81, 0x5e, 0x40, 0xbe, 0x29, 0xf8, 0xae, 0xff,
-	0x2a, 0xb4, 0x30, 0x1c, 0x8d, 0x7b, 0x77, 0xee, 0x09, 0xf1, 0x3e, 0x76, 0x41, 0xbc, 0xa5, 0x08,
-	0x89, 0x75, 0x2e, 0xdd, 0x48, 0x59, 0x71, 0xe1, 0x3e, 0x71, 0x0b, 0x09, 0x57, 0x61, 0x72, 0xd9,
-	0x1e, 0x47, 0x0d, 0xc0, 0x14, 0xca, 0xfa, 0x9d, 0x0b, 0xa2, 0x2d, 0x45, 0x40, 0x26, 0x24, 0x1b,
-	0xa2, 0x26, 0xd8, 0x81, 0x60, 0x7f, 0xef, 0x82, 0x60, 0x4b, 0x11, 0x20, 0x80, 0x5c, 0x13, 0x4b,
-	0x10, 0xeb, 0x53, 0x17, 0xc4, 0xaa, 0x2c, 0x41, 0xaa, 0x06, 0x37, 0x25, 0xf8, 0x0f, 0x2e, 0x08,
-	0x55, 0xe7, 0xa6, 0x24, 0xc5, 0x4d, 0x09, 0xfe, 0xa3, 0x0b, 0x22, 0x35, 0xb8, 0x0d, 0x4b, 0x10,
-	0xe8, 0x33, 0x17, 0x04, 0x6a, 0x70, 0x8b, 0x76, 0x95, 0x98, 0x52, 0x6b, 0x7f, 0x72, 0x41, 0x9c,
-	0xa5, 0xa8, 0x05, 0xa8, 0x5b, 0x89, 0xd4, 0xc0, 0x5a, 0x1a, 0x1f, 0xb8, 0x20, 0xcc, 0x52, 0x04,
-	0x94, 0x52, 0x96, 0x49, 0x56, 0x42, 0x94, 0x87, 0x2e, 0x88, 0x52, 0x65, 0x25, 0x24, 0x99, 0x8e,
-	0x80, 0x12, 0xfc, 0x67, 0x17, 0x04, 0x99, 0x8a, 0x80, 0x92, 0x74, 0x04, 0x94, 0xe0, 0xbf, 0xb8,
-	0x20, 0x46, 0x33, 0x02, 0xa3, 0x0a, 0x20, 0xc4, 0xbf, 0xba, 0x20, 0x44, 0x55, 0x05, 0x25, 0x43,
-	0x55, 0x59, 0x21, 0xc2, 0xbf, 0x31, 0xcb, 0xba, 0x51, 0x59, 0x29, 0x43, 0x99, 0x95, 0x10, 0xe1,
-	0xdf, 0x99, 0x61, 0x43, 0xcf, 0x4a, 0xca, 0x50, 0xc6, 0x29, 0x45, 0xf8, 0x0f, 0xb7, 0x90, 0x08,
-	0xf5, 0xc4, 0x12, 0x19, 0xb6, 0x4d, 0xf0, 0x2e, 0xfe, 0xa7, 0x5b, 0x4c, 0x84, 0x7a, 0x91, 0x95,
-	0x0c, 0xdf, 0x89, 0x6a, 0x83, 0xde, 0x58, 0x68, 0xf0, 0xb3, 0x65, 0x0e, 0x4c, 0x66, 0x06, 0xee,
-	0x8d, 0x99, 0x48, 0x57, 0x87, 0x93, 0x9d, 0xfd, 0xa8, 0x3a, 0x10, 0x6f, 0x12, 0x91, 0xeb, 0xf5,
-	0x73, 0xf9, 0x11, 0x99, 0x44, 0x13, 0x44, 0x2e, 0xd8, 0xab, 0xa8, 0xce, 0x10, 0x85, 0xb4, 0x3e,
-	0x2f, 0x20, 0x5f, 0x9f, 0x03, 0x92, 0xcb, 0x59, 0x60, 0xb2, 0xd0, 0x84, 0xba, 0xaf, 0x23, 0xc4,
-	0x40, 0x41, 0xda, 0x5f, 0x10, 0xa8, 0x34, 0x07, 0xaa, 0xd0, 0xbe, 0x80, 0x65, 0xf1, 0xc1, 0x2c,
-	0x00, 0x5c, 0x18, 0x04, 0x5f, 0xcc, 0x8f, 0xbb, 0x9e, 0xc2, 0x85, 0xc9, 0x91, 0x14, 0x81, 0x12,
-	0xfc, 0xa5, 0x42, 0x45, 0xa0, 0xc4, 0x28, 0x02, 0x25, 0x7a, 0x11, 0x28, 0xc1, 0x5f, 0x2e, 0x56,
-	0x04, 0x09, 0x2b, 0x8b, 0x90, 0xe0, 0xc2, 0x44, 0xfa, 0x4a, 0xb1, 0x22, 0xe8, 0xb8, 0x30, 0xc2,
-	0xde, 0x87, 0x1a, 0x3c, 0x5e, 0x39, 0x92, 0xbe, 0x2a, 0x90, 0xcf, 0xe6, 0x89, 0x18, 0x7c, 0x05,
-	0xf6, 0xc2, 0x20, 0x59, 0xf1, 0xdf, 0x83, 0xd8, 0xab, 0x9a, 0x77, 0x5f, 0x13, 0xe0, 0x6f, 0xc8,
-	0x01, 0xbe, 0xa6, 0x63, 0xb3, 0x12, 0xc8, 0x09, 0x09, 0xbb, 0x27, 0xc6, 0xe3, 0xd7, 0xf3, 0xef,
-	0x1e, 0x9f, 0x9f, 0xc9, 0xee, 0x89, 0x71, 0x6a, 0x54, 0x83, 0x12, 0xfc, 0x8d, 0xa2, 0xd5, 0x90,
-	0x95, 0x4e, 0xaa, 0x41, 0x89, 0x51, 0x0d, 0x4a, 0xf0, 0x37, 0x0b, 0x56, 0x43, 0x62, 0xab, 0x6a,
-	0x24, 0xed, 0x01, 0xa3, 0xfa, 0x5b, 0xf9, 0xdb, 0x43, 0xcc, 0xf2, 0xa4, 0x3d, 0x60, 0xb6, 0xcb,
-	0x76, 0x16, 0x83, 0xfd, 0xdb, 0x05, 0xda, 0x99, 0x7b, 0x6a, 0xed, 0x2c, 0x4e, 0x02, 0xd8, 0x3d,
-	0x71, 0x0c, 0x7c, 0x27, 0xff, 0xee, 0xf1, 0x73, 0x22, 0xd9, 0x3d, 0x71, 0x6c, 0x40, 0x7d, 0xe5,
-	0x99, 0xf1, 0xdd, 0xfc, 0xf5, 0x85, 0xc7, 0xa4, 0xbe, 0xf2, 0xd0, 0x80, 0xc6, 0x50, 0x27, 0xc6,
-	0xf7, 0xf2, 0x37, 0x86, 0xf4, 0x4d, 0x1a, 0x43, 0x1d, 0x19, 0x37, 0x51, 0x93, 0xa1, 0xdf, 0x8b,
-	0xf7, 0x61, 0x24, 0x7f, 0xa8, 0x92, 0x1b, 0xfe, 0x6d, 0xf1, 0xbe, 0x36, 0x95, 0x19, 0xbc, 0x5c,
-	0xf1, 0x6f, 0xa3, 0x96, 0x84, 0x87, 0xe1, 0xfc, 0x61, 0x81, 0xff, 0xc6, 0x7c, 0xf8, 0xfa, 0x7c,
-	0x6e, 0x0c, 0xb4, 0x25, 0x9d, 0x01, 0xc6, 0xf4, 0x47, 0x0a, 0x31, 0xac, 0x67, 0x19, 0x60, 0x58,
-	0x9b, 0x25, 0xa2, 0x04, 0x7f, 0xb4, 0x68, 0x89, 0x74, 0x69, 0xca, 0x95, 0x74, 0x89, 0x28, 0xc1,
-	0x1f, 0x2b, 0x5c, 0x22, 0x49, 0xa0, 0x95, 0xc8, 0x64, 0x80, 0x21, 0xfe, 0xf1, 0xc2, 0x25, 0x4a,
-	0x31, 0xc0, 0x28, 0xdf, 0x42, 0x9e, 0xca, 0x41, 0x4e, 0xdc, 0x4f, 0x08, 0x8e, 0xf3, 0x39, 0xb3,
-	0x30, 0x26, 0x7a, 0x6b, 0x60, 0x2c, 0xfa, 0x77, 0x50, 0x5b, 0xf2, 0x48, 0x9a, 0x4f, 0x0a, 0x9a,
-	0x73, 0xf9, 0x68, 0x8c, 0xd9, 0xde, 0x1c, 0xe8, 0x6b, 0xd9, 0x64, 0x28, 0xc1, 0x9f, 0x7a, 0x09,
-	0xc9, 0xc8, 0x92, 0x19, 0xc9, 0x50, 0x92, 0x49, 0x86, 0x12, 0xfc, 0xe9, 0xe2, 0xc9, 0x48, 0x16,
-	0x3d, 0x99, 0x54, 0x77, 0x89, 0x49, 0xfa, 0x99, 0x62, 0xdd, 0xa5, 0x0d, 0x53, 0xd9, 0x5d, 0x62,
-	0x9e, 0x42, 0x1a, 0x5c, 0x2b, 0x20, 0x90, 0x7f, 0xe5, 0x4f, 0x83, 0x8f, 0x0b, 0x4d, 0x22, 0xcd,
-	0x81, 0xbe, 0xe6, 0xf7, 0x91, 0x9f, 0x1c, 0x06, 0xb7, 0x06, 0x30, 0x66, 0xff, 0x2d, 0x78, 0x2e,
-	0xe4, 0x3e, 0x14, 0x8c, 0x61, 0xeb, 0x0d, 0x52, 0xcb, 0xfe, 0x08, 0xbd, 0x90, 0x65, 0xeb, 0xe2,
-	0xff, 0x08, 0xba, 0x8b, 0x45, 0xe9, 0xa0, 0xdd, 0x3a, 0x69, 0x3e, 0xd5, 0x72, 0xd0, 0x06, 0xe2,
-	0xba, 0xfd, 0xdf, 0xfc, 0x2d, 0xa7, 0x1a, 0x41, 0xde, 0xba, 0x5b, 0x03, 0x63, 0xf1, 0xd8, 0x39,
-	0xd4, 0xd0, 0xef, 0xf9, 0xbe, 0x87, 0x2a, 0xf7, 0xe2, 0x7d, 0xfe, 0x85, 0x7b, 0x2e, 0x62, 0x8f,
-	0xfe, 0xcb, 0xd0, 0xdc, 0xfd, 0x5e, 0x7f, 0x2f, 0xe6, 0x1f, 0xb4, 0x6b, 0x91, 0x78, 0x39, 0x57,
-	0x3e, 0xeb, 0x1c, 0xfb, 0x00, 0xf7, 0x55, 0xd8, 0x16, 0xdf, 0x15, 0xdd, 0x37, 0xef, 0xc7, 0x70,
-	0x8d, 0xe9, 0x3c, 0x6a, 0x1a, 0x17, 0xfd, 0x69, 0x61, 0xce, 0xe9, 0xce, 0x6f, 0x42, 0x2d, 0xf3,
-	0x3e, 0xaf, 0x7b, 0x77, 0x2c, 0xde, 0x9d, 0xac, 0xf7, 0xba, 0xdd, 0xbb, 0x69, 0xf1, 0x6e, 0x5a,
-	0x03, 0x87, 0x2e, 0xd6, 0x9d, 0x2b, 0x16, 0xe7, 0x8a, 0x3d, 0x70, 0x8b, 0xb7, 0x6f, 0xf1, 0xf6,
-	0xed, 0x81, 0x5b, 0xbc, 0x5d, 0x8b, 0xb7, 0xab, 0x7b, 0x5f, 0x44, 0x5e, 0xfa, 0x36, 0xad, 0xfb,
-	0xb7, 0x2d, 0xfe, 0x6d, 0xdd, 0xff, 0x02, 0x6a, 0xa7, 0x2e, 0xcc, 0xba, 0x7b, 0xd5, 0xe2, 0x5e,
-	0xcd, 0xd6, 0x2d, 0xb9, 0x16, 0x4f, 0xdb, 0xf0, 0xf2, 0x51, 0xb1, 0x5b, 0x72, 0xb7, 0xf9, 0x7b,
-	0x47, 0xc4, 0x3e, 0xa3, 0xfb, 0x7c, 0xb6, 0xf0, 0xda, 0x1d, 0x76, 0x9a, 0xb7, 0x63, 0xd9, 0xf4,
-	0x64, 0xb8, 0x4e, 0xf3, 0xae, 0x67, 0xeb, 0x96, 0x5c, 0x48, 0xa7, 0x39, 0x37, 0x74, 0xe7, 0x21,
-	0xcf, 0x5b, 0x9f, 0x84, 0x16, 0xf7, 0x55, 0xdd, 0xbd, 0xc0, 0x97, 0x48, 0x8d, 0x6f, 0xcc, 0xf7,
-	0xc9, 0x18, 0x85, 0x16, 0xc2, 0x35, 0x93, 0x30, 0xff, 0xc7, 0xc9, 0x4c, 0x67, 0x18, 0xb7, 0xd3,
-	0x5c, 0xa3, 0xe4, 0xcd, 0xa8, 0x93, 0xb9, 0x7d, 0x4e, 0x9b, 0x26, 0x76, 0x80, 0x1c, 0x03, 0x65,
-	0xee, 0xa8, 0x0c, 0x66, 0x9c, 0x29, 0x47, 0x67, 0x30, 0xe3, 0x58, 0x39, 0x3a, 0x83, 0x19, 0x27,
-	0x8b, 0x01, 0x70, 0x19, 0xbd, 0x60, 0xb9, 0xd8, 0x4d, 0x1b, 0x2e, 0x06, 0xc4, 0x25, 0xe4, 0x67,
-	0x2f, 0x6d, 0xd3, 0xe6, 0xcb, 0xff, 0x0b, 0xc2, 0x92, 0x87, 0x97, 0x2f, 0x08, 0x0b, 0xc2, 0xfc,
-	0xec, 0x7b, 0x61, 0x57, 0x7b, 0x7d, 0xb6, 0x10, 0x52, 0x17, 0xa5, 0x69, 0x0d, 0x6d, 0x1c, 0x31,
-	0x13, 0xf4, 0xa2, 0xf5, 0x0a, 0x64, 0x09, 0xe3, 0x39, 0x0a, 0xff, 0x3e, 0x7a, 0xb9, 0xfd, 0x26,
-	0x64, 0xa1, 0x7d, 0x9e, 0xf2, 0x1f, 0xf1, 0x5d, 0x4f, 0xdf, 0x89, 0x2c, 0x7b, 0xf6, 0xbc, 0xee,
-	0x2d, 0x75, 0x54, 0x85, 0x3f, 0x1d, 0xbb, 0x8d, 0x6a, 0xea, 0x72, 0xe7, 0x23, 0x57, 0xfb, 0x3f,
-	0x02, 0xfe, 0xec, 0x5f, 0x42, 0x6e, 0xe1, 0x7f, 0x1b, 0xe0, 0x9e, 0x4b, 0x4b, 0xc8, 0xe5, 0xdf,
-	0x53, 0x6b, 0xc8, 0xbd, 0xb1, 0x1a, 0x5d, 0xf1, 0x4a, 0x7e, 0x15, 0x55, 0xae, 0xbc, 0x63, 0xd5,
-	0x73, 0xd8, 0xc3, 0xb5, 0x77, 0x5f, 0xf1, 0xca, 0x4b, 0xaf, 0x40, 0xd5, 0xd5, 0x07, 0xbd, 0xc1,
-	0xb8, 0x1f, 0xb3, 0xa6, 0xd8, 0xda, 0xee, 0xc7, 0x9b, 0xd0, 0x28, 0xe2, 0xe5, 0xc4, 0x0c, 0x20,
-	0x2b, 0x4b, 0xdf, 0x3f, 0x58, 0x74, 0x1e, 0x1e, 0x2c, 0x3a, 0xcf, 0x0e, 0x16, 0x9d, 0x0f, 0x1e,
-	0x2e, 0x96, 0x1e, 0x1e, 0x2e, 0x96, 0x1e, 0x1d, 0x2e, 0x96, 0x6e, 0xd4, 0x96, 0x4f, 0x89, 0x40,
-	0x37, 0xe6, 0xc5, 0xef, 0xff, 0x02, 0x00, 0x00, 0xff, 0xff, 0x77, 0x19, 0x2a, 0x27, 0x76, 0x21,
-	0x00, 0x00,
+	// 1544 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x98, 0x6b, 0x73, 0x13, 0xb7,
+	0x1a, 0xc7, 0x2d, 0x5f, 0x62, 0x5b, 0xf1, 0x75, 0xcf, 0xe1, 0x8c, 0x86, 0x17, 0x61, 0x4f, 0x28,
+	0xb0, 0x5c, 0x6a, 0x32, 0x8e, 0x10, 0x34, 0x05, 0x4a, 0x53, 0x92, 0x19, 0x86, 0x96, 0x4c, 0xb7,
+	0xd0, 0x32, 0x81, 0x96, 0xb1, 0xc9, 0x86, 0x7a, 0xe2, 0xdb, 0x24, 0x4e, 0x86, 0x7c, 0x8b, 0x7e,
+	0xac, 0xde, 0x9b, 0xde, 0x69, 0x5f, 0x75, 0xe0, 0x8b, 0x74, 0x24, 0x3d, 0xd2, 0x4a, 0xbb, 0xcb,
+	0x38, 0xeb, 0xe1, 0x95, 0x6d, 0xf1, 0x3c, 0xff, 0xff, 0x5f, 0x8a, 0x7e, 0xfb, 0x60, 0xe3, 0xca,
+	0x76, 0x2f, 0xe8, 0x6f, 0xed, 0xb5, 0xc6, 0xbb, 0xa3, 0xc9, 0xc8, 0x39, 0xf1, 0x6c, 0x24, 0xde,
+	0xc8, 0x8f, 0x4f, 0xe5, 0xcb, 0xf2, 0xe2, 0xd1, 0x12, 0x6e, 0xac, 0xf3, 0xba, 0xfb, 0xc1, 0xde,
+	0xe4, 0xa3, 0x60, 0x6f, 0xaf, 0xf3, 0x2c, 0x70, 0x4e, 0xe3, 0xea, 0x68, 0x3c, 0xe9, 0x8d, 0x86,
+	0x9d, 0xfe, 0x93, 0xee, 0x68, 0xd4, 0x27, 0xc8, 0x45, 0x5e, 0xc9, 0xaf, 0xa8, 0xc5, 0xd5, 0xd1,
+	0xa8, 0xef, 0x7c, 0x6c, 0x14, 0x05, 0xc3, 0xfd, 0x01, 0xc9, 0xba, 0xc8, 0xab, 0xb5, 0x2f, 0xb5,
+	0x12, 0x8d, 0x5a, 0x51, 0x93, 0xd6, 0xda, 0x70, 0x7f, 0x10, 0x4a, 0xf2, 0x4f, 0xce, 0x19, 0x5c,
+	0xd3, 0x92, 0xbd, 0xe1, 0x64, 0xb9, 0x4d, 0x72, 0x2e, 0xf2, 0x0a, 0xbe, 0x36, 0xba, 0xc3, 0x17,
+	0x9d, 0x73, 0xb8, 0xae, 0xcb, 0xf6, 0x64, 0x5d, 0xde, 0x45, 0x5e, 0xd3, 0xd7, 0xdd, 0x9f, 0xf4,
+	0x62, 0x85, 0xfb, 0xb2, 0xb0, 0xe0, 0x22, 0xaf, 0x1a, 0x16, 0x3e, 0x90, 0x85, 0x11, 0x63, 0x46,
+	0xc9, 0x9c, 0x8b, 0xbc, 0x9c, 0x65, 0xcc, 0x68, 0xcc, 0x98, 0x51, 0x52, 0x74, 0x91, 0xe7, 0xd8,
+	0xc6, 0x91, 0xc2, 0x7d, 0x59, 0x58, 0x72, 0x91, 0x97, 0xb7, 0x8d, 0x19, 0x75, 0x2e, 0xe2, 0x66,
+	0xa8, 0xb8, 0xdd, 0x7b, 0x1e, 0x6c, 0x2d, 0xb7, 0x49, 0xd9, 0x45, 0x5e, 0xdd, 0x6f, 0x68, 0x4d,
+	0x58, 0x77, 0xce, 0x63, 0xbd, 0xf6, 0x44, 0xd5, 0x62, 0x17, 0x79, 0x45, 0x5f, 0xbb, 0xad, 0x43,
+	0xa9, 0xb9, 0xa1, 0xed, 0xfe, 0xa8, 0x33, 0x21, 0xf3, 0x2e, 0xf2, 0xb2, 0xe1, 0x86, 0xd6, 0xf9,
+	0x62, 0x82, 0x3d, 0xa3, 0xa4, 0xe2, 0x22, 0xaf, 0x11, 0xb5, 0x67, 0x34, 0x6e, 0xcf, 0x28, 0xa9,
+	0xba, 0xc8, 0x9b, 0x8b, 0xd8, 0x47, 0xf6, 0xbf, 0x35, 0xda, 0xef, 0xf6, 0x03, 0x52, 0x73, 0x91,
+	0x87, 0xc2, 0xfd, 0xdf, 0x16, 0xab, 0xf6, 0x89, 0x4e, 0x76, 0x7b, 0xc3, 0x67, 0xa4, 0xee, 0x22,
+	0xaf, 0x6c, 0x9c, 0xa8, 0x58, 0xb5, 0x36, 0xd4, 0x3d, 0x9c, 0x04, 0x7b, 0xa4, 0xe1, 0x22, 0xaf,
+	0x12, 0x6e, 0x68, 0x95, 0x2f, 0x3a, 0x9b, 0x46, 0xc6, 0x81, 0xbc, 0x68, 0xa4, 0xe9, 0x22, 0x6f,
+	0xbe, 0x7d, 0xf9, 0xb8, 0xf7, 0x12, 0x5e, 0xc3, 0x4d, 0x29, 0x2a, 0x3e, 0x37, 0x0e, 0x0b, 0xb4,
+	0xdb, 0xc4, 0x11, 0xe2, 0x4b, 0x29, 0xc5, 0xdb, 0xe1, 0xf1, 0xaa, 0x15, 0xc7, 0xc3, 0xd5, 0xdd,
+	0x60, 0x1c, 0x74, 0x26, 0xc1, 0x96, 0x84, 0xee, 0x1b, 0xe4, 0xe6, 0xbc, 0xd2, 0x6a, 0xb6, 0x81,
+	0xfc, 0x8a, 0xfa, 0x17, 0x41, 0xde, 0xa7, 0x46, 0xa5, 0x20, 0xef, 0x5b, 0x5e, 0x99, 0x12, 0x3d,
+	0x5b, 0x57, 0xe0, 0x77, 0x01, 0xd7, 0xb4, 0xae, 0xa4, 0xe5, 0x3b, 0x2e, 0x5c, 0x10, 0xa5, 0xda,
+	0x52, 0x32, 0x78, 0x09, 0xd7, 0x75, 0x2d, 0x30, 0xf8, 0x3d, 0x2f, 0x6e, 0x8a, 0x62, 0xad, 0x03,
+	0x20, 0x9a, 0xd5, 0x00, 0xe2, 0x0f, 0xbc, 0xba, 0x6a, 0x57, 0x03, 0x8d, 0x91, 0x1c, 0x8c, 0x92,
+	0x1f, 0x79, 0x71, 0x2e, 0x96, 0x83, 0xd1, 0x58, 0x0e, 0x46, 0xc9, 0x4f, 0xbc, 0xd8, 0x89, 0xe7,
+	0x88, 0x54, 0x03, 0x97, 0x47, 0xbc, 0x3a, 0x1f, 0xcf, 0xc1, 0xa8, 0xb3, 0x84, 0x9b, 0xa1, 0xb6,
+	0x02, 0xee, 0x67, 0x5e, 0x5f, 0x17, 0xf5, 0x0d, 0xad, 0xae, 0x08, 0x6d, 0x61, 0xbd, 0xa6, 0x09,
+	0xfd, 0x85, 0x37, 0x14, 0x45, 0x83, 0x36, 0x57, 0x98, 0x9a, 0x3b, 0x95, 0x98, 0xfe, 0xca, 0xab,
+	0xb3, 0xf6, 0x4e, 0x25, 0xab, 0xf1, 0x34, 0x8c, 0x92, 0xdf, 0x78, 0x79, 0x23, 0x29, 0x0d, 0xa3,
+	0xf1, 0x34, 0x8c, 0x92, 0xdf, 0x79, 0xc3, 0x5c, 0x42, 0x9a, 0xc8, 0xe9, 0x00, 0xb5, 0x7f, 0xf0,
+	0x72, 0x64, 0x9f, 0x0e, 0xa0, 0xeb, 0x99, 0x27, 0x2f, 0xd1, 0xfd, 0x93, 0x57, 0x97, 0x8d, 0x53,
+	0x97, 0xec, 0x9e, 0x35, 0x76, 0x29, 0xd9, 0x7d, 0xc1, 0x0b, 0x2b, 0xe1, 0x0e, 0x25, 0xbc, 0x8f,
+	0x8c, 0xbc, 0x0a, 0xde, 0xbf, 0x78, 0xe5, 0x2c, 0xf4, 0x2a, 0x25, 0x45, 0xef, 0x17, 0xc6, 0xf1,
+	0x69, 0x7a, 0xff, 0x96, 0xea, 0x33, 0xe0, 0x1b, 0x91, 0x6f, 0x3b, 0xa7, 0xf1, 0xfc, 0x70, 0x34,
+	0xee, 0x3c, 0xdd, 0x91, 0xf0, 0x9e, 0x02, 0x76, 0x33, 0x3e, 0x96, 0xcb, 0x30, 0x33, 0x55, 0x91,
+	0xe0, 0xd6, 0x9d, 0x09, 0x5b, 0x2d, 0x09, 0x33, 0xb3, 0x02, 0x92, 0x92, 0xab, 0xff, 0x03, 0xb1,
+	0x19, 0x1f, 0xac, 0xd4, 0xcc, 0xac, 0x42, 0x19, 0xd0, 0xba, 0x08, 0xb0, 0x66, 0x7c, 0xe8, 0xd7,
+	0x33, 0x53, 0x15, 0x02, 0xa8, 0xa7, 0x81, 0x53, 0x5d, 0xa8, 0x67, 0xa6, 0x61, 0xcc, 0x28, 0x79,
+	0x0b, 0x10, 0x35, 0x8d, 0xc5, 0x28, 0x30, 0x8d, 0x19, 0x25, 0x67, 0x80, 0x4e, 0xcb, 0xd8, 0x2a,
+	0x04, 0x32, 0xcf, 0x02, 0x98, 0x96, 0xb1, 0x98, 0x99, 0x75, 0xa5, 0xa8, 0x18, 0x3b, 0x07, 0x4c,
+	0x66, 0xfc, 0x1a, 0x68, 0x86, 0x33, 0x13, 0x56, 0x34, 0x8f, 0x1e, 0xe0, 0x98, 0xf1, 0xc1, 0x2f,
+	0x9c, 0x99, 0x6a, 0x43, 0x12, 0xc5, 0xf3, 0x40, 0xa2, 0xde, 0x90, 0x9a, 0x99, 0xb6, 0x3d, 0xa3,
+	0xe4, 0x02, 0x40, 0x18, 0xb1, 0x17, 0x33, 0xd3, 0xb2, 0x67, 0x94, 0x5c, 0x04, 0xfe, 0x6c, 0x7b,
+	0x6b, 0xff, 0xc0, 0xde, 0x25, 0x40, 0x4f, 0xef, 0x5f, 0xcf, 0x4c, 0x7d, 0xa2, 0x12, 0xbb, 0xb7,
+	0x39, 0x75, 0xd6, 0x89, 0xaa, 0x99, 0xa9, 0x36, 0x24, 0xa9, 0x6b, 0x71, 0xe8, 0xcc, 0x0d, 0xa9,
+	0x99, 0xa9, 0x32, 0x2a, 0xe8, 0x2e, 0xcf, 0xc4, 0x9c, 0xb9, 0xa9, 0x70, 0x66, 0xd6, 0x6d, 0xed,
+	0x36, 0x59, 0x9a, 0x0d, 0x39, 0xf3, 0x78, 0x35, 0x74, 0x1b, 0xb8, 0x34, 0xe8, 0x8c, 0x25, 0x71,
+	0xcb, 0x42, 0x97, 0x1e, 0x5b, 0xb7, 0x33, 0xe6, 0x48, 0xae, 0x0d, 0x27, 0xbb, 0x87, 0x7e, 0x71,
+	0x20, 0x3f, 0x29, 0x41, 0x41, 0x27, 0x4d, 0x2d, 0xc8, 0x81, 0x0c, 0x05, 0x05, 0x9e, 0x3e, 0x2e,
+	0x73, 0x41, 0x89, 0xd2, 0x15, 0xa1, 0x78, 0x25, 0x85, 0xa2, 0x80, 0x57, 0x4a, 0xf2, 0x60, 0x92,
+	0xe5, 0x07, 0x18, 0x73, 0x4d, 0xe0, 0xf3, 0xaa, 0x10, 0x65, 0x29, 0x44, 0x25, 0xc0, 0x52, 0x95,
+	0xa7, 0x03, 0xa0, 0xc3, 0xa8, 0x8c, 0x92, 0x6b, 0xb3, 0x44, 0x65, 0xd4, 0x8a, 0xca, 0xa8, 0x19,
+	0x95, 0x51, 0xb2, 0x32, 0x53, 0x54, 0xa5, 0xaa, 0xa2, 0x32, 0xaa, 0xa2, 0x4a, 0x4e, 0x6f, 0xa4,
+	0x8e, 0x2a, 0x40, 0x0e, 0xa3, 0x4a, 0xae, 0x21, 0x2a, 0xc0, 0x77, 0x2b, 0x75, 0x54, 0x49, 0x67,
+	0x18, 0x15, 0x68, 0x05, 0x59, 0x40, 0xf5, 0xfd, 0xd4, 0xb2, 0x92, 0xe5, 0x50, 0x16, 0xd8, 0x86,
+	0x13, 0x90, 0x60, 0xaf, 0xa6, 0x3e, 0x01, 0x41, 0x7e, 0x78, 0x02, 0xf2, 0x41, 0xf0, 0x10, 0xcf,
+	0x73, 0x4d, 0xf5, 0x14, 0xf8, 0x40, 0xa8, 0x5e, 0x4d, 0xa1, 0x0a, 0x6f, 0xa5, 0x2e, 0xdf, 0xb6,
+	0x7a, 0x0c, 0x3c, 0xc2, 0x15, 0x43, 0xb9, 0x4d, 0x6e, 0x0b, 0xe9, 0x6b, 0xe9, 0xa5, 0xe1, 0xd6,
+	0xce, 0x87, 0xda, 0x6d, 0xe7, 0x31, 0xae, 0x72, 0xf1, 0x9d, 0xe0, 0x10, 0x30, 0xbb, 0x93, 0x5a,
+	0xfd, 0x6e, 0x70, 0x68, 0x90, 0xc6, 0xd5, 0xd5, 0x8a, 0xf3, 0x04, 0xd7, 0x94, 0x3a, 0x00, 0x77,
+	0x57, 0xc8, 0xbf, 0x93, 0x4e, 0xde, 0x64, 0xae, 0x32, 0x30, 0x96, 0x22, 0xf1, 0x19, 0x25, 0x1f,
+	0xce, 0x18, 0x5f, 0x71, 0x12, 0xc6, 0x67, 0x34, 0x1a, 0x9f, 0x51, 0x72, 0x6f, 0xd6, 0xf8, 0x4a,
+	0xdf, 0x88, 0x6f, 0x1b, 0xc0, 0x1d, 0x7f, 0x30, 0x8b, 0x81, 0x79, 0xcd, 0xc1, 0x00, 0x6e, 0x7a,
+	0x17, 0xd7, 0xf5, 0x13, 0x14, 0x4e, 0x68, 0x53, 0x38, 0xac, 0xa4, 0x7d, 0x8e, 0x1a, 0x67, 0x54,
+	0x1d, 0x98, 0x6b, 0xce, 0x0e, 0x76, 0x42, 0x48, 0x35, 0x00, 0x8f, 0x84, 0xcd, 0x8d, 0xd4, 0xb0,
+	0x5a, 0x18, 0x34, 0x06, 0x91, 0x65, 0x67, 0x88, 0xff, 0x13, 0x37, 0x6b, 0x93, 0xc7, 0xc2, 0xed,
+	0xe6, 0xac, 0x6e, 0x70, 0xb7, 0x9a, 0x51, 0xbb, 0xf6, 0xc9, 0x15, 0x5c, 0x31, 0x87, 0x9d, 0xd3,
+	0xc0, 0xb9, 0x9d, 0xe0, 0x50, 0xfc, 0xa6, 0x53, 0xf0, 0xf9, 0x5b, 0xe7, 0xbf, 0xb8, 0x70, 0xd0,
+	0xe9, 0xef, 0x07, 0xe2, 0x27, 0x9c, 0x92, 0x2f, 0x3f, 0xac, 0x64, 0xaf, 0xa1, 0x93, 0x5f, 0x8a,
+	0x5e, 0x3d, 0xd7, 0x12, 0x7a, 0x57, 0xcd, 0xde, 0xb4, 0x3f, 0xff, 0x18, 0x4e, 0xef, 0xe2, 0xaa,
+	0x35, 0xef, 0xa6, 0xc5, 0x2c, 0x98, 0xcd, 0xd7, 0x71, 0xcd, 0x9e, 0x6b, 0x66, 0x77, 0x35, 0xa1,
+	0xbb, 0x9a, 0x68, 0x0d, 0xb7, 0xc3, 0x6c, 0xce, 0x25, 0x34, 0xe7, 0x92, 0xad, 0x13, 0xba, 0xf3,
+	0x09, 0xdd, 0xf9, 0xb8, 0x75, 0x38, 0x8f, 0xa6, 0xed, 0x3a, 0x1b, 0xb7, 0x36, 0xe6, 0xce, 0xb4,
+	0x6e, 0x14, 0xef, 0x36, 0xb8, 0x9b, 0xd6, 0x5d, 0x8e, 0x07, 0x0f, 0xc7, 0xc8, 0xb4, 0xe6, 0x8a,
+	0xd9, 0x3c, 0xc4, 0xf5, 0xc8, 0xb4, 0x48, 0x68, 0x5f, 0x33, 0xdb, 0x67, 0xf8, 0x06, 0x68, 0xf8,
+	0x8d, 0x71, 0x23, 0x3a, 0x42, 0x12, 0x0c, 0xd7, 0x6d, 0xc3, 0xf4, 0x5f, 0x0a, 0x0d, 0xc7, 0x9b,
+	0xc2, 0xd1, 0x1a, 0x2b, 0xa9, 0x2e, 0xf4, 0x7b, 0xb8, 0x19, 0x9b, 0x1b, 0xd3, 0xee, 0x74, 0xe1,
+	0x75, 0x01, 0x8e, 0x79, 0xad, 0x5f, 0x1f, 0xe0, 0x98, 0x37, 0x3b, 0x59, 0xe0, 0x35, 0x37, 0xac,
+	0x3c, 0x4d, 0xe0, 0x16, 0x76, 0xe2, 0x0f, 0xee, 0x69, 0x87, 0x68, 0xa1, 0x39, 0xc1, 0x27, 0x12,
+	0x9f, 0xc9, 0x09, 0x31, 0xde, 0xe0, 0x65, 0x3b, 0xc0, 0xff, 0x4b, 0x7e, 0x36, 0x27, 0xd8, 0xbe,
+	0xc9, 0x2b, 0x57, 0xc6, 0x45, 0x58, 0x3e, 0xf9, 0x10, 0x97, 0xf4, 0xff, 0x8e, 0x6a, 0x38, 0xdb,
+	0x3d, 0x80, 0x1f, 0xf0, 0xb3, 0xdd, 0x03, 0xe7, 0x3a, 0xce, 0x06, 0x07, 0x33, 0x3d, 0xac, 0xb3,
+	0xc1, 0xc1, 0xe2, 0x22, 0xce, 0x8b, 0xaf, 0x35, 0x25, 0x9c, 0xdf, 0x5c, 0xf3, 0x37, 0x1a, 0x19,
+	0xa7, 0x88, 0x73, 0x1b, 0xf7, 0xd6, 0x1a, 0x88, 0xbf, 0xb9, 0xff, 0xd9, 0x46, 0x23, 0xbb, 0x78,
+	0x0a, 0x17, 0xd7, 0x9e, 0x77, 0x06, 0xe3, 0x7e, 0xc0, 0xff, 0x36, 0xdb, 0xbd, 0x7e, 0xb0, 0x05,
+	0x7f, 0x2f, 0xf9, 0xe1, 0xc2, 0x31, 0x44, 0x56, 0x17, 0xbf, 0x7e, 0xb9, 0x80, 0x8e, 0x5e, 0x2e,
+	0xa0, 0x7f, 0x5e, 0x2e, 0xa0, 0xaf, 0x5e, 0x2d, 0x64, 0x8e, 0x5e, 0x2d, 0x64, 0x5e, 0xbc, 0x5a,
+	0xc8, 0x6c, 0x96, 0x5a, 0x97, 0x65, 0xcc, 0xee, 0x9c, 0x7c, 0xfd, 0x37, 0x00, 0x00, 0xff, 0xff,
+	0xc5, 0x30, 0x53, 0x2f, 0xe9, 0x18, 0x00, 0x00,
 }
 
 func (m *FieldTestMessage) Marshal() (dAtA []byte, err error) {
@@ -1135,832 +1008,10 @@ func (m *FieldTestMessage) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 	_ = i
 	var l int
 	_ = l
-	if len(m.Nopack_Message2) > 0 {
-		for iNdEx := len(m.Nopack_Message2) - 1; iNdEx >= 0; iNdEx-- {
+	if len(m.RepeatedMessage2) > 0 {
+		for iNdEx := len(m.RepeatedMessage2) - 1; iNdEx >= 0; iNdEx-- {
 			{
-				size, err := m.Nopack_Message2[iNdEx].MarshalToSizedBuffer(dAtA[:i])
-				if err != nil {
-					return 0, err
-				}
-				i -= size
-				i = encodeVarintFields(dAtA, i, uint64(size))
-			}
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0xd2
-		}
-	}
-	if len(m.Nopack_Message) > 0 {
-		for iNdEx := len(m.Nopack_Message) - 1; iNdEx >= 0; iNdEx-- {
-			{
-				size, err := m.Nopack_Message[iNdEx].MarshalToSizedBuffer(dAtA[:i])
-				if err != nil {
-					return 0, err
-				}
-				i -= size
-				i = encodeVarintFields(dAtA, i, uint64(size))
-			}
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0xca
-		}
-	}
-	if len(m.NopackBytes) > 0 {
-		for iNdEx := len(m.NopackBytes) - 1; iNdEx >= 0; iNdEx-- {
-			i -= len(m.NopackBytes[iNdEx])
-			copy(dAtA[i:], m.NopackBytes[iNdEx])
-			i = encodeVarintFields(dAtA, i, uint64(len(m.NopackBytes[iNdEx])))
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0xc2
-		}
-	}
-	if len(m.NopackString) > 0 {
-		for iNdEx := len(m.NopackString) - 1; iNdEx >= 0; iNdEx-- {
-			i -= len(m.NopackString[iNdEx])
-			copy(dAtA[i:], m.NopackString[iNdEx])
-			i = encodeVarintFields(dAtA, i, uint64(len(m.NopackString[iNdEx])))
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0xba
-		}
-	}
-	if len(m.NopackDouble) > 0 {
-		for iNdEx := len(m.NopackDouble) - 1; iNdEx >= 0; iNdEx-- {
-			f1 := math.Float64bits(float64(m.NopackDouble[iNdEx]))
-			i -= 8
-			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(f1))
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0xb1
-		}
-	}
-	if len(m.NopackFixed64) > 0 {
-		for iNdEx := len(m.NopackFixed64) - 1; iNdEx >= 0; iNdEx-- {
-			i -= 8
-			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(m.NopackFixed64[iNdEx]))
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0xa9
-		}
-	}
-	if len(m.NopackSfixed64) > 0 {
-		for iNdEx := len(m.NopackSfixed64) - 1; iNdEx >= 0; iNdEx-- {
-			i -= 8
-			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(m.NopackSfixed64[iNdEx]))
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0xa1
-		}
-	}
-	if len(m.NopackFloat) > 0 {
-		for iNdEx := len(m.NopackFloat) - 1; iNdEx >= 0; iNdEx-- {
-			f2 := math.Float32bits(float32(m.NopackFloat[iNdEx]))
-			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(f2))
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0x9d
-		}
-	}
-	if len(m.NopackFixed32) > 0 {
-		for iNdEx := len(m.NopackFixed32) - 1; iNdEx >= 0; iNdEx-- {
-			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(m.NopackFixed32[iNdEx]))
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0x95
-		}
-	}
-	if len(m.NopackSfixed32) > 0 {
-		for iNdEx := len(m.NopackSfixed32) - 1; iNdEx >= 0; iNdEx-- {
-			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(m.NopackSfixed32[iNdEx]))
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0x8d
-		}
-	}
-	if len(m.NopackUint64) > 0 {
-		for iNdEx := len(m.NopackUint64) - 1; iNdEx >= 0; iNdEx-- {
-			i = encodeVarintFields(dAtA, i, uint64(m.NopackUint64[iNdEx]))
-			i--
-			dAtA[i] = 0x26
-			i--
-			dAtA[i] = 0x80
-		}
-	}
-	if len(m.NopackSint64) > 0 {
-		for iNdEx := len(m.NopackSint64) - 1; iNdEx >= 0; iNdEx-- {
-			x3 := (uint64(m.NopackSint64[iNdEx]) << 1) ^ uint64((m.NopackSint64[iNdEx] >> 63))
-			i = encodeVarintFields(dAtA, i, uint64(x3))
-			i--
-			dAtA[i] = 0x25
-			i--
-			dAtA[i] = 0xf8
-		}
-	}
-	if len(m.NopackInt64) > 0 {
-		for iNdEx := len(m.NopackInt64) - 1; iNdEx >= 0; iNdEx-- {
-			i = encodeVarintFields(dAtA, i, uint64(m.NopackInt64[iNdEx]))
-			i--
-			dAtA[i] = 0x25
-			i--
-			dAtA[i] = 0xf0
-		}
-	}
-	if len(m.NopackUint32) > 0 {
-		for iNdEx := len(m.NopackUint32) - 1; iNdEx >= 0; iNdEx-- {
-			i = encodeVarintFields(dAtA, i, uint64(m.NopackUint32[iNdEx]))
-			i--
-			dAtA[i] = 0x25
-			i--
-			dAtA[i] = 0xe8
-		}
-	}
-	if len(m.NopackSint32) > 0 {
-		for iNdEx := len(m.NopackSint32) - 1; iNdEx >= 0; iNdEx-- {
-			x4 := (uint32(m.NopackSint32[iNdEx]) << 1) ^ uint32((m.NopackSint32[iNdEx] >> 31))
-			i = encodeVarintFields(dAtA, i, uint64(x4))
-			i--
-			dAtA[i] = 0x25
-			i--
-			dAtA[i] = 0xe0
-		}
-	}
-	if len(m.NopackInt32) > 0 {
-		for iNdEx := len(m.NopackInt32) - 1; iNdEx >= 0; iNdEx-- {
-			i = encodeVarintFields(dAtA, i, uint64(m.NopackInt32[iNdEx]))
-			i--
-			dAtA[i] = 0x25
-			i--
-			dAtA[i] = 0xd8
-		}
-	}
-	if len(m.NopackEnum) > 0 {
-		for iNdEx := len(m.NopackEnum) - 1; iNdEx >= 0; iNdEx-- {
-			i = encodeVarintFields(dAtA, i, uint64(m.NopackEnum[iNdEx]))
-			i--
-			dAtA[i] = 0x25
-			i--
-			dAtA[i] = 0xd0
-		}
-	}
-	if len(m.NopackBool) > 0 {
-		for iNdEx := len(m.NopackBool) - 1; iNdEx >= 0; iNdEx-- {
-			i--
-			if m.NopackBool[iNdEx] {
-				dAtA[i] = 1
-			} else {
-				dAtA[i] = 0
-			}
-			i--
-			dAtA[i] = 0x25
-			i--
-			dAtA[i] = 0xc8
-		}
-	}
-	if len(m.MapFixed64Enum) > 0 {
-		for k := range m.MapFixed64Enum {
-			v := m.MapFixed64Enum[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i -= 8
-			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(k))
-			i--
-			dAtA[i] = 0x9
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x1f
-			i--
-			dAtA[i] = 0xba
-		}
-	}
-	if len(m.MapStringMessage2) > 0 {
-		for k := range m.MapStringMessage2 {
-			v := m.MapStringMessage2[k]
-			baseI := i
-			if v != nil {
-				{
-					size, err := v.MarshalToSizedBuffer(dAtA[:i])
-					if err != nil {
-						return 0, err
-					}
-					i -= size
-					i = encodeVarintFields(dAtA, i, uint64(size))
-				}
-				i--
-				dAtA[i] = 0x12
-			}
-			i -= len(k)
-			copy(dAtA[i:], k)
-			i = encodeVarintFields(dAtA, i, uint64(len(k)))
-			i--
-			dAtA[i] = 0xa
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x1f
-			i--
-			dAtA[i] = 0xb2
-		}
-	}
-	if len(m.MapStringMessage) > 0 {
-		for k := range m.MapStringMessage {
-			v := m.MapStringMessage[k]
-			baseI := i
-			if v != nil {
-				{
-					size, err := v.MarshalToSizedBuffer(dAtA[:i])
-					if err != nil {
-						return 0, err
-					}
-					i -= size
-					i = encodeVarintFields(dAtA, i, uint64(size))
-				}
-				i--
-				dAtA[i] = 0x12
-			}
-			i -= len(k)
-			copy(dAtA[i:], k)
-			i = encodeVarintFields(dAtA, i, uint64(len(k)))
-			i--
-			dAtA[i] = 0xa
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x1f
-			i--
-			dAtA[i] = 0xaa
-		}
-	}
-	if len(m.MapInt32Int64) > 0 {
-		for k := range m.MapInt32Int64 {
-			v := m.MapInt32Int64[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x1f
-			i--
-			dAtA[i] = 0xa2
-		}
-	}
-	if len(m.MapKeyString) > 0 {
-		for k := range m.MapKeyString {
-			v := m.MapKeyString[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i -= len(k)
-			copy(dAtA[i:], k)
-			i = encodeVarintFields(dAtA, i, uint64(len(k)))
-			i--
-			dAtA[i] = 0xa
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0xfa
-		}
-	}
-	if len(m.MapKeyFixed64) > 0 {
-		for k := range m.MapKeyFixed64 {
-			v := m.MapKeyFixed64[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i -= 8
-			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(k))
-			i--
-			dAtA[i] = 0x9
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0xea
-		}
-	}
-	if len(m.MapKeySfixed64) > 0 {
-		for k := range m.MapKeySfixed64 {
-			v := m.MapKeySfixed64[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i -= 8
-			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(k))
-			i--
-			dAtA[i] = 0x9
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0xe2
-		}
-	}
-	if len(m.MapKeyFixed32) > 0 {
-		for k := range m.MapKeyFixed32 {
-			v := m.MapKeyFixed32[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(k))
-			i--
-			dAtA[i] = 0xd
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0xd2
-		}
-	}
-	if len(m.MapKeySfixed32) > 0 {
-		for k := range m.MapKeySfixed32 {
-			v := m.MapKeySfixed32[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(k))
-			i--
-			dAtA[i] = 0xd
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0xca
-		}
-	}
-	if len(m.MapKeyUint64) > 0 {
-		for k := range m.MapKeyUint64 {
-			v := m.MapKeyUint64[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0xc2
-		}
-	}
-	if len(m.MapKeySint64) > 0 {
-		for k := range m.MapKeySint64 {
-			v := m.MapKeySint64[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64((uint64(k)<<1)^uint64((k>>63))))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0xba
-		}
-	}
-	if len(m.MapKeyInt64) > 0 {
-		for k := range m.MapKeyInt64 {
-			v := m.MapKeyInt64[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0xb2
-		}
-	}
-	if len(m.MapKeyUint32) > 0 {
-		for k := range m.MapKeyUint32 {
-			v := m.MapKeyUint32[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0xaa
-		}
-	}
-	if len(m.MapKeySint32) > 0 {
-		for k := range m.MapKeySint32 {
-			v := m.MapKeySint32[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64((uint32(k)<<1)^uint32((k>>31))))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0xa2
-		}
-	}
-	if len(m.MapKeyInt32) > 0 {
-		for k := range m.MapKeyInt32 {
-			v := m.MapKeyInt32[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x19
-			i--
-			dAtA[i] = 0x9a
-		}
-	}
-	if len(m.Map_Message2) > 0 {
-		for k := range m.Map_Message2 {
-			v := m.Map_Message2[k]
-			baseI := i
-			if v != nil {
-				{
-					size, err := v.MarshalToSizedBuffer(dAtA[:i])
-					if err != nil {
-						return 0, err
-					}
-					i -= size
-					i = encodeVarintFields(dAtA, i, uint64(size))
-				}
-				i--
-				dAtA[i] = 0x12
-			}
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xf2
-		}
-	}
-	if len(m.Map_Message) > 0 {
-		for k := range m.Map_Message {
-			v := m.Map_Message[k]
-			baseI := i
-			if v != nil {
-				{
-					size, err := v.MarshalToSizedBuffer(dAtA[:i])
-					if err != nil {
-						return 0, err
-					}
-					i -= size
-					i = encodeVarintFields(dAtA, i, uint64(size))
-				}
-				i--
-				dAtA[i] = 0x12
-			}
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xea
-		}
-	}
-	if len(m.MapBytes) > 0 {
-		for k := range m.MapBytes {
-			v := m.MapBytes[k]
-			baseI := i
-			if len(v) > 0 {
-				i -= len(v)
-				copy(dAtA[i:], v)
-				i = encodeVarintFields(dAtA, i, uint64(len(v)))
-				i--
-				dAtA[i] = 0x12
-			}
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xe2
-		}
-	}
-	if len(m.MapString) > 0 {
-		for k := range m.MapString {
-			v := m.MapString[k]
-			baseI := i
-			i -= len(v)
-			copy(dAtA[i:], v)
-			i = encodeVarintFields(dAtA, i, uint64(len(v)))
-			i--
-			dAtA[i] = 0x12
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xda
-		}
-	}
-	if len(m.MapDouble) > 0 {
-		for k := range m.MapDouble {
-			v := m.MapDouble[k]
-			baseI := i
-			i -= 8
-			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(v))))
-			i--
-			dAtA[i] = 0x11
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xd2
-		}
-	}
-	if len(m.MapFixed64) > 0 {
-		for k := range m.MapFixed64 {
-			v := m.MapFixed64[k]
-			baseI := i
-			i -= 8
-			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(v))
-			i--
-			dAtA[i] = 0x11
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xca
-		}
-	}
-	if len(m.MapSfixed64) > 0 {
-		for k := range m.MapSfixed64 {
-			v := m.MapSfixed64[k]
-			baseI := i
-			i -= 8
-			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(v))
-			i--
-			dAtA[i] = 0x11
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xc2
-		}
-	}
-	if len(m.MapFloat) > 0 {
-		for k := range m.MapFloat {
-			v := m.MapFloat[k]
-			baseI := i
-			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(v))))
-			i--
-			dAtA[i] = 0x15
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xba
-		}
-	}
-	if len(m.MapFixed32) > 0 {
-		for k := range m.MapFixed32 {
-			v := m.MapFixed32[k]
-			baseI := i
-			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(v))
-			i--
-			dAtA[i] = 0x15
-			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(k))
-			i--
-			dAtA[i] = 0xd
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xb2
-		}
-	}
-	if len(m.MapSfixed32) > 0 {
-		for k := range m.MapSfixed32 {
-			v := m.MapSfixed32[k]
-			baseI := i
-			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(v))
-			i--
-			dAtA[i] = 0x15
-			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(k))
-			i--
-			dAtA[i] = 0xd
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xaa
-		}
-	}
-	if len(m.MapUint64) > 0 {
-		for k := range m.MapUint64 {
-			v := m.MapUint64[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0xa2
-		}
-	}
-	if len(m.MapSint64) > 0 {
-		for k := range m.MapSint64 {
-			v := m.MapSint64[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64((uint64(v)<<1)^uint64((v>>63))))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64((uint64(k)<<1)^uint64((k>>63))))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0x9a
-		}
-	}
-	if len(m.MapInt64) > 0 {
-		for k := range m.MapInt64 {
-			v := m.MapInt64[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0x92
-		}
-	}
-	if len(m.MapUint32) > 0 {
-		for k := range m.MapUint32 {
-			v := m.MapUint32[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0x8a
-		}
-	}
-	if len(m.MapSint32) > 0 {
-		for k := range m.MapSint32 {
-			v := m.MapSint32[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64((uint32(v)<<1)^uint32((v>>31))))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64((uint32(k)<<1)^uint32((k>>31))))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x13
-			i--
-			dAtA[i] = 0x82
-		}
-	}
-	if len(m.MapInt32) > 0 {
-		for k := range m.MapInt32 {
-			v := m.MapInt32[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x12
-			i--
-			dAtA[i] = 0xfa
-		}
-	}
-	if len(m.MapEnum) > 0 {
-		for k := range m.MapEnum {
-			v := m.MapEnum[k]
-			baseI := i
-			i = encodeVarintFields(dAtA, i, uint64(v))
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x12
-			i--
-			dAtA[i] = 0xf2
-		}
-	}
-	if len(m.MapBool) > 0 {
-		for k := range m.MapBool {
-			v := m.MapBool[k]
-			baseI := i
-			i--
-			if v {
-				dAtA[i] = 1
-			} else {
-				dAtA[i] = 0
-			}
-			i--
-			dAtA[i] = 0x10
-			i = encodeVarintFields(dAtA, i, uint64(k))
-			i--
-			dAtA[i] = 0x8
-			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
-			i--
-			dAtA[i] = 0x12
-			i--
-			dAtA[i] = 0xea
-		}
-	}
-	if len(m.Repeated_Message2) > 0 {
-		for iNdEx := len(m.Repeated_Message2) - 1; iNdEx >= 0; iNdEx-- {
-			{
-				size, err := m.Repeated_Message2[iNdEx].MarshalToSizedBuffer(dAtA[:i])
+				size, err := m.RepeatedMessage2[iNdEx].MarshalToSizedBuffer(dAtA[:i])
 				if err != nil {
 					return 0, err
 				}
@@ -1973,10 +1024,10 @@ func (m *FieldTestMessage) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 			dAtA[i] = 0xd2
 		}
 	}
-	if len(m.Repeated_Message) > 0 {
-		for iNdEx := len(m.Repeated_Message) - 1; iNdEx >= 0; iNdEx-- {
+	if len(m.RepeatedMessage) > 0 {
+		for iNdEx := len(m.RepeatedMessage) - 1; iNdEx >= 0; iNdEx-- {
 			{
-				size, err := m.Repeated_Message[iNdEx].MarshalToSizedBuffer(dAtA[:i])
+				size, err := m.RepeatedMessage[iNdEx].MarshalToSizedBuffer(dAtA[:i])
 				if err != nil {
 					return 0, err
 				}
@@ -2013,9 +1064,9 @@ func (m *FieldTestMessage) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 	}
 	if len(m.RepeatedDouble) > 0 {
 		for iNdEx := len(m.RepeatedDouble) - 1; iNdEx >= 0; iNdEx-- {
-			f9 := math.Float64bits(float64(m.RepeatedDouble[iNdEx]))
+			f1 := math.Float64bits(float64(m.RepeatedDouble[iNdEx]))
 			i -= 8
-			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(f9))
+			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(f1))
 		}
 		i = encodeVarintFields(dAtA, i, uint64(len(m.RepeatedDouble)*8))
 		i--
@@ -2047,9 +1098,9 @@ func (m *FieldTestMessage) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 	}
 	if len(m.RepeatedFloat) > 0 {
 		for iNdEx := len(m.RepeatedFloat) - 1; iNdEx >= 0; iNdEx-- {
-			f10 := math.Float32bits(float32(m.RepeatedFloat[iNdEx]))
+			f2 := math.Float32bits(float32(m.RepeatedFloat[iNdEx]))
 			i -= 4
-			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(f10))
+			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(f2))
 		}
 		i = encodeVarintFields(dAtA, i, uint64(len(m.RepeatedFloat)*4))
 		i--
@@ -2080,144 +1131,144 @@ func (m *FieldTestMessage) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 		dAtA[i] = 0x8a
 	}
 	if len(m.RepeatedUint64) > 0 {
-		dAtA12 := make([]byte, len(m.RepeatedUint64)*10)
-		var j11 int
+		dAtA4 := make([]byte, len(m.RepeatedUint64)*10)
+		var j3 int
 		for _, num := range m.RepeatedUint64 {
 			for num >= 1<<7 {
-				dAtA12[j11] = uint8(uint64(num)&0x7f | 0x80)
+				dAtA4[j3] = uint8(uint64(num)&0x7f | 0x80)
 				num >>= 7
-				j11++
+				j3++
 			}
-			dAtA12[j11] = uint8(num)
-			j11++
+			dAtA4[j3] = uint8(num)
+			j3++
 		}
-		i -= j11
-		copy(dAtA[i:], dAtA12[:j11])
-		i = encodeVarintFields(dAtA, i, uint64(j11))
+		i -= j3
+		copy(dAtA[i:], dAtA4[:j3])
+		i = encodeVarintFields(dAtA, i, uint64(j3))
 		i--
 		dAtA[i] = 0xd
 		i--
 		dAtA[i] = 0x82
 	}
 	if len(m.RepeatedSint64) > 0 {
-		var j13 int
-		dAtA15 := make([]byte, len(m.RepeatedSint64)*10)
+		var j5 int
+		dAtA7 := make([]byte, len(m.RepeatedSint64)*10)
 		for _, num := range m.RepeatedSint64 {
-			x14 := (uint64(num) << 1) ^ uint64((num >> 63))
-			for x14 >= 1<<7 {
-				dAtA15[j13] = uint8(uint64(x14)&0x7f | 0x80)
-				j13++
-				x14 >>= 7
+			x6 := (uint64(num) << 1) ^ uint64((num >> 63))
+			for x6 >= 1<<7 {
+				dAtA7[j5] = uint8(uint64(x6)&0x7f | 0x80)
+				j5++
+				x6 >>= 7
 			}
-			dAtA15[j13] = uint8(x14)
-			j13++
+			dAtA7[j5] = uint8(x6)
+			j5++
 		}
-		i -= j13
-		copy(dAtA[i:], dAtA15[:j13])
-		i = encodeVarintFields(dAtA, i, uint64(j13))
+		i -= j5
+		copy(dAtA[i:], dAtA7[:j5])
+		i = encodeVarintFields(dAtA, i, uint64(j5))
 		i--
 		dAtA[i] = 0xc
 		i--
 		dAtA[i] = 0xfa
 	}
 	if len(m.RepeatedInt64) > 0 {
-		dAtA17 := make([]byte, len(m.RepeatedInt64)*10)
-		var j16 int
+		dAtA9 := make([]byte, len(m.RepeatedInt64)*10)
+		var j8 int
 		for _, num1 := range m.RepeatedInt64 {
 			num := uint64(num1)
 			for num >= 1<<7 {
-				dAtA17[j16] = uint8(uint64(num)&0x7f | 0x80)
+				dAtA9[j8] = uint8(uint64(num)&0x7f | 0x80)
 				num >>= 7
-				j16++
+				j8++
 			}
-			dAtA17[j16] = uint8(num)
-			j16++
+			dAtA9[j8] = uint8(num)
+			j8++
 		}
-		i -= j16
-		copy(dAtA[i:], dAtA17[:j16])
-		i = encodeVarintFields(dAtA, i, uint64(j16))
+		i -= j8
+		copy(dAtA[i:], dAtA9[:j8])
+		i = encodeVarintFields(dAtA, i, uint64(j8))
 		i--
 		dAtA[i] = 0xc
 		i--
 		dAtA[i] = 0xf2
 	}
 	if len(m.RepeatedUint32) > 0 {
-		dAtA19 := make([]byte, len(m.RepeatedUint32)*10)
-		var j18 int
+		dAtA11 := make([]byte, len(m.RepeatedUint32)*10)
+		var j10 int
 		for _, num := range m.RepeatedUint32 {
 			for num >= 1<<7 {
-				dAtA19[j18] = uint8(uint64(num)&0x7f | 0x80)
+				dAtA11[j10] = uint8(uint64(num)&0x7f | 0x80)
 				num >>= 7
-				j18++
+				j10++
 			}
-			dAtA19[j18] = uint8(num)
-			j18++
+			dAtA11[j10] = uint8(num)
+			j10++
 		}
-		i -= j18
-		copy(dAtA[i:], dAtA19[:j18])
-		i = encodeVarintFields(dAtA, i, uint64(j18))
+		i -= j10
+		copy(dAtA[i:], dAtA11[:j10])
+		i = encodeVarintFields(dAtA, i, uint64(j10))
 		i--
 		dAtA[i] = 0xc
 		i--
 		dAtA[i] = 0xea
 	}
 	if len(m.RepeatedSint32) > 0 {
-		dAtA20 := make([]byte, len(m.RepeatedSint32)*5)
-		var j21 int
+		dAtA12 := make([]byte, len(m.RepeatedSint32)*5)
+		var j13 int
 		for _, num := range m.RepeatedSint32 {
-			x22 := (uint32(num) << 1) ^ uint32((num >> 31))
-			for x22 >= 1<<7 {
-				dAtA20[j21] = uint8(uint64(x22)&0x7f | 0x80)
-				j21++
-				x22 >>= 7
+			x14 := (uint32(num) << 1) ^ uint32((num >> 31))
+			for x14 >= 1<<7 {
+				dAtA12[j13] = uint8(uint64(x14)&0x7f | 0x80)
+				j13++
+				x14 >>= 7
 			}
-			dAtA20[j21] = uint8(x22)
-			j21++
+			dAtA12[j13] = uint8(x14)
+			j13++
 		}
-		i -= j21
-		copy(dAtA[i:], dAtA20[:j21])
-		i = encodeVarintFields(dAtA, i, uint64(j21))
+		i -= j13
+		copy(dAtA[i:], dAtA12[:j13])
+		i = encodeVarintFields(dAtA, i, uint64(j13))
 		i--
 		dAtA[i] = 0xc
 		i--
 		dAtA[i] = 0xe2
 	}
 	if len(m.RepeatedInt32) > 0 {
-		dAtA24 := make([]byte, len(m.RepeatedInt32)*10)
-		var j23 int
+		dAtA16 := make([]byte, len(m.RepeatedInt32)*10)
+		var j15 int
 		for _, num1 := range m.RepeatedInt32 {
 			num := uint64(num1)
 			for num >= 1<<7 {
-				dAtA24[j23] = uint8(uint64(num)&0x7f | 0x80)
+				dAtA16[j15] = uint8(uint64(num)&0x7f | 0x80)
 				num >>= 7
-				j23++
+				j15++
 			}
-			dAtA24[j23] = uint8(num)
-			j23++
+			dAtA16[j15] = uint8(num)
+			j15++
 		}
-		i -= j23
-		copy(dAtA[i:], dAtA24[:j23])
-		i = encodeVarintFields(dAtA, i, uint64(j23))
+		i -= j15
+		copy(dAtA[i:], dAtA16[:j15])
+		i = encodeVarintFields(dAtA, i, uint64(j15))
 		i--
 		dAtA[i] = 0xc
 		i--
 		dAtA[i] = 0xda
 	}
 	if len(m.RepeatedEnum) > 0 {
-		dAtA26 := make([]byte, len(m.RepeatedEnum)*10)
-		var j25 int
+		dAtA18 := make([]byte, len(m.RepeatedEnum)*10)
+		var j17 int
 		for _, num := range m.RepeatedEnum {
 			for num >= 1<<7 {
-				dAtA26[j25] = uint8(uint64(num)&0x7f | 0x80)
+				dAtA18[j17] = uint8(uint64(num)&0x7f | 0x80)
 				num >>= 7
-				j25++
+				j17++
 			}
-			dAtA26[j25] = uint8(num)
-			j25++
+			dAtA18[j17] = uint8(num)
+			j17++
 		}
-		i -= j25
-		copy(dAtA[i:], dAtA26[:j25])
-		i = encodeVarintFields(dAtA, i, uint64(j25))
+		i -= j17
+		copy(dAtA[i:], dAtA18[:j17])
+		i = encodeVarintFields(dAtA, i, uint64(j17))
 		i--
 		dAtA[i] = 0xc
 		i--
@@ -2238,9 +1289,599 @@ func (m *FieldTestMessage) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 		i--
 		dAtA[i] = 0xca
 	}
-	if m.Optional_Message2 != nil {
+	if len(m.MapStringMessage2) > 0 {
+		for k := range m.MapStringMessage2 {
+			v := m.MapStringMessage2[k]
+			baseI := i
+			if v != nil {
+				{
+					size, err := v.MarshalToSizedBuffer(dAtA[:i])
+					if err != nil {
+						return 0, err
+					}
+					i -= size
+					i = encodeVarintFields(dAtA, i, uint64(size))
+				}
+				i--
+				dAtA[i] = 0x12
+			}
+			i -= len(k)
+			copy(dAtA[i:], k)
+			i = encodeVarintFields(dAtA, i, uint64(len(k)))
+			i--
+			dAtA[i] = 0xa
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x5
+			i--
+			dAtA[i] = 0xe2
+		}
+	}
+	if len(m.MapStringMessage) > 0 {
+		for k := range m.MapStringMessage {
+			v := m.MapStringMessage[k]
+			baseI := i
+			if v != nil {
+				{
+					size, err := v.MarshalToSizedBuffer(dAtA[:i])
+					if err != nil {
+						return 0, err
+					}
+					i -= size
+					i = encodeVarintFields(dAtA, i, uint64(size))
+				}
+				i--
+				dAtA[i] = 0x12
+			}
+			i -= len(k)
+			copy(dAtA[i:], k)
+			i = encodeVarintFields(dAtA, i, uint64(len(k)))
+			i--
+			dAtA[i] = 0xa
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x5
+			i--
+			dAtA[i] = 0xda
+		}
+	}
+	if len(m.MapInt32Int64) > 0 {
+		for k := range m.MapInt32Int64 {
+			v := m.MapInt32Int64[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x5
+			i--
+			dAtA[i] = 0xd2
+		}
+	}
+	if len(m.MapKeyString) > 0 {
+		for k := range m.MapKeyString {
+			v := m.MapKeyString[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i -= len(k)
+			copy(dAtA[i:], k)
+			i = encodeVarintFields(dAtA, i, uint64(len(k)))
+			i--
+			dAtA[i] = 0xa
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x5
+			i--
+			dAtA[i] = 0xaa
+		}
+	}
+	if len(m.MapKeyUint64) > 0 {
+		for k := range m.MapKeyUint64 {
+			v := m.MapKeyUint64[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x4
+			i--
+			dAtA[i] = 0xf2
+		}
+	}
+	if len(m.MapKeyInt64) > 0 {
+		for k := range m.MapKeyInt64 {
+			v := m.MapKeyInt64[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x4
+			i--
+			dAtA[i] = 0xe2
+		}
+	}
+	if len(m.MapKeyUint32) > 0 {
+		for k := range m.MapKeyUint32 {
+			v := m.MapKeyUint32[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x4
+			i--
+			dAtA[i] = 0xda
+		}
+	}
+	if len(m.MapKeyInt32) > 0 {
+		for k := range m.MapKeyInt32 {
+			v := m.MapKeyInt32[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x4
+			i--
+			dAtA[i] = 0xca
+		}
+	}
+	if len(m.MapMessage2) > 0 {
+		for k := range m.MapMessage2 {
+			v := m.MapMessage2[k]
+			baseI := i
+			if v != nil {
+				{
+					size, err := v.MarshalToSizedBuffer(dAtA[:i])
+					if err != nil {
+						return 0, err
+					}
+					i -= size
+					i = encodeVarintFields(dAtA, i, uint64(size))
+				}
+				i--
+				dAtA[i] = 0x12
+			}
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x4
+			i--
+			dAtA[i] = 0xa2
+		}
+	}
+	if len(m.MapMessage) > 0 {
+		for k := range m.MapMessage {
+			v := m.MapMessage[k]
+			baseI := i
+			if v != nil {
+				{
+					size, err := v.MarshalToSizedBuffer(dAtA[:i])
+					if err != nil {
+						return 0, err
+					}
+					i -= size
+					i = encodeVarintFields(dAtA, i, uint64(size))
+				}
+				i--
+				dAtA[i] = 0x12
+			}
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x4
+			i--
+			dAtA[i] = 0x9a
+		}
+	}
+	if len(m.MapBytes) > 0 {
+		for k := range m.MapBytes {
+			v := m.MapBytes[k]
+			baseI := i
+			if len(v) > 0 {
+				i -= len(v)
+				copy(dAtA[i:], v)
+				i = encodeVarintFields(dAtA, i, uint64(len(v)))
+				i--
+				dAtA[i] = 0x12
+			}
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x4
+			i--
+			dAtA[i] = 0x92
+		}
+	}
+	if len(m.MapString) > 0 {
+		for k := range m.MapString {
+			v := m.MapString[k]
+			baseI := i
+			i -= len(v)
+			copy(dAtA[i:], v)
+			i = encodeVarintFields(dAtA, i, uint64(len(v)))
+			i--
+			dAtA[i] = 0x12
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x4
+			i--
+			dAtA[i] = 0x8a
+		}
+	}
+	if len(m.MapDouble) > 0 {
+		for k := range m.MapDouble {
+			v := m.MapDouble[k]
+			baseI := i
+			i -= 8
+			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(math.Float64bits(float64(v))))
+			i--
+			dAtA[i] = 0x11
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x4
+			i--
+			dAtA[i] = 0x82
+		}
+	}
+	if len(m.MapFloat) > 0 {
+		for k := range m.MapFloat {
+			v := m.MapFloat[k]
+			baseI := i
+			i -= 4
+			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(math.Float32bits(float32(v))))
+			i--
+			dAtA[i] = 0x15
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x3
+			i--
+			dAtA[i] = 0xea
+		}
+	}
+	if len(m.MapUint64) > 0 {
+		for k := range m.MapUint64 {
+			v := m.MapUint64[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x3
+			i--
+			dAtA[i] = 0xd2
+		}
+	}
+	if len(m.MapInt64) > 0 {
+		for k := range m.MapInt64 {
+			v := m.MapInt64[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x3
+			i--
+			dAtA[i] = 0xc2
+		}
+	}
+	if len(m.MapUint32) > 0 {
+		for k := range m.MapUint32 {
+			v := m.MapUint32[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x3
+			i--
+			dAtA[i] = 0xba
+		}
+	}
+	if len(m.MapInt32) > 0 {
+		for k := range m.MapInt32 {
+			v := m.MapInt32[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x3
+			i--
+			dAtA[i] = 0xaa
+		}
+	}
+	if len(m.MapEnum) > 0 {
+		for k := range m.MapEnum {
+			v := m.MapEnum[k]
+			baseI := i
+			i = encodeVarintFields(dAtA, i, uint64(v))
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x3
+			i--
+			dAtA[i] = 0xa2
+		}
+	}
+	if len(m.MapBool) > 0 {
+		for k := range m.MapBool {
+			v := m.MapBool[k]
+			baseI := i
+			i--
+			if v {
+				dAtA[i] = 1
+			} else {
+				dAtA[i] = 0
+			}
+			i--
+			dAtA[i] = 0x10
+			i = encodeVarintFields(dAtA, i, uint64(k))
+			i--
+			dAtA[i] = 0x8
+			i = encodeVarintFields(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x3
+			i--
+			dAtA[i] = 0x9a
+		}
+	}
+	if len(m.NopackMessage2) > 0 {
+		for iNdEx := len(m.NopackMessage2) - 1; iNdEx >= 0; iNdEx-- {
+			{
+				size, err := m.NopackMessage2[iNdEx].MarshalToSizedBuffer(dAtA[:i])
+				if err != nil {
+					return 0, err
+				}
+				i -= size
+				i = encodeVarintFields(dAtA, i, uint64(size))
+			}
+			i--
+			dAtA[i] = 0x3
+			i--
+			dAtA[i] = 0x82
+		}
+	}
+	if len(m.NopackMessage) > 0 {
+		for iNdEx := len(m.NopackMessage) - 1; iNdEx >= 0; iNdEx-- {
+			{
+				size, err := m.NopackMessage[iNdEx].MarshalToSizedBuffer(dAtA[:i])
+				if err != nil {
+					return 0, err
+				}
+				i -= size
+				i = encodeVarintFields(dAtA, i, uint64(size))
+			}
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xfa
+		}
+	}
+	if len(m.NopackBytes) > 0 {
+		for iNdEx := len(m.NopackBytes) - 1; iNdEx >= 0; iNdEx-- {
+			i -= len(m.NopackBytes[iNdEx])
+			copy(dAtA[i:], m.NopackBytes[iNdEx])
+			i = encodeVarintFields(dAtA, i, uint64(len(m.NopackBytes[iNdEx])))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xf2
+		}
+	}
+	if len(m.NopackString) > 0 {
+		for iNdEx := len(m.NopackString) - 1; iNdEx >= 0; iNdEx-- {
+			i -= len(m.NopackString[iNdEx])
+			copy(dAtA[i:], m.NopackString[iNdEx])
+			i = encodeVarintFields(dAtA, i, uint64(len(m.NopackString[iNdEx])))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xea
+		}
+	}
+	if len(m.NopackDouble) > 0 {
+		for iNdEx := len(m.NopackDouble) - 1; iNdEx >= 0; iNdEx-- {
+			f23 := math.Float64bits(float64(m.NopackDouble[iNdEx]))
+			i -= 8
+			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(f23))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xe1
+		}
+	}
+	if len(m.NopackFixed64) > 0 {
+		for iNdEx := len(m.NopackFixed64) - 1; iNdEx >= 0; iNdEx-- {
+			i -= 8
+			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(m.NopackFixed64[iNdEx]))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xd9
+		}
+	}
+	if len(m.NopackSfixed64) > 0 {
+		for iNdEx := len(m.NopackSfixed64) - 1; iNdEx >= 0; iNdEx-- {
+			i -= 8
+			encoding_binary.LittleEndian.PutUint64(dAtA[i:], uint64(m.NopackSfixed64[iNdEx]))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xd1
+		}
+	}
+	if len(m.NopackFloat) > 0 {
+		for iNdEx := len(m.NopackFloat) - 1; iNdEx >= 0; iNdEx-- {
+			f24 := math.Float32bits(float32(m.NopackFloat[iNdEx]))
+			i -= 4
+			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(f24))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xcd
+		}
+	}
+	if len(m.NopackFixed32) > 0 {
+		for iNdEx := len(m.NopackFixed32) - 1; iNdEx >= 0; iNdEx-- {
+			i -= 4
+			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(m.NopackFixed32[iNdEx]))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xc5
+		}
+	}
+	if len(m.NopackSfixed32) > 0 {
+		for iNdEx := len(m.NopackSfixed32) - 1; iNdEx >= 0; iNdEx-- {
+			i -= 4
+			encoding_binary.LittleEndian.PutUint32(dAtA[i:], uint32(m.NopackSfixed32[iNdEx]))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xbd
+		}
+	}
+	if len(m.NopackUint64) > 0 {
+		for iNdEx := len(m.NopackUint64) - 1; iNdEx >= 0; iNdEx-- {
+			i = encodeVarintFields(dAtA, i, uint64(m.NopackUint64[iNdEx]))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xb0
+		}
+	}
+	if len(m.NopackSint64) > 0 {
+		for iNdEx := len(m.NopackSint64) - 1; iNdEx >= 0; iNdEx-- {
+			x25 := (uint64(m.NopackSint64[iNdEx]) << 1) ^ uint64((m.NopackSint64[iNdEx] >> 63))
+			i = encodeVarintFields(dAtA, i, uint64(x25))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xa8
+		}
+	}
+	if len(m.NopackInt64) > 0 {
+		for iNdEx := len(m.NopackInt64) - 1; iNdEx >= 0; iNdEx-- {
+			i = encodeVarintFields(dAtA, i, uint64(m.NopackInt64[iNdEx]))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0xa0
+		}
+	}
+	if len(m.NopackUint32) > 0 {
+		for iNdEx := len(m.NopackUint32) - 1; iNdEx >= 0; iNdEx-- {
+			i = encodeVarintFields(dAtA, i, uint64(m.NopackUint32[iNdEx]))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0x98
+		}
+	}
+	if len(m.NopackSint32) > 0 {
+		for iNdEx := len(m.NopackSint32) - 1; iNdEx >= 0; iNdEx-- {
+			x26 := (uint32(m.NopackSint32[iNdEx]) << 1) ^ uint32((m.NopackSint32[iNdEx] >> 31))
+			i = encodeVarintFields(dAtA, i, uint64(x26))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0x90
+		}
+	}
+	if len(m.NopackInt32) > 0 {
+		for iNdEx := len(m.NopackInt32) - 1; iNdEx >= 0; iNdEx-- {
+			i = encodeVarintFields(dAtA, i, uint64(m.NopackInt32[iNdEx]))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0x88
+		}
+	}
+	if len(m.NopackEnum) > 0 {
+		for iNdEx := len(m.NopackEnum) - 1; iNdEx >= 0; iNdEx-- {
+			i = encodeVarintFields(dAtA, i, uint64(m.NopackEnum[iNdEx]))
+			i--
+			dAtA[i] = 0x2
+			i--
+			dAtA[i] = 0x80
+		}
+	}
+	if len(m.NopackBool) > 0 {
+		for iNdEx := len(m.NopackBool) - 1; iNdEx >= 0; iNdEx-- {
+			i--
+			if m.NopackBool[iNdEx] {
+				dAtA[i] = 1
+			} else {
+				dAtA[i] = 0
+			}
+			i--
+			dAtA[i] = 0x1
+			i--
+			dAtA[i] = 0xf8
+		}
+	}
+	if m.OptionalMessage2 != nil {
 		{
-			size, err := m.Optional_Message2.MarshalToSizedBuffer(dAtA[:i])
+			size, err := m.OptionalMessage2.MarshalToSizedBuffer(dAtA[:i])
 			if err != nil {
 				return 0, err
 			}
@@ -2252,9 +1893,9 @@ func (m *FieldTestMessage) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 		i--
 		dAtA[i] = 0x92
 	}
-	if m.Optional_Message != nil {
+	if m.OptionalMessage != nil {
 		{
-			size, err := m.Optional_Message.MarshalToSizedBuffer(dAtA[:i])
+			size, err := m.OptionalMessage.MarshalToSizedBuffer(dAtA[:i])
 			if err != nil {
 				return 0, err
 			}
@@ -2409,14 +2050,14 @@ func (m *FieldTestMessage_Message2) MarshalToSizedBuffer(dAtA []byte) (int, erro
 	_ = i
 	var l int
 	_ = l
-	if m.Enum != 0 {
-		i = encodeVarintFields(dAtA, i, uint64(m.Enum))
+	if m.Ev != 0 {
+		i = encodeVarintFields(dAtA, i, uint64(m.Ev))
 		i--
 		dAtA[i] = 0x10
 	}
-	if m.Bool {
+	if m.Bv {
 		i--
-		if m.Bool {
+		if m.Bv {
 			dAtA[i] = 1
 		} else {
 			dAtA[i] = 0
@@ -2522,13 +2163,277 @@ func (m *FieldTestMessage) Size() (n int) {
 	if l > 0 {
 		n += 2 + l + sovFields(uint64(l))
 	}
-	if m.Optional_Message != nil {
-		l = m.Optional_Message.Size()
+	if m.OptionalMessage != nil {
+		l = m.OptionalMessage.Size()
 		n += 2 + l + sovFields(uint64(l))
 	}
-	if m.Optional_Message2 != nil {
-		l = m.Optional_Message2.Size()
+	if m.OptionalMessage2 != nil {
+		l = m.OptionalMessage2.Size()
 		n += 2 + l + sovFields(uint64(l))
+	}
+	if len(m.NopackBool) > 0 {
+		n += 3 * len(m.NopackBool)
+	}
+	if len(m.NopackEnum) > 0 {
+		for _, e := range m.NopackEnum {
+			n += 2 + sovFields(uint64(e))
+		}
+	}
+	if len(m.NopackInt32) > 0 {
+		for _, e := range m.NopackInt32 {
+			n += 2 + sovFields(uint64(e))
+		}
+	}
+	if len(m.NopackSint32) > 0 {
+		for _, e := range m.NopackSint32 {
+			n += 2 + sozFields(uint64(e))
+		}
+	}
+	if len(m.NopackUint32) > 0 {
+		for _, e := range m.NopackUint32 {
+			n += 2 + sovFields(uint64(e))
+		}
+	}
+	if len(m.NopackInt64) > 0 {
+		for _, e := range m.NopackInt64 {
+			n += 2 + sovFields(uint64(e))
+		}
+	}
+	if len(m.NopackSint64) > 0 {
+		for _, e := range m.NopackSint64 {
+			n += 2 + sozFields(uint64(e))
+		}
+	}
+	if len(m.NopackUint64) > 0 {
+		for _, e := range m.NopackUint64 {
+			n += 2 + sovFields(uint64(e))
+		}
+	}
+	if len(m.NopackSfixed32) > 0 {
+		n += 6 * len(m.NopackSfixed32)
+	}
+	if len(m.NopackFixed32) > 0 {
+		n += 6 * len(m.NopackFixed32)
+	}
+	if len(m.NopackFloat) > 0 {
+		n += 6 * len(m.NopackFloat)
+	}
+	if len(m.NopackSfixed64) > 0 {
+		n += 10 * len(m.NopackSfixed64)
+	}
+	if len(m.NopackFixed64) > 0 {
+		n += 10 * len(m.NopackFixed64)
+	}
+	if len(m.NopackDouble) > 0 {
+		n += 10 * len(m.NopackDouble)
+	}
+	if len(m.NopackString) > 0 {
+		for _, s := range m.NopackString {
+			l = len(s)
+			n += 2 + l + sovFields(uint64(l))
+		}
+	}
+	if len(m.NopackBytes) > 0 {
+		for _, b := range m.NopackBytes {
+			l = len(b)
+			n += 2 + l + sovFields(uint64(l))
+		}
+	}
+	if len(m.NopackMessage) > 0 {
+		for _, e := range m.NopackMessage {
+			l = e.Size()
+			n += 2 + l + sovFields(uint64(l))
+		}
+	}
+	if len(m.NopackMessage2) > 0 {
+		for _, e := range m.NopackMessage2 {
+			l = e.Size()
+			n += 2 + l + sovFields(uint64(l))
+		}
+	}
+	if len(m.MapBool) > 0 {
+		for k, v := range m.MapBool {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + 1
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapEnum) > 0 {
+		for k, v := range m.MapEnum {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapInt32) > 0 {
+		for k, v := range m.MapInt32 {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapUint32) > 0 {
+		for k, v := range m.MapUint32 {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapInt64) > 0 {
+		for k, v := range m.MapInt64 {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapUint64) > 0 {
+		for k, v := range m.MapUint64 {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapFloat) > 0 {
+		for k, v := range m.MapFloat {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + 4
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapDouble) > 0 {
+		for k, v := range m.MapDouble {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + 8
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapString) > 0 {
+		for k, v := range m.MapString {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + len(v) + sovFields(uint64(len(v)))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapBytes) > 0 {
+		for k, v := range m.MapBytes {
+			_ = k
+			_ = v
+			l = 0
+			if len(v) > 0 {
+				l = 1 + len(v) + sovFields(uint64(len(v)))
+			}
+			mapEntrySize := 1 + sovFields(uint64(k)) + l
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapMessage) > 0 {
+		for k, v := range m.MapMessage {
+			_ = k
+			_ = v
+			l = 0
+			if v != nil {
+				l = v.Size()
+				l += 1 + sovFields(uint64(l))
+			}
+			mapEntrySize := 1 + sovFields(uint64(k)) + l
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapMessage2) > 0 {
+		for k, v := range m.MapMessage2 {
+			_ = k
+			_ = v
+			l = 0
+			if v != nil {
+				l = v.Size()
+				l += 1 + sovFields(uint64(l))
+			}
+			mapEntrySize := 1 + sovFields(uint64(k)) + l
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapKeyInt32) > 0 {
+		for k, v := range m.MapKeyInt32 {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapKeyUint32) > 0 {
+		for k, v := range m.MapKeyUint32 {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapKeyInt64) > 0 {
+		for k, v := range m.MapKeyInt64 {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapKeyUint64) > 0 {
+		for k, v := range m.MapKeyUint64 {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapKeyString) > 0 {
+		for k, v := range m.MapKeyString {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + len(k) + sovFields(uint64(len(k))) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapInt32Int64) > 0 {
+		for k, v := range m.MapInt32Int64 {
+			_ = k
+			_ = v
+			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapStringMessage) > 0 {
+		for k, v := range m.MapStringMessage {
+			_ = k
+			_ = v
+			l = 0
+			if v != nil {
+				l = v.Size()
+				l += 1 + sovFields(uint64(l))
+			}
+			mapEntrySize := 1 + len(k) + sovFields(uint64(len(k))) + l
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
+	}
+	if len(m.MapStringMessage2) > 0 {
+		for k, v := range m.MapStringMessage2 {
+			_ = k
+			_ = v
+			l = 0
+			if v != nil {
+				l = v.Size()
+				l += 1 + sovFields(uint64(l))
+			}
+			mapEntrySize := 1 + len(k) + sovFields(uint64(len(k))) + l
+			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
+		}
 	}
 	if len(m.RepeatedBool) > 0 {
 		n += 2 + sovFields(uint64(len(m.RepeatedBool))) + len(m.RepeatedBool)*1
@@ -2612,382 +2517,14 @@ func (m *FieldTestMessage) Size() (n int) {
 			n += 2 + l + sovFields(uint64(l))
 		}
 	}
-	if len(m.Repeated_Message) > 0 {
-		for _, e := range m.Repeated_Message {
+	if len(m.RepeatedMessage) > 0 {
+		for _, e := range m.RepeatedMessage {
 			l = e.Size()
 			n += 2 + l + sovFields(uint64(l))
 		}
 	}
-	if len(m.Repeated_Message2) > 0 {
-		for _, e := range m.Repeated_Message2 {
-			l = e.Size()
-			n += 2 + l + sovFields(uint64(l))
-		}
-	}
-	if len(m.MapBool) > 0 {
-		for k, v := range m.MapBool {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + 1
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapEnum) > 0 {
-		for k, v := range m.MapEnum {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapInt32) > 0 {
-		for k, v := range m.MapInt32 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapSint32) > 0 {
-		for k, v := range m.MapSint32 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sozFields(uint64(k)) + 1 + sozFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapUint32) > 0 {
-		for k, v := range m.MapUint32 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapInt64) > 0 {
-		for k, v := range m.MapInt64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapSint64) > 0 {
-		for k, v := range m.MapSint64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sozFields(uint64(k)) + 1 + sozFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapUint64) > 0 {
-		for k, v := range m.MapUint64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapSfixed32) > 0 {
-		for k, v := range m.MapSfixed32 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + 4 + 1 + 4
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapFixed32) > 0 {
-		for k, v := range m.MapFixed32 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + 4 + 1 + 4
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapFloat) > 0 {
-		for k, v := range m.MapFloat {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + 4
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapSfixed64) > 0 {
-		for k, v := range m.MapSfixed64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + 8
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapFixed64) > 0 {
-		for k, v := range m.MapFixed64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + 8
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapDouble) > 0 {
-		for k, v := range m.MapDouble {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + 8
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapString) > 0 {
-		for k, v := range m.MapString {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + len(v) + sovFields(uint64(len(v)))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapBytes) > 0 {
-		for k, v := range m.MapBytes {
-			_ = k
-			_ = v
-			l = 0
-			if len(v) > 0 {
-				l = 1 + len(v) + sovFields(uint64(len(v)))
-			}
-			mapEntrySize := 1 + sovFields(uint64(k)) + l
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.Map_Message) > 0 {
-		for k, v := range m.Map_Message {
-			_ = k
-			_ = v
-			l = 0
-			if v != nil {
-				l = v.Size()
-				l += 1 + sovFields(uint64(l))
-			}
-			mapEntrySize := 1 + sovFields(uint64(k)) + l
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.Map_Message2) > 0 {
-		for k, v := range m.Map_Message2 {
-			_ = k
-			_ = v
-			l = 0
-			if v != nil {
-				l = v.Size()
-				l += 1 + sovFields(uint64(l))
-			}
-			mapEntrySize := 1 + sovFields(uint64(k)) + l
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeyInt32) > 0 {
-		for k, v := range m.MapKeyInt32 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeySint32) > 0 {
-		for k, v := range m.MapKeySint32 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sozFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeyUint32) > 0 {
-		for k, v := range m.MapKeyUint32 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeyInt64) > 0 {
-		for k, v := range m.MapKeyInt64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeySint64) > 0 {
-		for k, v := range m.MapKeySint64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sozFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeyUint64) > 0 {
-		for k, v := range m.MapKeyUint64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeySfixed32) > 0 {
-		for k, v := range m.MapKeySfixed32 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + 4 + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeyFixed32) > 0 {
-		for k, v := range m.MapKeyFixed32 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + 4 + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeySfixed64) > 0 {
-		for k, v := range m.MapKeySfixed64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + 8 + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeyFixed64) > 0 {
-		for k, v := range m.MapKeyFixed64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + 8 + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapKeyString) > 0 {
-		for k, v := range m.MapKeyString {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + len(k) + sovFields(uint64(len(k))) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapInt32Int64) > 0 {
-		for k, v := range m.MapInt32Int64 {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + sovFields(uint64(k)) + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapStringMessage) > 0 {
-		for k, v := range m.MapStringMessage {
-			_ = k
-			_ = v
-			l = 0
-			if v != nil {
-				l = v.Size()
-				l += 1 + sovFields(uint64(l))
-			}
-			mapEntrySize := 1 + len(k) + sovFields(uint64(len(k))) + l
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapStringMessage2) > 0 {
-		for k, v := range m.MapStringMessage2 {
-			_ = k
-			_ = v
-			l = 0
-			if v != nil {
-				l = v.Size()
-				l += 1 + sovFields(uint64(l))
-			}
-			mapEntrySize := 1 + len(k) + sovFields(uint64(len(k))) + l
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.MapFixed64Enum) > 0 {
-		for k, v := range m.MapFixed64Enum {
-			_ = k
-			_ = v
-			mapEntrySize := 1 + 8 + 1 + sovFields(uint64(v))
-			n += mapEntrySize + 2 + sovFields(uint64(mapEntrySize))
-		}
-	}
-	if len(m.NopackBool) > 0 {
-		n += 3 * len(m.NopackBool)
-	}
-	if len(m.NopackEnum) > 0 {
-		for _, e := range m.NopackEnum {
-			n += 2 + sovFields(uint64(e))
-		}
-	}
-	if len(m.NopackInt32) > 0 {
-		for _, e := range m.NopackInt32 {
-			n += 2 + sovFields(uint64(e))
-		}
-	}
-	if len(m.NopackSint32) > 0 {
-		for _, e := range m.NopackSint32 {
-			n += 2 + sozFields(uint64(e))
-		}
-	}
-	if len(m.NopackUint32) > 0 {
-		for _, e := range m.NopackUint32 {
-			n += 2 + sovFields(uint64(e))
-		}
-	}
-	if len(m.NopackInt64) > 0 {
-		for _, e := range m.NopackInt64 {
-			n += 2 + sovFields(uint64(e))
-		}
-	}
-	if len(m.NopackSint64) > 0 {
-		for _, e := range m.NopackSint64 {
-			n += 2 + sozFields(uint64(e))
-		}
-	}
-	if len(m.NopackUint64) > 0 {
-		for _, e := range m.NopackUint64 {
-			n += 2 + sovFields(uint64(e))
-		}
-	}
-	if len(m.NopackSfixed32) > 0 {
-		n += 6 * len(m.NopackSfixed32)
-	}
-	if len(m.NopackFixed32) > 0 {
-		n += 6 * len(m.NopackFixed32)
-	}
-	if len(m.NopackFloat) > 0 {
-		n += 6 * len(m.NopackFloat)
-	}
-	if len(m.NopackSfixed64) > 0 {
-		n += 10 * len(m.NopackSfixed64)
-	}
-	if len(m.NopackFixed64) > 0 {
-		n += 10 * len(m.NopackFixed64)
-	}
-	if len(m.NopackDouble) > 0 {
-		n += 10 * len(m.NopackDouble)
-	}
-	if len(m.NopackString) > 0 {
-		for _, s := range m.NopackString {
-			l = len(s)
-			n += 2 + l + sovFields(uint64(l))
-		}
-	}
-	if len(m.NopackBytes) > 0 {
-		for _, b := range m.NopackBytes {
-			l = len(b)
-			n += 2 + l + sovFields(uint64(l))
-		}
-	}
-	if len(m.Nopack_Message) > 0 {
-		for _, e := range m.Nopack_Message {
-			l = e.Size()
-			n += 2 + l + sovFields(uint64(l))
-		}
-	}
-	if len(m.Nopack_Message2) > 0 {
-		for _, e := range m.Nopack_Message2 {
+	if len(m.RepeatedMessage2) > 0 {
+		for _, e := range m.RepeatedMessage2 {
 			l = e.Size()
 			n += 2 + l + sovFields(uint64(l))
 		}
@@ -3010,11 +2547,11 @@ func (m *FieldTestMessage_Message2) Size() (n int) {
 	}
 	var l int
 	_ = l
-	if m.Bool {
+	if m.Bv {
 		n += 2
 	}
-	if m.Enum != 0 {
-		n += 1 + sovFields(uint64(m.Enum))
+	if m.Ev != 0 {
+		n += 1 + sovFields(uint64(m.Ev))
 	}
 	return n
 }
@@ -3353,7 +2890,7 @@ func (m *FieldTestMessage) Unmarshal(dAtA []byte) error {
 			iNdEx = postIndex
 		case 17:
 			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Optional_Message", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field OptionalMessage", wireType)
 			}
 			var msglen int
 			for shift := uint(0); ; shift += 7 {
@@ -3380,16 +2917,16 @@ func (m *FieldTestMessage) Unmarshal(dAtA []byte) error {
 			if postIndex > l {
 				return io.ErrUnexpectedEOF
 			}
-			if m.Optional_Message == nil {
-				m.Optional_Message = &FieldTestMessage_Message{}
+			if m.OptionalMessage == nil {
+				m.OptionalMessage = &FieldTestMessage_Message{}
 			}
-			if err := m.Optional_Message.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+			if err := m.OptionalMessage.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
 				return err
 			}
 			iNdEx = postIndex
 		case 18:
 			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Optional_Message2", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field OptionalMessage2", wireType)
 			}
 			var msglen int
 			for shift := uint(0); ; shift += 7 {
@@ -3416,12 +2953,3162 @@ func (m *FieldTestMessage) Unmarshal(dAtA []byte) error {
 			if postIndex > l {
 				return io.ErrUnexpectedEOF
 			}
-			if m.Optional_Message2 == nil {
-				m.Optional_Message2 = &FieldTestMessage_Message2{}
+			if m.OptionalMessage2 == nil {
+				m.OptionalMessage2 = &FieldTestMessage_Message2{}
 			}
-			if err := m.Optional_Message2.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+			if err := m.OptionalMessage2.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
 				return err
 			}
+			iNdEx = postIndex
+		case 31:
+			if wireType == 0 {
+				var v int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					v |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				m.NopackBool = append(m.NopackBool, bool(v != 0))
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				elementCount = packedLen
+				if elementCount != 0 && len(m.NopackBool) == 0 {
+					m.NopackBool = make([]bool, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v int
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						v |= int(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					m.NopackBool = append(m.NopackBool, bool(v != 0))
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackBool", wireType)
+			}
+		case 32:
+			if wireType == 0 {
+				var v FieldTestMessage_Enum
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					v |= FieldTestMessage_Enum(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				m.NopackEnum = append(m.NopackEnum, v)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				if elementCount != 0 && len(m.NopackEnum) == 0 {
+					m.NopackEnum = make([]FieldTestMessage_Enum, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v FieldTestMessage_Enum
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						v |= FieldTestMessage_Enum(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					m.NopackEnum = append(m.NopackEnum, v)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackEnum", wireType)
+			}
+		case 33:
+			if wireType == 0 {
+				var v int32
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					v |= int32(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				m.NopackInt32 = append(m.NopackInt32, v)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				var count int
+				for _, integer := range dAtA[iNdEx:postIndex] {
+					if integer < 128 {
+						count++
+					}
+				}
+				elementCount = count
+				if elementCount != 0 && len(m.NopackInt32) == 0 {
+					m.NopackInt32 = make([]int32, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v int32
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						v |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					m.NopackInt32 = append(m.NopackInt32, v)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackInt32", wireType)
+			}
+		case 34:
+			if wireType == 0 {
+				var v int32
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					v |= int32(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				v = int32((uint32(v) >> 1) ^ uint32(((v&1)<<31)>>31))
+				m.NopackSint32 = append(m.NopackSint32, v)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				var count int
+				for _, integer := range dAtA[iNdEx:postIndex] {
+					if integer < 128 {
+						count++
+					}
+				}
+				elementCount = count
+				if elementCount != 0 && len(m.NopackSint32) == 0 {
+					m.NopackSint32 = make([]int32, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v int32
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						v |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					v = int32((uint32(v) >> 1) ^ uint32(((v&1)<<31)>>31))
+					m.NopackSint32 = append(m.NopackSint32, v)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackSint32", wireType)
+			}
+		case 35:
+			if wireType == 0 {
+				var v uint32
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					v |= uint32(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				m.NopackUint32 = append(m.NopackUint32, v)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				var count int
+				for _, integer := range dAtA[iNdEx:postIndex] {
+					if integer < 128 {
+						count++
+					}
+				}
+				elementCount = count
+				if elementCount != 0 && len(m.NopackUint32) == 0 {
+					m.NopackUint32 = make([]uint32, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v uint32
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						v |= uint32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					m.NopackUint32 = append(m.NopackUint32, v)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackUint32", wireType)
+			}
+		case 36:
+			if wireType == 0 {
+				var v int64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					v |= int64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				m.NopackInt64 = append(m.NopackInt64, v)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				var count int
+				for _, integer := range dAtA[iNdEx:postIndex] {
+					if integer < 128 {
+						count++
+					}
+				}
+				elementCount = count
+				if elementCount != 0 && len(m.NopackInt64) == 0 {
+					m.NopackInt64 = make([]int64, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v int64
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						v |= int64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					m.NopackInt64 = append(m.NopackInt64, v)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackInt64", wireType)
+			}
+		case 37:
+			if wireType == 0 {
+				var v uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					v |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				v = (v >> 1) ^ uint64((int64(v&1)<<63)>>63)
+				m.NopackSint64 = append(m.NopackSint64, int64(v))
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				var count int
+				for _, integer := range dAtA[iNdEx:postIndex] {
+					if integer < 128 {
+						count++
+					}
+				}
+				elementCount = count
+				if elementCount != 0 && len(m.NopackSint64) == 0 {
+					m.NopackSint64 = make([]int64, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v uint64
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						v |= uint64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					v = (v >> 1) ^ uint64((int64(v&1)<<63)>>63)
+					m.NopackSint64 = append(m.NopackSint64, int64(v))
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackSint64", wireType)
+			}
+		case 38:
+			if wireType == 0 {
+				var v uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					v |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				m.NopackUint64 = append(m.NopackUint64, v)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				var count int
+				for _, integer := range dAtA[iNdEx:postIndex] {
+					if integer < 128 {
+						count++
+					}
+				}
+				elementCount = count
+				if elementCount != 0 && len(m.NopackUint64) == 0 {
+					m.NopackUint64 = make([]uint64, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v uint64
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						v |= uint64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					m.NopackUint64 = append(m.NopackUint64, v)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackUint64", wireType)
+			}
+		case 39:
+			if wireType == 5 {
+				var v int32
+				if (iNdEx + 4) > l {
+					return io.ErrUnexpectedEOF
+				}
+				v = int32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
+				iNdEx += 4
+				m.NopackSfixed32 = append(m.NopackSfixed32, v)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				elementCount = packedLen / 4
+				if elementCount != 0 && len(m.NopackSfixed32) == 0 {
+					m.NopackSfixed32 = make([]int32, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v int32
+					if (iNdEx + 4) > l {
+						return io.ErrUnexpectedEOF
+					}
+					v = int32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
+					iNdEx += 4
+					m.NopackSfixed32 = append(m.NopackSfixed32, v)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackSfixed32", wireType)
+			}
+		case 40:
+			if wireType == 5 {
+				var v uint32
+				if (iNdEx + 4) > l {
+					return io.ErrUnexpectedEOF
+				}
+				v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
+				iNdEx += 4
+				m.NopackFixed32 = append(m.NopackFixed32, v)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				elementCount = packedLen / 4
+				if elementCount != 0 && len(m.NopackFixed32) == 0 {
+					m.NopackFixed32 = make([]uint32, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v uint32
+					if (iNdEx + 4) > l {
+						return io.ErrUnexpectedEOF
+					}
+					v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
+					iNdEx += 4
+					m.NopackFixed32 = append(m.NopackFixed32, v)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackFixed32", wireType)
+			}
+		case 41:
+			if wireType == 5 {
+				var v uint32
+				if (iNdEx + 4) > l {
+					return io.ErrUnexpectedEOF
+				}
+				v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
+				iNdEx += 4
+				v2 := float32(math.Float32frombits(v))
+				m.NopackFloat = append(m.NopackFloat, v2)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				elementCount = packedLen / 4
+				if elementCount != 0 && len(m.NopackFloat) == 0 {
+					m.NopackFloat = make([]float32, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v uint32
+					if (iNdEx + 4) > l {
+						return io.ErrUnexpectedEOF
+					}
+					v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
+					iNdEx += 4
+					v2 := float32(math.Float32frombits(v))
+					m.NopackFloat = append(m.NopackFloat, v2)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackFloat", wireType)
+			}
+		case 42:
+			if wireType == 1 {
+				var v int64
+				if (iNdEx + 8) > l {
+					return io.ErrUnexpectedEOF
+				}
+				v = int64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+				iNdEx += 8
+				m.NopackSfixed64 = append(m.NopackSfixed64, v)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				elementCount = packedLen / 8
+				if elementCount != 0 && len(m.NopackSfixed64) == 0 {
+					m.NopackSfixed64 = make([]int64, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v int64
+					if (iNdEx + 8) > l {
+						return io.ErrUnexpectedEOF
+					}
+					v = int64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+					iNdEx += 8
+					m.NopackSfixed64 = append(m.NopackSfixed64, v)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackSfixed64", wireType)
+			}
+		case 43:
+			if wireType == 1 {
+				var v uint64
+				if (iNdEx + 8) > l {
+					return io.ErrUnexpectedEOF
+				}
+				v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+				iNdEx += 8
+				m.NopackFixed64 = append(m.NopackFixed64, v)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				elementCount = packedLen / 8
+				if elementCount != 0 && len(m.NopackFixed64) == 0 {
+					m.NopackFixed64 = make([]uint64, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v uint64
+					if (iNdEx + 8) > l {
+						return io.ErrUnexpectedEOF
+					}
+					v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+					iNdEx += 8
+					m.NopackFixed64 = append(m.NopackFixed64, v)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackFixed64", wireType)
+			}
+		case 44:
+			if wireType == 1 {
+				var v uint64
+				if (iNdEx + 8) > l {
+					return io.ErrUnexpectedEOF
+				}
+				v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+				iNdEx += 8
+				v2 := float64(math.Float64frombits(v))
+				m.NopackDouble = append(m.NopackDouble, v2)
+			} else if wireType == 2 {
+				var packedLen int
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					packedLen |= int(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				if packedLen < 0 {
+					return ErrInvalidLengthFields
+				}
+				postIndex := iNdEx + packedLen
+				if postIndex < 0 {
+					return ErrInvalidLengthFields
+				}
+				if postIndex > l {
+					return io.ErrUnexpectedEOF
+				}
+				var elementCount int
+				elementCount = packedLen / 8
+				if elementCount != 0 && len(m.NopackDouble) == 0 {
+					m.NopackDouble = make([]float64, 0, elementCount)
+				}
+				for iNdEx < postIndex {
+					var v uint64
+					if (iNdEx + 8) > l {
+						return io.ErrUnexpectedEOF
+					}
+					v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+					iNdEx += 8
+					v2 := float64(math.Float64frombits(v))
+					m.NopackDouble = append(m.NopackDouble, v2)
+				}
+			} else {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackDouble", wireType)
+			}
+		case 45:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackString", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.NopackString = append(m.NopackString, string(dAtA[iNdEx:postIndex]))
+			iNdEx = postIndex
+		case 46:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackBytes", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.NopackBytes = append(m.NopackBytes, make([]byte, postIndex-iNdEx))
+			copy(m.NopackBytes[len(m.NopackBytes)-1], dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 47:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackMessage", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.NopackMessage = append(m.NopackMessage, &FieldTestMessage_Message{})
+			if err := m.NopackMessage[len(m.NopackMessage)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+				return err
+			}
+			iNdEx = postIndex
+		case 48:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field NopackMessage2", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.NopackMessage2 = append(m.NopackMessage2, &FieldTestMessage_Message2{})
+			if err := m.NopackMessage2[len(m.NopackMessage2)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+				return err
+			}
+			iNdEx = postIndex
+		case 51:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapBool", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapBool == nil {
+				m.MapBool = make(map[int32]bool)
+			}
+			var mapkey int32
+			var mapvalue bool
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					var mapvaluetemp int
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvaluetemp |= int(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					mapvalue = bool(mapvaluetemp != 0)
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapBool[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 52:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapEnum", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapEnum == nil {
+				m.MapEnum = make(map[int32]FieldTestMessage_Enum)
+			}
+			var mapkey int32
+			var mapvalue FieldTestMessage_Enum
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= FieldTestMessage_Enum(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapEnum[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 53:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapInt32", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapInt32 == nil {
+				m.MapInt32 = make(map[int32]int32)
+			}
+			var mapkey int32
+			var mapvalue int32
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapInt32[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 55:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapUint32", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapUint32 == nil {
+				m.MapUint32 = make(map[uint32]uint32)
+			}
+			var mapkey uint32
+			var mapvalue uint32
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= uint32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= uint32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapUint32[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 56:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapInt64", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapInt64 == nil {
+				m.MapInt64 = make(map[int64]int64)
+			}
+			var mapkey int64
+			var mapvalue int64
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= int64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapInt64[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 58:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapUint64", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapUint64 == nil {
+				m.MapUint64 = make(map[uint64]uint64)
+			}
+			var mapkey uint64
+			var mapvalue uint64
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= uint64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= uint64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapUint64[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 61:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapFloat", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapFloat == nil {
+				m.MapFloat = make(map[int32]float32)
+			}
+			var mapkey int32
+			var mapvalue float32
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					var mapvaluetemp uint32
+					if (iNdEx + 4) > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapvaluetemp = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
+					iNdEx += 4
+					mapvalue = math.Float32frombits(mapvaluetemp)
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapFloat[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 64:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapDouble", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapDouble == nil {
+				m.MapDouble = make(map[int32]float64)
+			}
+			var mapkey int32
+			var mapvalue float64
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					var mapvaluetemp uint64
+					if (iNdEx + 8) > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapvaluetemp = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
+					iNdEx += 8
+					mapvalue = math.Float64frombits(mapvaluetemp)
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapDouble[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 65:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapString", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapString == nil {
+				m.MapString = make(map[int32]string)
+			}
+			var mapkey int32
+			var mapvalue string
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					var stringLenmapvalue uint64
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						stringLenmapvalue |= uint64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					intStringLenmapvalue := int(stringLenmapvalue)
+					if intStringLenmapvalue < 0 {
+						return ErrInvalidLengthFields
+					}
+					postStringIndexmapvalue := iNdEx + intStringLenmapvalue
+					if postStringIndexmapvalue < 0 {
+						return ErrInvalidLengthFields
+					}
+					if postStringIndexmapvalue > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapvalue = string(dAtA[iNdEx:postStringIndexmapvalue])
+					iNdEx = postStringIndexmapvalue
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapString[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 66:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapBytes", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapBytes == nil {
+				m.MapBytes = make(map[int32][]byte)
+			}
+			var mapkey int32
+			mapvalue := []byte{}
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					var mapbyteLen uint64
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapbyteLen |= uint64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					intMapbyteLen := int(mapbyteLen)
+					if intMapbyteLen < 0 {
+						return ErrInvalidLengthFields
+					}
+					postbytesIndex := iNdEx + intMapbyteLen
+					if postbytesIndex < 0 {
+						return ErrInvalidLengthFields
+					}
+					if postbytesIndex > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapvalue = make([]byte, mapbyteLen)
+					copy(mapvalue, dAtA[iNdEx:postbytesIndex])
+					iNdEx = postbytesIndex
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapBytes[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 67:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapMessage", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapMessage == nil {
+				m.MapMessage = make(map[int32]*FieldTestMessage_Message)
+			}
+			var mapkey int32
+			var mapvalue *FieldTestMessage_Message
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					var mapmsglen int
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapmsglen |= int(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					if mapmsglen < 0 {
+						return ErrInvalidLengthFields
+					}
+					postmsgIndex := iNdEx + mapmsglen
+					if postmsgIndex < 0 {
+						return ErrInvalidLengthFields
+					}
+					if postmsgIndex > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapvalue = &FieldTestMessage_Message{}
+					if err := mapvalue.Unmarshal(dAtA[iNdEx:postmsgIndex]); err != nil {
+						return err
+					}
+					iNdEx = postmsgIndex
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapMessage[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 68:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapMessage2", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapMessage2 == nil {
+				m.MapMessage2 = make(map[int32]*FieldTestMessage_Message2)
+			}
+			var mapkey int32
+			var mapvalue *FieldTestMessage_Message2
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					var mapmsglen int
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapmsglen |= int(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					if mapmsglen < 0 {
+						return ErrInvalidLengthFields
+					}
+					postmsgIndex := iNdEx + mapmsglen
+					if postmsgIndex < 0 {
+						return ErrInvalidLengthFields
+					}
+					if postmsgIndex > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapvalue = &FieldTestMessage_Message2{}
+					if err := mapvalue.Unmarshal(dAtA[iNdEx:postmsgIndex]); err != nil {
+						return err
+					}
+					iNdEx = postmsgIndex
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapMessage2[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 73:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyInt32", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapKeyInt32 == nil {
+				m.MapKeyInt32 = make(map[int32]int32)
+			}
+			var mapkey int32
+			var mapvalue int32
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapKeyInt32[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 75:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyUint32", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapKeyUint32 == nil {
+				m.MapKeyUint32 = make(map[uint32]int32)
+			}
+			var mapkey uint32
+			var mapvalue int32
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= uint32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapKeyUint32[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 76:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyInt64", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapKeyInt64 == nil {
+				m.MapKeyInt64 = make(map[int64]int32)
+			}
+			var mapkey int64
+			var mapvalue int32
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapKeyInt64[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 78:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyUint64", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapKeyUint64 == nil {
+				m.MapKeyUint64 = make(map[uint64]int32)
+			}
+			var mapkey uint64
+			var mapvalue int32
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= uint64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapKeyUint64[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 85:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyString", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapKeyString == nil {
+				m.MapKeyString = make(map[string]int32)
+			}
+			var mapkey string
+			var mapvalue int32
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					var stringLenmapkey uint64
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						stringLenmapkey |= uint64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					intStringLenmapkey := int(stringLenmapkey)
+					if intStringLenmapkey < 0 {
+						return ErrInvalidLengthFields
+					}
+					postStringIndexmapkey := iNdEx + intStringLenmapkey
+					if postStringIndexmapkey < 0 {
+						return ErrInvalidLengthFields
+					}
+					if postStringIndexmapkey > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapkey = string(dAtA[iNdEx:postStringIndexmapkey])
+					iNdEx = postStringIndexmapkey
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapKeyString[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 90:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapInt32Int64", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapInt32Int64 == nil {
+				m.MapInt32Int64 = make(map[int32]int64)
+			}
+			var mapkey int32
+			var mapvalue int64
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapkey |= int32(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else if fieldNum == 2 {
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapvalue |= int64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapInt32Int64[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 91:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapStringMessage", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapStringMessage == nil {
+				m.MapStringMessage = make(map[string]*FieldTestMessage_Message)
+			}
+			var mapkey string
+			var mapvalue *FieldTestMessage_Message
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					var stringLenmapkey uint64
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						stringLenmapkey |= uint64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					intStringLenmapkey := int(stringLenmapkey)
+					if intStringLenmapkey < 0 {
+						return ErrInvalidLengthFields
+					}
+					postStringIndexmapkey := iNdEx + intStringLenmapkey
+					if postStringIndexmapkey < 0 {
+						return ErrInvalidLengthFields
+					}
+					if postStringIndexmapkey > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapkey = string(dAtA[iNdEx:postStringIndexmapkey])
+					iNdEx = postStringIndexmapkey
+				} else if fieldNum == 2 {
+					var mapmsglen int
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapmsglen |= int(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					if mapmsglen < 0 {
+						return ErrInvalidLengthFields
+					}
+					postmsgIndex := iNdEx + mapmsglen
+					if postmsgIndex < 0 {
+						return ErrInvalidLengthFields
+					}
+					if postmsgIndex > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapvalue = &FieldTestMessage_Message{}
+					if err := mapvalue.Unmarshal(dAtA[iNdEx:postmsgIndex]); err != nil {
+						return err
+					}
+					iNdEx = postmsgIndex
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapStringMessage[mapkey] = mapvalue
+			iNdEx = postIndex
+		case 92:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field MapStringMessage2", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowFields
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthFields
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthFields
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.MapStringMessage2 == nil {
+				m.MapStringMessage2 = make(map[string]*FieldTestMessage_Message2)
+			}
+			var mapkey string
+			var mapvalue *FieldTestMessage_Message2
+			for iNdEx < postIndex {
+				entryPreIndex := iNdEx
+				var wire uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return ErrIntOverflowFields
+					}
+					if iNdEx >= l {
+						return io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					wire |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				fieldNum := int32(wire >> 3)
+				if fieldNum == 1 {
+					var stringLenmapkey uint64
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						stringLenmapkey |= uint64(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					intStringLenmapkey := int(stringLenmapkey)
+					if intStringLenmapkey < 0 {
+						return ErrInvalidLengthFields
+					}
+					postStringIndexmapkey := iNdEx + intStringLenmapkey
+					if postStringIndexmapkey < 0 {
+						return ErrInvalidLengthFields
+					}
+					if postStringIndexmapkey > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapkey = string(dAtA[iNdEx:postStringIndexmapkey])
+					iNdEx = postStringIndexmapkey
+				} else if fieldNum == 2 {
+					var mapmsglen int
+					for shift := uint(0); ; shift += 7 {
+						if shift >= 64 {
+							return ErrIntOverflowFields
+						}
+						if iNdEx >= l {
+							return io.ErrUnexpectedEOF
+						}
+						b := dAtA[iNdEx]
+						iNdEx++
+						mapmsglen |= int(b&0x7F) << shift
+						if b < 0x80 {
+							break
+						}
+					}
+					if mapmsglen < 0 {
+						return ErrInvalidLengthFields
+					}
+					postmsgIndex := iNdEx + mapmsglen
+					if postmsgIndex < 0 {
+						return ErrInvalidLengthFields
+					}
+					if postmsgIndex > l {
+						return io.ErrUnexpectedEOF
+					}
+					mapvalue = &FieldTestMessage_Message2{}
+					if err := mapvalue.Unmarshal(dAtA[iNdEx:postmsgIndex]); err != nil {
+						return err
+					}
+					iNdEx = postmsgIndex
+				} else {
+					iNdEx = entryPreIndex
+					skippy, err := skipFields(dAtA[iNdEx:])
+					if err != nil {
+						return err
+					}
+					if (skippy < 0) || (iNdEx+skippy) < 0 {
+						return ErrInvalidLengthFields
+					}
+					if (iNdEx + skippy) > postIndex {
+						return io.ErrUnexpectedEOF
+					}
+					iNdEx += skippy
+				}
+			}
+			m.MapStringMessage2[mapkey] = mapvalue
 			iNdEx = postIndex
 		case 201:
 			if wireType == 0 {
@@ -4404,7 +7091,7 @@ func (m *FieldTestMessage) Unmarshal(dAtA []byte) error {
 			iNdEx = postIndex
 		case 217:
 			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Repeated_Message", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field RepeatedMessage", wireType)
 			}
 			var msglen int
 			for shift := uint(0); ; shift += 7 {
@@ -4431,14 +7118,14 @@ func (m *FieldTestMessage) Unmarshal(dAtA []byte) error {
 			if postIndex > l {
 				return io.ErrUnexpectedEOF
 			}
-			m.Repeated_Message = append(m.Repeated_Message, &FieldTestMessage_Message{})
-			if err := m.Repeated_Message[len(m.Repeated_Message)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+			m.RepeatedMessage = append(m.RepeatedMessage, &FieldTestMessage_Message{})
+			if err := m.RepeatedMessage[len(m.RepeatedMessage)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
 				return err
 			}
 			iNdEx = postIndex
 		case 218:
 			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Repeated_Message2", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field RepeatedMessage2", wireType)
 			}
 			var msglen int
 			for shift := uint(0); ; shift += 7 {
@@ -4465,4364 +7152,8 @@ func (m *FieldTestMessage) Unmarshal(dAtA []byte) error {
 			if postIndex > l {
 				return io.ErrUnexpectedEOF
 			}
-			m.Repeated_Message2 = append(m.Repeated_Message2, &FieldTestMessage_Message2{})
-			if err := m.Repeated_Message2[len(m.Repeated_Message2)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
-				return err
-			}
-			iNdEx = postIndex
-		case 301:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapBool", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapBool == nil {
-				m.MapBool = make(map[int32]bool)
-			}
-			var mapkey int32
-			var mapvalue bool
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					var mapvaluetemp int
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvaluetemp |= int(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					mapvalue = bool(mapvaluetemp != 0)
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapBool[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 302:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapEnum", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapEnum == nil {
-				m.MapEnum = make(map[int32]FieldTestMessage_Enum)
-			}
-			var mapkey int32
-			var mapvalue FieldTestMessage_Enum
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= FieldTestMessage_Enum(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapEnum[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 303:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapInt32", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapInt32 == nil {
-				m.MapInt32 = make(map[int32]int32)
-			}
-			var mapkey int32
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapInt32[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 304:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapSint32", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapSint32 == nil {
-				m.MapSint32 = make(map[int32]int32)
-			}
-			var mapkey int32
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					var mapkeytemp int32
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkeytemp |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					mapkeytemp = int32((uint32(mapkeytemp) >> 1) ^ uint32(((mapkeytemp&1)<<31)>>31))
-					mapkey = int32(mapkeytemp)
-				} else if fieldNum == 2 {
-					var mapvaluetemp int32
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvaluetemp |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					mapvaluetemp = int32((uint32(mapvaluetemp) >> 1) ^ uint32(((mapvaluetemp&1)<<31)>>31))
-					mapvalue = int32(mapvaluetemp)
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapSint32[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 305:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapUint32", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapUint32 == nil {
-				m.MapUint32 = make(map[uint32]uint32)
-			}
-			var mapkey uint32
-			var mapvalue uint32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= uint32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= uint32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapUint32[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 306:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapInt64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapInt64 == nil {
-				m.MapInt64 = make(map[int64]int64)
-			}
-			var mapkey int64
-			var mapvalue int64
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapInt64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 307:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapSint64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapSint64 == nil {
-				m.MapSint64 = make(map[int64]int64)
-			}
-			var mapkey int64
-			var mapvalue int64
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					var mapkeytemp uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkeytemp |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					mapkeytemp = (mapkeytemp >> 1) ^ uint64((int64(mapkeytemp&1)<<63)>>63)
-					mapkey = int64(mapkeytemp)
-				} else if fieldNum == 2 {
-					var mapvaluetemp uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvaluetemp |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					mapvaluetemp = (mapvaluetemp >> 1) ^ uint64((int64(mapvaluetemp&1)<<63)>>63)
-					mapvalue = int64(mapvaluetemp)
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapSint64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 308:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapUint64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapUint64 == nil {
-				m.MapUint64 = make(map[uint64]uint64)
-			}
-			var mapkey uint64
-			var mapvalue uint64
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapUint64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 309:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapSfixed32", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapSfixed32 == nil {
-				m.MapSfixed32 = make(map[int32]int32)
-			}
-			var mapkey int32
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					if (iNdEx + 4) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapkey = int32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-					iNdEx += 4
-				} else if fieldNum == 2 {
-					if (iNdEx + 4) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvalue = int32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-					iNdEx += 4
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapSfixed32[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 310:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapFixed32", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapFixed32 == nil {
-				m.MapFixed32 = make(map[uint32]uint32)
-			}
-			var mapkey uint32
-			var mapvalue uint32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					if (iNdEx + 4) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapkey = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-					iNdEx += 4
-				} else if fieldNum == 2 {
-					if (iNdEx + 4) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvalue = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-					iNdEx += 4
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapFixed32[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 311:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapFloat", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapFloat == nil {
-				m.MapFloat = make(map[int32]float32)
-			}
-			var mapkey int32
-			var mapvalue float32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					var mapvaluetemp uint32
-					if (iNdEx + 4) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvaluetemp = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-					iNdEx += 4
-					mapvalue = math.Float32frombits(mapvaluetemp)
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapFloat[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 312:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapSfixed64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapSfixed64 == nil {
-				m.MapSfixed64 = make(map[int32]int64)
-			}
-			var mapkey int32
-			var mapvalue int64
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					if (iNdEx + 8) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvalue = int64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-					iNdEx += 8
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapSfixed64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 313:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapFixed64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapFixed64 == nil {
-				m.MapFixed64 = make(map[int32]uint64)
-			}
-			var mapkey int32
-			var mapvalue uint64
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					if (iNdEx + 8) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvalue = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-					iNdEx += 8
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapFixed64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 314:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapDouble", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapDouble == nil {
-				m.MapDouble = make(map[int32]float64)
-			}
-			var mapkey int32
-			var mapvalue float64
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					var mapvaluetemp uint64
-					if (iNdEx + 8) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvaluetemp = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-					iNdEx += 8
-					mapvalue = math.Float64frombits(mapvaluetemp)
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapDouble[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 315:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapString", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapString == nil {
-				m.MapString = make(map[int32]string)
-			}
-			var mapkey int32
-			var mapvalue string
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					var stringLenmapvalue uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						stringLenmapvalue |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					intStringLenmapvalue := int(stringLenmapvalue)
-					if intStringLenmapvalue < 0 {
-						return ErrInvalidLengthFields
-					}
-					postStringIndexmapvalue := iNdEx + intStringLenmapvalue
-					if postStringIndexmapvalue < 0 {
-						return ErrInvalidLengthFields
-					}
-					if postStringIndexmapvalue > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvalue = string(dAtA[iNdEx:postStringIndexmapvalue])
-					iNdEx = postStringIndexmapvalue
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapString[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 316:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapBytes", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapBytes == nil {
-				m.MapBytes = make(map[int32][]byte)
-			}
-			var mapkey int32
-			mapvalue := []byte{}
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					var mapbyteLen uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapbyteLen |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					intMapbyteLen := int(mapbyteLen)
-					if intMapbyteLen < 0 {
-						return ErrInvalidLengthFields
-					}
-					postbytesIndex := iNdEx + intMapbyteLen
-					if postbytesIndex < 0 {
-						return ErrInvalidLengthFields
-					}
-					if postbytesIndex > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvalue = make([]byte, mapbyteLen)
-					copy(mapvalue, dAtA[iNdEx:postbytesIndex])
-					iNdEx = postbytesIndex
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapBytes[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 317:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Map_Message", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.Map_Message == nil {
-				m.Map_Message = make(map[int32]*FieldTestMessage_Message)
-			}
-			var mapkey int32
-			var mapvalue *FieldTestMessage_Message
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					var mapmsglen int
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapmsglen |= int(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					if mapmsglen < 0 {
-						return ErrInvalidLengthFields
-					}
-					postmsgIndex := iNdEx + mapmsglen
-					if postmsgIndex < 0 {
-						return ErrInvalidLengthFields
-					}
-					if postmsgIndex > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvalue = &FieldTestMessage_Message{}
-					if err := mapvalue.Unmarshal(dAtA[iNdEx:postmsgIndex]); err != nil {
-						return err
-					}
-					iNdEx = postmsgIndex
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.Map_Message[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 318:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Map_Message2", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.Map_Message2 == nil {
-				m.Map_Message2 = make(map[int32]*FieldTestMessage_Message2)
-			}
-			var mapkey int32
-			var mapvalue *FieldTestMessage_Message2
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					var mapmsglen int
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapmsglen |= int(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					if mapmsglen < 0 {
-						return ErrInvalidLengthFields
-					}
-					postmsgIndex := iNdEx + mapmsglen
-					if postmsgIndex < 0 {
-						return ErrInvalidLengthFields
-					}
-					if postmsgIndex > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvalue = &FieldTestMessage_Message2{}
-					if err := mapvalue.Unmarshal(dAtA[iNdEx:postmsgIndex]); err != nil {
-						return err
-					}
-					iNdEx = postmsgIndex
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.Map_Message2[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 403:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyInt32", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeyInt32 == nil {
-				m.MapKeyInt32 = make(map[int32]int32)
-			}
-			var mapkey int32
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeyInt32[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 404:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeySint32", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeySint32 == nil {
-				m.MapKeySint32 = make(map[int32]int32)
-			}
-			var mapkey int32
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					var mapkeytemp int32
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkeytemp |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					mapkeytemp = int32((uint32(mapkeytemp) >> 1) ^ uint32(((mapkeytemp&1)<<31)>>31))
-					mapkey = int32(mapkeytemp)
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeySint32[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 405:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyUint32", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeyUint32 == nil {
-				m.MapKeyUint32 = make(map[uint32]int32)
-			}
-			var mapkey uint32
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= uint32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeyUint32[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 406:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyInt64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeyInt64 == nil {
-				m.MapKeyInt64 = make(map[int64]int32)
-			}
-			var mapkey int64
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeyInt64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 407:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeySint64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeySint64 == nil {
-				m.MapKeySint64 = make(map[int64]int32)
-			}
-			var mapkey int64
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					var mapkeytemp uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkeytemp |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					mapkeytemp = (mapkeytemp >> 1) ^ uint64((int64(mapkeytemp&1)<<63)>>63)
-					mapkey = int64(mapkeytemp)
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeySint64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 408:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyUint64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeyUint64 == nil {
-				m.MapKeyUint64 = make(map[uint64]int32)
-			}
-			var mapkey uint64
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeyUint64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 409:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeySfixed32", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeySfixed32 == nil {
-				m.MapKeySfixed32 = make(map[int32]int32)
-			}
-			var mapkey int32
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					if (iNdEx + 4) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapkey = int32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-					iNdEx += 4
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeySfixed32[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 410:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyFixed32", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeyFixed32 == nil {
-				m.MapKeyFixed32 = make(map[uint32]int32)
-			}
-			var mapkey uint32
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					if (iNdEx + 4) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapkey = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-					iNdEx += 4
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeyFixed32[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 412:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeySfixed64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeySfixed64 == nil {
-				m.MapKeySfixed64 = make(map[int64]int32)
-			}
-			var mapkey int64
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					if (iNdEx + 8) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapkey = int64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-					iNdEx += 8
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeySfixed64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 413:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyFixed64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeyFixed64 == nil {
-				m.MapKeyFixed64 = make(map[uint64]int32)
-			}
-			var mapkey uint64
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					if (iNdEx + 8) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapkey = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-					iNdEx += 8
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeyFixed64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 415:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapKeyString", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapKeyString == nil {
-				m.MapKeyString = make(map[string]int32)
-			}
-			var mapkey string
-			var mapvalue int32
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					var stringLenmapkey uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						stringLenmapkey |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					intStringLenmapkey := int(stringLenmapkey)
-					if intStringLenmapkey < 0 {
-						return ErrInvalidLengthFields
-					}
-					postStringIndexmapkey := iNdEx + intStringLenmapkey
-					if postStringIndexmapkey < 0 {
-						return ErrInvalidLengthFields
-					}
-					if postStringIndexmapkey > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapkey = string(dAtA[iNdEx:postStringIndexmapkey])
-					iNdEx = postStringIndexmapkey
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapKeyString[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 500:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapInt32Int64", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapInt32Int64 == nil {
-				m.MapInt32Int64 = make(map[int32]int64)
-			}
-			var mapkey int32
-			var mapvalue int64
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapkey |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= int64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapInt32Int64[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 501:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapStringMessage", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapStringMessage == nil {
-				m.MapStringMessage = make(map[string]*FieldTestMessage_Message)
-			}
-			var mapkey string
-			var mapvalue *FieldTestMessage_Message
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					var stringLenmapkey uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						stringLenmapkey |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					intStringLenmapkey := int(stringLenmapkey)
-					if intStringLenmapkey < 0 {
-						return ErrInvalidLengthFields
-					}
-					postStringIndexmapkey := iNdEx + intStringLenmapkey
-					if postStringIndexmapkey < 0 {
-						return ErrInvalidLengthFields
-					}
-					if postStringIndexmapkey > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapkey = string(dAtA[iNdEx:postStringIndexmapkey])
-					iNdEx = postStringIndexmapkey
-				} else if fieldNum == 2 {
-					var mapmsglen int
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapmsglen |= int(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					if mapmsglen < 0 {
-						return ErrInvalidLengthFields
-					}
-					postmsgIndex := iNdEx + mapmsglen
-					if postmsgIndex < 0 {
-						return ErrInvalidLengthFields
-					}
-					if postmsgIndex > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvalue = &FieldTestMessage_Message{}
-					if err := mapvalue.Unmarshal(dAtA[iNdEx:postmsgIndex]); err != nil {
-						return err
-					}
-					iNdEx = postmsgIndex
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapStringMessage[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 502:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapStringMessage2", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapStringMessage2 == nil {
-				m.MapStringMessage2 = make(map[string]*FieldTestMessage_Message2)
-			}
-			var mapkey string
-			var mapvalue *FieldTestMessage_Message2
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					var stringLenmapkey uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						stringLenmapkey |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					intStringLenmapkey := int(stringLenmapkey)
-					if intStringLenmapkey < 0 {
-						return ErrInvalidLengthFields
-					}
-					postStringIndexmapkey := iNdEx + intStringLenmapkey
-					if postStringIndexmapkey < 0 {
-						return ErrInvalidLengthFields
-					}
-					if postStringIndexmapkey > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapkey = string(dAtA[iNdEx:postStringIndexmapkey])
-					iNdEx = postStringIndexmapkey
-				} else if fieldNum == 2 {
-					var mapmsglen int
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapmsglen |= int(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					if mapmsglen < 0 {
-						return ErrInvalidLengthFields
-					}
-					postmsgIndex := iNdEx + mapmsglen
-					if postmsgIndex < 0 {
-						return ErrInvalidLengthFields
-					}
-					if postmsgIndex > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapvalue = &FieldTestMessage_Message2{}
-					if err := mapvalue.Unmarshal(dAtA[iNdEx:postmsgIndex]); err != nil {
-						return err
-					}
-					iNdEx = postmsgIndex
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapStringMessage2[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 503:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field MapFixed64Enum", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			if m.MapFixed64Enum == nil {
-				m.MapFixed64Enum = make(map[uint64]FieldTestMessage_Enum)
-			}
-			var mapkey uint64
-			var mapvalue FieldTestMessage_Enum
-			for iNdEx < postIndex {
-				entryPreIndex := iNdEx
-				var wire uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					wire |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				fieldNum := int32(wire >> 3)
-				if fieldNum == 1 {
-					if (iNdEx + 8) > l {
-						return io.ErrUnexpectedEOF
-					}
-					mapkey = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-					iNdEx += 8
-				} else if fieldNum == 2 {
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						mapvalue |= FieldTestMessage_Enum(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-				} else {
-					iNdEx = entryPreIndex
-					skippy, err := skipFields(dAtA[iNdEx:])
-					if err != nil {
-						return err
-					}
-					if (skippy < 0) || (iNdEx+skippy) < 0 {
-						return ErrInvalidLengthFields
-					}
-					if (iNdEx + skippy) > postIndex {
-						return io.ErrUnexpectedEOF
-					}
-					iNdEx += skippy
-				}
-			}
-			m.MapFixed64Enum[mapkey] = mapvalue
-			iNdEx = postIndex
-		case 601:
-			if wireType == 0 {
-				var v int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					v |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				m.NopackBool = append(m.NopackBool, bool(v != 0))
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				elementCount = packedLen
-				if elementCount != 0 && len(m.NopackBool) == 0 {
-					m.NopackBool = make([]bool, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v int
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						v |= int(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					m.NopackBool = append(m.NopackBool, bool(v != 0))
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackBool", wireType)
-			}
-		case 602:
-			if wireType == 0 {
-				var v FieldTestMessage_Enum
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					v |= FieldTestMessage_Enum(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				m.NopackEnum = append(m.NopackEnum, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				if elementCount != 0 && len(m.NopackEnum) == 0 {
-					m.NopackEnum = make([]FieldTestMessage_Enum, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v FieldTestMessage_Enum
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						v |= FieldTestMessage_Enum(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					m.NopackEnum = append(m.NopackEnum, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackEnum", wireType)
-			}
-		case 603:
-			if wireType == 0 {
-				var v int32
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					v |= int32(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				m.NopackInt32 = append(m.NopackInt32, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				var count int
-				for _, integer := range dAtA[iNdEx:postIndex] {
-					if integer < 128 {
-						count++
-					}
-				}
-				elementCount = count
-				if elementCount != 0 && len(m.NopackInt32) == 0 {
-					m.NopackInt32 = make([]int32, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v int32
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						v |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					m.NopackInt32 = append(m.NopackInt32, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackInt32", wireType)
-			}
-		case 604:
-			if wireType == 0 {
-				var v int32
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					v |= int32(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				v = int32((uint32(v) >> 1) ^ uint32(((v&1)<<31)>>31))
-				m.NopackSint32 = append(m.NopackSint32, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				var count int
-				for _, integer := range dAtA[iNdEx:postIndex] {
-					if integer < 128 {
-						count++
-					}
-				}
-				elementCount = count
-				if elementCount != 0 && len(m.NopackSint32) == 0 {
-					m.NopackSint32 = make([]int32, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v int32
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						v |= int32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					v = int32((uint32(v) >> 1) ^ uint32(((v&1)<<31)>>31))
-					m.NopackSint32 = append(m.NopackSint32, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackSint32", wireType)
-			}
-		case 605:
-			if wireType == 0 {
-				var v uint32
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					v |= uint32(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				m.NopackUint32 = append(m.NopackUint32, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				var count int
-				for _, integer := range dAtA[iNdEx:postIndex] {
-					if integer < 128 {
-						count++
-					}
-				}
-				elementCount = count
-				if elementCount != 0 && len(m.NopackUint32) == 0 {
-					m.NopackUint32 = make([]uint32, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v uint32
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						v |= uint32(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					m.NopackUint32 = append(m.NopackUint32, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackUint32", wireType)
-			}
-		case 606:
-			if wireType == 0 {
-				var v int64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					v |= int64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				m.NopackInt64 = append(m.NopackInt64, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				var count int
-				for _, integer := range dAtA[iNdEx:postIndex] {
-					if integer < 128 {
-						count++
-					}
-				}
-				elementCount = count
-				if elementCount != 0 && len(m.NopackInt64) == 0 {
-					m.NopackInt64 = make([]int64, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v int64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						v |= int64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					m.NopackInt64 = append(m.NopackInt64, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackInt64", wireType)
-			}
-		case 607:
-			if wireType == 0 {
-				var v uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					v |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				v = (v >> 1) ^ uint64((int64(v&1)<<63)>>63)
-				m.NopackSint64 = append(m.NopackSint64, int64(v))
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				var count int
-				for _, integer := range dAtA[iNdEx:postIndex] {
-					if integer < 128 {
-						count++
-					}
-				}
-				elementCount = count
-				if elementCount != 0 && len(m.NopackSint64) == 0 {
-					m.NopackSint64 = make([]int64, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						v |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					v = (v >> 1) ^ uint64((int64(v&1)<<63)>>63)
-					m.NopackSint64 = append(m.NopackSint64, int64(v))
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackSint64", wireType)
-			}
-		case 608:
-			if wireType == 0 {
-				var v uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					v |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				m.NopackUint64 = append(m.NopackUint64, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				var count int
-				for _, integer := range dAtA[iNdEx:postIndex] {
-					if integer < 128 {
-						count++
-					}
-				}
-				elementCount = count
-				if elementCount != 0 && len(m.NopackUint64) == 0 {
-					m.NopackUint64 = make([]uint64, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v uint64
-					for shift := uint(0); ; shift += 7 {
-						if shift >= 64 {
-							return ErrIntOverflowFields
-						}
-						if iNdEx >= l {
-							return io.ErrUnexpectedEOF
-						}
-						b := dAtA[iNdEx]
-						iNdEx++
-						v |= uint64(b&0x7F) << shift
-						if b < 0x80 {
-							break
-						}
-					}
-					m.NopackUint64 = append(m.NopackUint64, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackUint64", wireType)
-			}
-		case 609:
-			if wireType == 5 {
-				var v int32
-				if (iNdEx + 4) > l {
-					return io.ErrUnexpectedEOF
-				}
-				v = int32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-				iNdEx += 4
-				m.NopackSfixed32 = append(m.NopackSfixed32, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				elementCount = packedLen / 4
-				if elementCount != 0 && len(m.NopackSfixed32) == 0 {
-					m.NopackSfixed32 = make([]int32, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v int32
-					if (iNdEx + 4) > l {
-						return io.ErrUnexpectedEOF
-					}
-					v = int32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-					iNdEx += 4
-					m.NopackSfixed32 = append(m.NopackSfixed32, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackSfixed32", wireType)
-			}
-		case 610:
-			if wireType == 5 {
-				var v uint32
-				if (iNdEx + 4) > l {
-					return io.ErrUnexpectedEOF
-				}
-				v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-				iNdEx += 4
-				m.NopackFixed32 = append(m.NopackFixed32, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				elementCount = packedLen / 4
-				if elementCount != 0 && len(m.NopackFixed32) == 0 {
-					m.NopackFixed32 = make([]uint32, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v uint32
-					if (iNdEx + 4) > l {
-						return io.ErrUnexpectedEOF
-					}
-					v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-					iNdEx += 4
-					m.NopackFixed32 = append(m.NopackFixed32, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackFixed32", wireType)
-			}
-		case 611:
-			if wireType == 5 {
-				var v uint32
-				if (iNdEx + 4) > l {
-					return io.ErrUnexpectedEOF
-				}
-				v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-				iNdEx += 4
-				v2 := float32(math.Float32frombits(v))
-				m.NopackFloat = append(m.NopackFloat, v2)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				elementCount = packedLen / 4
-				if elementCount != 0 && len(m.NopackFloat) == 0 {
-					m.NopackFloat = make([]float32, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v uint32
-					if (iNdEx + 4) > l {
-						return io.ErrUnexpectedEOF
-					}
-					v = uint32(encoding_binary.LittleEndian.Uint32(dAtA[iNdEx:]))
-					iNdEx += 4
-					v2 := float32(math.Float32frombits(v))
-					m.NopackFloat = append(m.NopackFloat, v2)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackFloat", wireType)
-			}
-		case 612:
-			if wireType == 1 {
-				var v int64
-				if (iNdEx + 8) > l {
-					return io.ErrUnexpectedEOF
-				}
-				v = int64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-				iNdEx += 8
-				m.NopackSfixed64 = append(m.NopackSfixed64, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				elementCount = packedLen / 8
-				if elementCount != 0 && len(m.NopackSfixed64) == 0 {
-					m.NopackSfixed64 = make([]int64, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v int64
-					if (iNdEx + 8) > l {
-						return io.ErrUnexpectedEOF
-					}
-					v = int64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-					iNdEx += 8
-					m.NopackSfixed64 = append(m.NopackSfixed64, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackSfixed64", wireType)
-			}
-		case 613:
-			if wireType == 1 {
-				var v uint64
-				if (iNdEx + 8) > l {
-					return io.ErrUnexpectedEOF
-				}
-				v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-				iNdEx += 8
-				m.NopackFixed64 = append(m.NopackFixed64, v)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				elementCount = packedLen / 8
-				if elementCount != 0 && len(m.NopackFixed64) == 0 {
-					m.NopackFixed64 = make([]uint64, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v uint64
-					if (iNdEx + 8) > l {
-						return io.ErrUnexpectedEOF
-					}
-					v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-					iNdEx += 8
-					m.NopackFixed64 = append(m.NopackFixed64, v)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackFixed64", wireType)
-			}
-		case 614:
-			if wireType == 1 {
-				var v uint64
-				if (iNdEx + 8) > l {
-					return io.ErrUnexpectedEOF
-				}
-				v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-				iNdEx += 8
-				v2 := float64(math.Float64frombits(v))
-				m.NopackDouble = append(m.NopackDouble, v2)
-			} else if wireType == 2 {
-				var packedLen int
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return ErrIntOverflowFields
-					}
-					if iNdEx >= l {
-						return io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					packedLen |= int(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				if packedLen < 0 {
-					return ErrInvalidLengthFields
-				}
-				postIndex := iNdEx + packedLen
-				if postIndex < 0 {
-					return ErrInvalidLengthFields
-				}
-				if postIndex > l {
-					return io.ErrUnexpectedEOF
-				}
-				var elementCount int
-				elementCount = packedLen / 8
-				if elementCount != 0 && len(m.NopackDouble) == 0 {
-					m.NopackDouble = make([]float64, 0, elementCount)
-				}
-				for iNdEx < postIndex {
-					var v uint64
-					if (iNdEx + 8) > l {
-						return io.ErrUnexpectedEOF
-					}
-					v = uint64(encoding_binary.LittleEndian.Uint64(dAtA[iNdEx:]))
-					iNdEx += 8
-					v2 := float64(math.Float64frombits(v))
-					m.NopackDouble = append(m.NopackDouble, v2)
-				}
-			} else {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackDouble", wireType)
-			}
-		case 615:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackString", wireType)
-			}
-			var stringLen uint64
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				stringLen |= uint64(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			intStringLen := int(stringLen)
-			if intStringLen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + intStringLen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.NopackString = append(m.NopackString, string(dAtA[iNdEx:postIndex]))
-			iNdEx = postIndex
-		case 616:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field NopackBytes", wireType)
-			}
-			var byteLen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				byteLen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if byteLen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + byteLen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.NopackBytes = append(m.NopackBytes, make([]byte, postIndex-iNdEx))
-			copy(m.NopackBytes[len(m.NopackBytes)-1], dAtA[iNdEx:postIndex])
-			iNdEx = postIndex
-		case 617:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Nopack_Message", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.Nopack_Message = append(m.Nopack_Message, &FieldTestMessage_Message{})
-			if err := m.Nopack_Message[len(m.Nopack_Message)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
-				return err
-			}
-			iNdEx = postIndex
-		case 618:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Nopack_Message2", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowFields
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				msglen |= int(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if msglen < 0 {
-				return ErrInvalidLengthFields
-			}
-			postIndex := iNdEx + msglen
-			if postIndex < 0 {
-				return ErrInvalidLengthFields
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.Nopack_Message2 = append(m.Nopack_Message2, &FieldTestMessage_Message2{})
-			if err := m.Nopack_Message2[len(m.Nopack_Message2)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+			m.RepeatedMessage2 = append(m.RepeatedMessage2, &FieldTestMessage_Message2{})
+			if err := m.RepeatedMessage2[len(m.RepeatedMessage2)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
 				return err
 			}
 			iNdEx = postIndex
@@ -8928,7 +7259,7 @@ func (m *FieldTestMessage_Message2) Unmarshal(dAtA []byte) error {
 		switch fieldNum {
 		case 1:
 			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Bool", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field Bv", wireType)
 			}
 			var v int
 			for shift := uint(0); ; shift += 7 {
@@ -8945,12 +7276,12 @@ func (m *FieldTestMessage_Message2) Unmarshal(dAtA []byte) error {
 					break
 				}
 			}
-			m.Bool = bool(v != 0)
+			m.Bv = bool(v != 0)
 		case 2:
 			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Enum", wireType)
+				return fmt.Errorf("proto: wrong wireType = %d for field Ev", wireType)
 			}
-			m.Enum = 0
+			m.Ev = 0
 			for shift := uint(0); ; shift += 7 {
 				if shift >= 64 {
 					return ErrIntOverflowFields
@@ -8960,7 +7291,7 @@ func (m *FieldTestMessage_Message2) Unmarshal(dAtA []byte) error {
 				}
 				b := dAtA[iNdEx]
 				iNdEx++
-				m.Enum |= FieldTestMessage_Enum(b&0x7F) << shift
+				m.Ev |= FieldTestMessage_Enum(b&0x7F) << shift
 				if b < 0x80 {
 					break
 				}

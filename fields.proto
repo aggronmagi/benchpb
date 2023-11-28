@@ -25,8 +25,8 @@ message FieldTestMessage {
   double optional_double = 14;
   string optional_string = 15;
   bytes optional_bytes = 16;
-  Message optional_Message = 17;
-  Message2 optional_Message2 = 18;
+  Message optional_message = 17;
+  Message2 optional_message2 = 18;
 
   repeated bool repeated_bool = 201[packed=true];
   repeated Enum repeated_enum = 202[packed=true];
@@ -44,71 +44,71 @@ message FieldTestMessage {
   repeated double repeated_double = 214[packed=true];
   repeated string repeated_string = 215;
   repeated bytes repeated_bytes = 216;
-  repeated Message repeated_Message = 217;
-  repeated Message2 repeated_Message2 = 218;
+  repeated Message repeated_message = 217;
+  repeated Message2 repeated_message2 = 218;
 
-  repeated bool nopack_bool = 601[packed=false];
-  repeated Enum nopack_enum = 602[packed=false];
-  repeated int32 nopack_int32 = 603[packed=false];
-  repeated sint32 nopack_sint32 = 604[packed=false];
-  repeated uint32 nopack_uint32 = 605[packed=false];
-  repeated int64 nopack_int64 = 606[packed=false];
-  repeated sint64 nopack_sint64 = 607[packed=false];
-  repeated uint64 nopack_uint64 = 608[packed=false];
-  repeated sfixed32 nopack_sfixed32 = 609[packed=false];
-  repeated fixed32 nopack_fixed32 = 610[packed=false];
-  repeated float nopack_float = 611[packed=false];
-  repeated sfixed64 nopack_sfixed64 = 612[packed=false];
-  repeated fixed64 nopack_fixed64 = 613[packed=false];
-  repeated double nopack_double = 614[packed=false];
-  repeated string nopack_string = 615[packed=false];
-  repeated bytes nopack_bytes = 616[packed=false];
-  repeated Message nopack_Message = 617[packed=false];
-  repeated Message2 nopack_Message2 = 618[packed=false];
+  repeated bool nopack_bool = 31[packed=false];
+  repeated Enum nopack_enum = 32[packed=false];
+  repeated int32 nopack_int32 = 33[packed=false];
+  repeated sint32 nopack_sint32 = 34[packed=false];
+  repeated uint32 nopack_uint32 = 35[packed=false];
+  repeated int64 nopack_int64 = 36[packed=false];
+  repeated sint64 nopack_sint64 = 37[packed=false];
+  repeated uint64 nopack_uint64 = 38[packed=false];
+  repeated sfixed32 nopack_sfixed32 = 39[packed=false];
+  repeated fixed32 nopack_fixed32 = 40[packed=false];
+  repeated float nopack_float = 41[packed=false];
+  repeated sfixed64 nopack_sfixed64 = 42[packed=false];
+  repeated fixed64 nopack_fixed64 = 43[packed=false];
+  repeated double nopack_double = 44[packed=false];
+  repeated string nopack_string = 45[packed=false];
+  repeated bytes nopack_bytes = 46[packed=false];
+  repeated Message nopack_message = 47[packed=false];
+  repeated Message2 nopack_message2 = 48[packed=false];
 
 
-  map<int32, bool> map_bool = 301;
-  map<int32, Enum> map_enum = 302;
-  map<int32, int32> map_int32 = 303;
-  map<sint32, sint32> map_sint32 = 304;
-  map<uint32, uint32> map_uint32 = 305;
-  map<int64, int64> map_int64 = 306;
-  map<sint64, sint64> map_sint64 = 307;
-  map<uint64, uint64> map_uint64 = 308;
-  map<sfixed32, sfixed32> map_sfixed32 = 309;
-  map<fixed32, fixed32> map_fixed32 = 310;
-  map<int32, float> map_float = 311;
-  map<int32, sfixed64> map_sfixed64 = 312;
-  map<int32, fixed64> map_fixed64 = 313;
-  map<int32, double> map_double = 314;
-  map<int32, string> map_string = 315;
-  map<int32, bytes> map_bytes = 316;
-  map<int32, Message> map_Message = 317;
-  map<int32, Message2> map_Message2 = 318;
+  map<int32, bool> map_bool = 51;
+  map<int32, Enum> map_enum = 52;
+  map<int32, int32> map_int32 = 53;
+    //map<sint32, sint32> map_sint32 = 54;
+  map<uint32, uint32> map_uint32 = 55;
+  map<int64, int64> map_int64 = 56;
+    //map<sint64, sint64> map_sint64 = 57;
+  map<uint64, uint64> map_uint64 = 58;
+    //map<sfixed32, sfixed32> map_sfixed32 = 59;
+    //map<fixed32, fixed32> map_fixed32 = 60;
+  map<int32, float> map_float = 61;
+    //map<int32, sfixed64> map_sfixed64 = 62;
+    //map<int32, fixed64> map_fixed64 = 63;
+  map<int32, double> map_double = 64;
+  map<int32, string> map_string = 65;
+  map<int32, bytes> map_bytes = 66;
+  map<int32, Message> map_message = 67;
+  map<int32, Message2> map_message2 = 68;
 
  //  map<bool,int32> map_key_bool = 401;
   //map<Enum,int32> map_key_enum = 402;
-  map<int32,int32> map_key_int32 = 403;
-  map<sint32,int32> map_key_sint32 = 404;
-  map<uint32,int32> map_key_uint32 = 405;
-  map<int64,int32> map_key_int64 = 406;
-  map<sint64,int32> map_key_sint64 = 407;
-  map<uint64,int32> map_key_uint64 = 408;
-  map<sfixed32,int32> map_key_sfixed32 = 409;
-  map<fixed32,int32> map_key_fixed32 = 410;
+  map<int32,int32> map_key_int32 = 73;
+    ///map<sint32,int32> map_key_sint32 = 404;
+  map<uint32,int32> map_key_uint32 = 75;
+  map<int64,int32> map_key_int64 = 76;
+    ///map<sint64,int32> map_key_sint64 = 407;
+  map<uint64,int32> map_key_uint64 = 78;
+    ///map<sfixed32,int32> map_key_sfixed32 = 409;
+    ///map<fixed32,int32> map_key_fixed32 = 410;
   //map<float,int32> map_key_float = 411;
-  map<sfixed64,int32> map_key_sfixed64 = 412;
-  map<fixed64,int32> map_key_fixed64 = 413;
+  ///map<sfixed64,int32> map_key_sfixed64 = 412;
+    ///map<fixed64,int32> map_key_fixed64 = 413;
   //map<double,int32> map_key_double = 414;
-  map<string,int32> map_key_string = 415;
+  map<string,int32> map_key_string = 85;
   //map<bytes,int32> map_key_bytes = 416;
   //map<Message,int32> map_key_Message = 417;
   //map<Message2,int32> map_key_Message2 = 418;
 
-  map<int32, int64> map_int32_int64 = 500;
-  map<string, Message> map_string_message = 501;
-  map<string, Message2> map_string_message2 = 502;
-  map<fixed64, Enum> map_fixed64_enum = 503;
+  map<int32, int64> map_int32_int64 = 90;
+  map<string, Message> map_string_message = 91;
+  map<string, Message2> map_string_message2 = 92;
+    ///map<fixed64, Enum> map_fixed64_enum = 503;
 
 
 
@@ -121,8 +121,8 @@ message FieldTestMessage {
   message Message {}
 
   message Message2 {
-    bool bool = 1;
-    Enum enum = 2;
+    bool bv = 1;
+    Enum ev = 2;
   }
 }
 

@@ -1,0 +1,120 @@
+package wproto;
+
+proto.gopkg = "wproto"
+
+message field_test_message {
+  bool optional_bool = 1;
+  int32 optional_enum = 2;
+  int32 optional_int32 = 3;
+  int32 optional_sint32 = 4 {
+  proto.signed = 1
+};
+  uint32 optional_uint32 = 5;
+  int64 optional_int64 = 6;
+  int64 optional_sint64 = 7 {
+  proto.signed = 1
+};
+  uint64 optional_uint64 = 8;
+  int32 optional_sfixed32 = 9 {
+  proto.signed = 1
+  proto.fixed = 1 
+};
+  uint32 optional_fixed32 = 10 {
+  proto.fixed = 1
+};
+  float optional_float = 11;
+  int64 optional_sfixed64 = 12 {
+  proto.signed = 1
+  proto.fixed = 1 
+};
+  uint64 optional_fixed64 = 13 {
+  proto.fixed = 1 
+};
+  double optional_double = 14;
+  string optional_string = 15;
+  bytes optional_bytes = 16;
+  message1 optional_message = 17;
+  message2 optional_message2 = 18;
+
+  repeated bool repeated_bool = 201 {proto.packed=1};
+  repeated int32 repeated_enum = 202 {proto.packed=1};
+  repeated int32 repeated_int32 = 203 {proto.packed=1};
+  repeated int32 repeated_sint32 = 204 {proto.packed=1 proto.signed = 1 };
+  repeated uint32 repeated_uint32 = 205 {proto.packed=1};
+  repeated int64 repeated_int64 = 206 {proto.packed=1};
+  repeated int64 repeated_sint64 = 207 {proto.packed=1 proto.signed = 1 };
+  repeated uint64 repeated_uint64 = 208 {proto.packed=1};
+  repeated int32 repeated_sfixed32 = 209 {proto.packed=1 proto.signed = 1 proto.fixed = 1 };
+  repeated uint32 repeated_fixed32 = 210 {proto.packed=1 proto.fixed = 1 };
+  repeated float repeated_float = 211 {proto.packed=1};
+  repeated int64 repeated_sfixed64 = 212 {proto.packed=1 proto.signed = 1 proto.fixed = 1 };
+  repeated uint64 repeated_fixed64 = 213 {proto.packed=1 proto.fixed = 1 };
+  repeated double repeated_double = 214 {proto.packed=1};
+  repeated string repeated_string = 215;
+  repeated bytes repeated_bytes = 216;
+  repeated message1 repeated_message = 217;
+  repeated message2 repeated_message2 = 218;
+
+  repeated bool nopack_bool = 31 {proto.packed= 0};
+  repeated int32 nopack_enum = 32 {proto.packed= 0};
+  repeated int32 nopack_int32 = 33 {proto.packed= 0};
+  repeated int32 nopack_sint32 = 34 {proto.packed= 0 proto.signed = 1};
+  repeated uint32 nopack_uint32 = 35 {proto.packed= 0};
+  repeated int64 nopack_int64 = 36 {proto.packed= 0};
+  repeated int64 nopack_sint64 = 37 {proto.packed= 0 proto.signed = 1};
+  repeated uint64 nopack_uint64 = 38 {proto.packed= 0};
+  repeated int32 nopack_sfixed32 = 39 {proto.packed= 0 proto.signed = 1 proto.fixed = 1};
+  repeated uint32 nopack_fixed32 = 40 {proto.packed= 0 proto.fixed = 1};
+  repeated float nopack_float = 41 {proto.packed= 0};
+  repeated int64 nopack_sfixed64 = 42 {proto.packed= 0 proto.signed = 1 proto.fixed = 1};
+  repeated uint64 nopack_fixed64 = 43 {proto.packed= 0 proto.fixed = 1};
+  repeated double nopack_double = 44 {proto.packed= 0};
+  repeated string nopack_string = 45 {proto.packed= 0};
+  repeated bytes nopack_bytes = 46 {proto.packed= 0};
+  repeated message1 nopack_message = 47 {proto.packed= 0};
+  repeated message2 nopack_message2 = 48 {proto.packed= 0};
+
+
+  map<int32, bool> map_bool = 51;
+  map<int32, int32> map_enum = 52;
+  map<int32, int32> map_int32 = 53;
+  map<uint32, uint32> map_uint32 = 55;
+  map<int64, int64> map_int64 = 56;
+  map<uint64, uint64> map_uint64 = 58;
+  map<int32, float> map_float = 61;
+  map<int32, double> map_double = 64;
+  map<int32, string> map_string = 65;
+  map<int32, bytes> map_bytes = 66;
+  map<int32, message1> map_message = 67;
+  map<int32, message2> map_message2 = 68;
+
+  map<int32,int32> map_key_int32 = 73;
+  map<uint32,int32> map_key_uint32 = 75;
+  map<int64,int32> map_key_int64 = 76;
+  map<uint64,int32> map_key_uint64 = 78;
+  map<string,int32> map_key_string = 85;
+
+
+  map<int32, int64> map_int32_int64 = 90;
+  map<string, message1> map_string_message = 91;
+  map<string, message2> map_string_message2 = 92;
+
+}
+
+enum enum_type  {
+  zero = 0;
+  one = 1;
+  two = 2;
+}
+
+message exmaple_msg  {
+    int32 filed = 1;
+}
+
+
+  message message1  {}
+
+  message message2  {
+    bool bv = 1;
+    int32 ev = 2;
+  }

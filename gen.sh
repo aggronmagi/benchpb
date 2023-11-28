@@ -17,3 +17,4 @@ protoc --gogofast_out=./gogofast/ fields.proto
 
 mkdir -p gogofaster/
 protoc --gogofaster_out=./gogofaster/ fields.proto
+
